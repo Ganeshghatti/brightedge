@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       home
       <Link to="/form">
-        <Button color="primary">Form Page</Button>
+        <b>FORM</b>
       </Link>
     </div>
   );
