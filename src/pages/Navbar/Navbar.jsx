@@ -21,7 +21,7 @@ export default function Navbar() {
       {menu ? (
         <>
           <div
-            className="block w-screen h-screen top-0 left-0 z-30 navbar-mobile-menu-overlay"
+            className="block w-screen h-screen top-0 left-0 z-30 navbar-mobile-menu-overlay bg-transparent"
             onClick={menuf}
           ></div>
           <ul className="flex flex-col fixed top-0 right-0 z-50 w-3/4 h-screen bg-white justify-center  items-center gap-6">
