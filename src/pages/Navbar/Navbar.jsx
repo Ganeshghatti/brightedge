@@ -169,7 +169,7 @@ export default function Navbar() {
       )}
 
       <nav
-        className="flex justify-between items-center py-4 px-20"
+        className="flex w-screen justify-between items-center py-4 px-20"
         style={{ borderBottom: "1px solid gray" }}
       >
         <Link to="/">
