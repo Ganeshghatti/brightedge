@@ -50,10 +50,12 @@ export default function Form() {
           className="w-1/2 flex justify-center flex-col gap-5 md:w-full"
           style={{ padding: "0 6vw" }}
         >
-          <h1 className="text-5xl font-extrabold" style={{ color: "#32355D" }}>
-            Start your own
-            <span className="md:hidden">&nbsp;</span>
-            <br className="xl:hidden lg:hidden md:hidden" />
+          <h1
+            className="text-5xl font-extrabold"
+            style={{ color: "#32355D" }}
+          >
+            Start your own &nbsp;
+            <br className="lg:hidden" />
             <span className="" style={{ color: "#7F46FF" }}>
               Preschool
             </span>
@@ -150,7 +152,11 @@ export default function Form() {
           <p className="font-normal text-base md:text-center">
             Your email address and mobile number will be safely managed
             according to our &nbsp;
-            <a href="#" style={{ color: "#1682FB" }} className="font-bold unerline">
+            <a
+              href="#"
+              style={{ color: "#1682FB" }}
+              className="font-bold unerline"
+            >
               Privacy Policy
             </a>
           </p>
@@ -162,7 +168,7 @@ export default function Form() {
         className="w-full flex flex-col items-center justify-center gap-16 py-16 px-12 "
       >
         <h1
-          className="text-5xl font-extrabold md:text-center "
+          className="text-5xl font-extrabold md:text-center"
           style={{ color: "#32355D", padding: "0 15vw" }}
         >
           Endurance & Success
@@ -252,7 +258,7 @@ export default function Form() {
         className="flex w-11/12 justify-around items-center md:flex-col py-16 lg:flex-wrap md:gap-8"
       >
         <h1
-          className="text-5xl font-extrabold w-1/5 md:text-center  lg:w-2/5 md:w-full"
+          className="text-5xl font-extrabold w-1/5 md:text-center lg:w-2/5 md:w-full"
           style={{ color: "#32355D" }}
         >
           Our Pricing
