@@ -1,5 +1,7 @@
-#form{
-  margin-top: 12vh;
+#form {
+  @media (max-width: 867px) {
+    margin-top: 8vh;
+  }
 }
 #form-inputs {
   width: 100vw;
@@ -14,7 +16,7 @@
   src: url(../../../public/Assets/Fonts/MyriadPro/MyriadProBold/MyriadProBold.ttf);
 }
 @font-face {
-  font-family:MyridProBlack ;
+  font-family: MyridProBlack;
   src: url(../../../public/Assets/Fonts/MyriadPro/MyriadProBlack/MyriadProBlack.otf);
 }
 #form-inputs-background-container {
@@ -41,6 +43,7 @@ h1 {
   line-height: 120% !important;
 }
 
-#form-inputs input ,#form-inputs form div{
+#form-inputs input,
+#form-inputs form div {
   background-color: white !important;
 }
