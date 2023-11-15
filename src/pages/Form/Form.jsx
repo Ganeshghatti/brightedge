@@ -43,7 +43,7 @@ export default function Form() {
     >
       <section
         id="form-inputs"
-        className="flex justify-center w-screen items-center h-screen md:flex-col md:h-auto "
+        className="flex justify-center w-screen items-center h-screen md:flex-col md:h-auto"
       >
         <div id="form-inputs-background-container"></div>
         <div
@@ -55,7 +55,7 @@ export default function Form() {
             style={{ color: "#32355D" }}
           >
             Start your own &nbsp;
-            <br className="lg:hidden" />
+            <br className="lg:hidden md:hidden" />
             <span className="" style={{ color: "#7F46FF" }}>
               Preschool
             </span>
