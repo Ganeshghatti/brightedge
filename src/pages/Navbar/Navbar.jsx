@@ -20,10 +20,10 @@ export default function Navbar() {
     <header>
       {menu ? (
         <>
-          {/* <div
+          <div
             className="block w-screen h-screen top-0 left-0 z-30 navbar-mobile-menu-overlay"
             onClick={menuf}
-          ></div> */}
+          ></div>
           <ul className="flex flex-col fixed top-0 right-0 z-50 w-3/4 h-screen bg-white justify-center  items-center gap-6">
             <li style={{ color: "#0B1C39" }} onClick={menuf}>
               Partnership

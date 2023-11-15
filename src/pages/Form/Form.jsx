@@ -50,10 +50,7 @@ export default function Form() {
           className="w-1/2 flex justify-center flex-col gap-5 md:w-full"
           style={{ padding: "0 6vw" }}
         >
-          <h1
-            className="text-5xl font-extrabold"
-            style={{ color: "#32355D" }}
-          >
+          <h1 className="text-5xl font-extrabold" style={{ color: "#32355D" }}>
             Start your own &nbsp;
             <br className="lg:hidden md:hidden" />
             <span className="" style={{ color: "#7F46FF" }}>
@@ -155,7 +152,7 @@ export default function Form() {
             <a
               href="#"
               style={{ color: "#1682FB" }}
-              className="font-bold unerline"
+              className="font-bold underline"
             >
               Privacy Policy
             </a>
@@ -392,6 +389,55 @@ export default function Form() {
               />
             </svg>
           </p>
+        </div>
+      </section>
+
+      <section
+        id="form-affiliate"
+        className="py-16 gap-12 w-full flex flex-col items-center"
+      >
+        <h1
+          className="text-5xl font-extrabold md:text-center"
+          style={{ color: "#32355D", padding: "0 15vw" }}
+        >
+          Our Affiliate Program
+        </h1>
+        <img
+          src="./Assets/Images/form/Video.png"
+          className="w-11/12 self-end"
+          alt=""
+        />
+        <div className="flex justify-around items-center md:flex-col">
+          <div className="flex flex-col justify-center w-1/4 md:w-11/12">
+            <p style={{ color: "#FF833F" }} className="text-4xl font-extrabold text-left md:text-3xl">
+              Not an average franchise program.
+            </p>
+            <p style={{ color: "#0B1C39" }} className="text-xl font-normal md:text-lg">
+              Watch the video for on overview.
+            </p>
+          </div>
+          <ul className="flex flex-col w-1/2 list-disc gap-4 md:w-3/4 md:mt-6">
+            <li className="text-xl md:text-lg">
+              <span className="font-bold" style={{color:"#FF833F"}}>Revolutionary Model:</span>Redefining the franchise program
+              with a groundbreaking flexible approach.
+            </li>
+            <li className="text-xl md:text-lg">
+              <span className="font-bold" style={{color:"#FF833F"}}>Zero Royalties:</span> Keep all your hard-earned profits
+              without paying any royalties.
+            </li>
+            <li className="text-xl md:text-lg">
+              <span className="font-bold" style={{color:"#FF833F"}}>Franchise Freedom:</span>Say goodbye to franchise fees and
+              exit fees, putting you in control.
+            </li>
+            <li className="text-xl md:text-lg">
+              <span className="font-bold" style={{color:"#FF833F"}}>Simplicity Matters:</span> A straightforward agreement that
+              makes business. ownership easier.
+            </li>
+            <li className="text-xl md:text-lg">
+              <span className="font-bold" style={{color:"#FF833F"}}>Welcome to the Affiliate Program:</span> A new era in
+              franchising awaits.
+            </li>
+          </ul>
         </div>
       </section>
     </div>
