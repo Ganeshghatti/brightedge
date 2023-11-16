@@ -269,6 +269,11 @@ export default function Form() {
         id="form-highlights"
         className="flex w-11/12 justify-around items-center md:flex-col py-16 lg:flex-wrap md:gap-8"
       >
+        <img
+          src="./Assets/Images/form/icon_5.png"
+          className="absolute  mb-96 left-2/3 lg:hidden md:hidden"
+          alt=""
+        />
         <h1
           className="text-6xl font-extrabold w-1/5 md:text-center lg:w-2/5 md:w-full md:text-5xl"
           style={{ color: "#32355D" }}
@@ -417,7 +422,7 @@ export default function Form() {
           style={{ color: "#32355D" }}
         >
           Our Affiliate&nbsp;
-          <br className="hidden md:block"/>
+          <br className="hidden md:block" />
           <span className="form-affiliate-h1-style">Program</span>
         </h1>
         <img
@@ -427,18 +432,25 @@ export default function Form() {
         />
         <div className="flex justify-around items-center md:flex-col">
           <div className="flex flex-col justify-center w-1/4 md:w-11/12">
-            <p
-              style={{ color: "#FF833F" }}
-              className="text-4xl font-extrabold text-left md:text-3xl"
-            >
-              Not an average franchise program.
-            </p>
-            <p
-              style={{ color: "#0B1C39" }}
-              className="text-xl font-normal md:text-lg"
-            >
-              Watch the video for on overview.
-            </p>
+            <div>
+              <p
+                style={{ color: "#FF833F" }}
+                className="text-4xl font-extrabold text-left md:text-3xl"
+              >
+                Not an average franchise program.
+              </p>
+              <p
+                style={{ color: "#0B1C39" }}
+                className="text-xl font-normal md:text-lg"
+              >
+                Watch the video for on overview.
+              </p>
+            </div>
+            {/* <img
+              src="./Assets/Images/form/affiliateimg.png"
+              className="object-contain"
+              alt=""
+            /> */}
           </div>
           <ul className="flex flex-col w-1/2 list-disc gap-4 md:w-3/4 md:mt-6">
             <li className="text-xl md:text-lg">
@@ -485,7 +497,7 @@ export default function Form() {
           className="text-6xl font-extrabold md:text-center md:text-5xl"
           style={{ color: "#32355D", padding: "0 15vw" }}
         >
-          Here’s all{" "}
+          Here’s all&nbsp;
           <span className="form-hereisallyouneed-h1-style">you need!</span>
         </h1>
 
@@ -575,7 +587,10 @@ export default function Form() {
                 stroke-linejoin="round"
               />
             </svg>
-            <p className="text-2xl font-normal">About 1200 Sq.ft and above</p>
+            <p className="text-2xl font-normal">
+              About 1200
+              <br /> Sq.ft and above
+            </p>
           </div>
 
           <div className="form-hereisallyouneed-card3 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:mt-6">
@@ -598,7 +613,8 @@ export default function Form() {
               />
             </svg>
             <p className="text-2xl font-normal">
-              For early childhood education
+              For early childhood
+              <br /> education
             </p>
           </div>
           <div className="form-hereisallyouneed-card4 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:mt-6">
@@ -637,7 +653,10 @@ export default function Form() {
                 stroke-linejoin="round"
               />
             </svg>
-            <p className="text-2xl font-normal">For entrepreneurship</p>
+            <p className="text-2xl font-normal">
+              For
+              <br /> entrepreneurship
+            </p>
           </div>
         </div>
       </section>
