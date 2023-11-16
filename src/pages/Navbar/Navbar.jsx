@@ -169,7 +169,7 @@ export default function Navbar() {
       )}
 
       <nav
-        className="flex w-screen justify-between items-center py-4 px-20 md:px-10"
+        className="flex w-screen justify-between items-center py-6 px-20 md:px-10"
         style={{ borderBottom: "1px solid gray" }}
       >
         <Link to="/">
@@ -206,7 +206,7 @@ export default function Navbar() {
             stroke-linejoin="round"
           />
         </svg>
-        <ul className="flex w-3/4 justify-around  items-center md:hidden">
+        <ul className="flex w-2/3 justify-around  items-center md:hidden">
           <li style={{ color: "#0B1C39" }}>Partnership</li>
           <li>
             <Dropdown>
@@ -312,7 +312,7 @@ export default function Navbar() {
           </Link>
           <Button
             radius="full"
-            className="bg-gradient-to-tr text-white shadow-lg px-4 py-2 text-lg font-bold"
+            className="bg-gradient-to-tr text-white shadow-lg px-4 py-2 text-md font-bold"
             style={{ backgroundColor: "#F72378" }}
           >
             Enquire Today!

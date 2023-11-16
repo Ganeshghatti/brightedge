@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import { Button, ButtonGroup } from "@nextui-org/react";
 import "./Form.scss";
-import Select from "react-select";
+import Select from "@mui/material/Select";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import TextField from "@mui/material/TextField";
+import { MenuItem } from "@mui/base/MenuItem";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+} from "@nextui-org/react";
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -19,11 +26,11 @@ export default function Form() {
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log(name, value);
     setFormData({
       ...formData,
       [name]: value,
     });
-    console.log(formData);
   };
 
   const handleSubmit = (e) => {
@@ -50,12 +57,14 @@ export default function Form() {
           className="w-1/2 flex justify-center flex-col gap-5 md:w-full"
           style={{ padding: "0 6vw" }}
         >
-          <h1 className="text-5xl font-extrabold" style={{ color: "#32355D" }}>
-            Start your own &nbsp;
-            <br className="lg:hidden md:hidden" />
-            <span className="" style={{ color: "#7F46FF" }}>
+          <h1
+            className="text-6xl font-extrabold lg:text-5xl md:text-5xl"
+            style={{ color: "#32355D" }}
+          >
+            Start your own
+            <p className="" style={{ color: "#7F46FF" }}>
               Preschool
-            </span>
+            </p>
           </h1>
           <p
             style={{ color: "#0B1C39" }}
@@ -87,13 +96,18 @@ export default function Form() {
             onChange={handleChange}
             className="w-full"
           />
-          <div className="flex justify-start w-full">
-            <Select
-              defaultValue={formData.countrycode}
+          <div className="flex justify-start w-full gap-4">
+            <select
+              name="countrycode"
+              value={formData.countrycode}
               onChange={handleChange}
-              options={options}
-              className="w-1/4 h-full z-10"
-            />
+              className="w-1/3 h-full z-10 py-4 px-4 flex justify-center rounded bg-white border-1 border-solid border-gray-400 cursor-pointer text-gray-500"
+            >
+              <option value="">Select country code</option>
+              <option value="+91">(+91) India</option>
+              <option value="+1">(+1) United States</option>
+              <option value="+44">(+44) United Kingdom</option>
+            </select>
             <TextField
               id="outlined-basic"
               variant="outlined"
@@ -146,9 +160,10 @@ export default function Form() {
           >
             Enquire Now!
           </Button>
-          <p className="font-normal text-base md:text-center">
+          <p className="font-normal text-base text-center">
             Your email address and mobile number will be safely managed
             according to our &nbsp;
+            <br />
             <a
               href="#"
               style={{ color: "#1682FB" }}
@@ -165,13 +180,13 @@ export default function Form() {
         className="w-full flex flex-col items-center justify-center gap-16 py-16 px-12 "
       >
         <h1
-          className="text-5xl font-extrabold md:text-center"
+          className="text-6xl font-extrabold md:text-center md:text-5xl"
           style={{ color: "#32355D", padding: "0 15vw" }}
         >
-          Endurance & Success
+          Endurance<span className="form-numbers-h1-style"> & Success</span>
         </h1>
-        <div className="w-full flex justify-around md:flex-wrap">
-          <div className="w-1/6 px-2 flex flex-col justify-around md:w-1/2 md:flex-col-reverse md:items-center">
+        <div className="w-full flex justify-around md:gap-6 md:flex-wrap">
+          <div className="w-1/6 px-2 flex flex-col justify-around md:w-2/5 md:flex-col-reverse md:items-center">
             <p
               className="text-3xl md:text-xl font-bold md:text-center"
               style={{ color: "#0B1C39" }}
@@ -189,7 +204,7 @@ export default function Form() {
             className="h-44 w-0.5 lg:hidden md:hidden"
             style={{ backgroundColor: "#0B1C39" }}
           ></div>
-          <div className="w-1/6 px-2 flex flex-col justify-around md:w-1/2  md:flex-col-reverse md:items-center">
+          <div className="w-1/6 px-2 flex flex-col justify-around md:w-2/5  md:flex-col-reverse md:items-center">
             <p
               className="text-3xl font-bold md:text-center md:text-xl"
               style={{ color: "#0B1C39" }}
@@ -208,7 +223,7 @@ export default function Form() {
             style={{ backgroundColor: "#0B1C39" }}
           ></div>
 
-          <div className="w-1/6 px-2 flex flex-col justify-around md:w-1/2  md:flex-col-reverse md:items-center md:mt-12">
+          <div className="w-1/6 px-2 flex flex-col justify-around md:w-2/5  md:flex-col-reverse md:items-center md:mt-12">
             <p
               className="text-3xl font-bold md:text-center md:text-xl"
               style={{ color: "#0B1C39" }}
@@ -227,7 +242,7 @@ export default function Form() {
             style={{ backgroundColor: "#0B1C39" }}
           ></div>
 
-          <div className="w-1/6 px-2 flex flex-col justify-around md:w-1/2  md:flex-col-reverse md:items-center md:mt-12">
+          <div className="w-1/6 px-2 flex flex-col justify-around md:w-2/5  md:flex-col-reverse md:items-center md:mt-12">
             <p
               className="text-3xl font-bold md:text-center md:text-xl"
               style={{ color: "#0B1C39" }}
@@ -255,11 +270,12 @@ export default function Form() {
         className="flex w-11/12 justify-around items-center md:flex-col py-16 lg:flex-wrap md:gap-8"
       >
         <h1
-          className="text-5xl font-extrabold w-1/5 md:text-center lg:w-2/5 md:w-full"
+          className="text-6xl font-extrabold w-1/5 md:text-center lg:w-2/5 md:w-full md:text-5xl"
           style={{ color: "#32355D" }}
         >
           Our Pricing
-          <br /> Highlights
+          <br />
+          <span className="form-highlights-h1-style"> Highlights</span>
         </h1>
         <div
           className="w-1/5 p-8 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full"
@@ -304,7 +320,7 @@ export default function Form() {
         </div>
 
         <div
-          className="w-1/5 p-8 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full"
+          className="w-1/5 p-8 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full lg:mt-6"
           style={{
             backgroundColor: "#FEFDDE ",
             borderRadius: "24px",
@@ -348,7 +364,7 @@ export default function Form() {
         </div>
 
         <div
-          className="w-1/5 p-8 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full"
+          className="w-1/5 p-8 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full lg:mt-6"
           style={{
             backgroundColor: "#E5DAFF",
             borderRadius: "24px",
@@ -397,10 +413,11 @@ export default function Form() {
         className="py-16 gap-12 w-full flex flex-col items-center"
       >
         <h1
-          className="text-5xl font-extrabold md:text-center"
+          className="text-6xl font-extrabold md:text-center md:text-5xl"
           style={{ color: "#32355D", padding: "0 15vw" }}
         >
-          Our Affiliate Program
+          Our Affiliate
+          <span className="form-affiliate-h1-style">&nbsp;Program</span>
         </h1>
         <img
           src="./Assets/Images/form/Video.png"
@@ -464,10 +481,11 @@ export default function Form() {
         className="py-16 gap-12 w-full flex flex-col items-center"
       >
         <h1
-          className="text-5xl font-extrabold md:text-center"
+          className="text-6xl font-extrabold md:text-center md:text-5xl"
           style={{ color: "#32355D", padding: "0 15vw" }}
         >
-          Here’s all you need!
+          Here’s all{" "}
+          <span className="form-hereisallyouneed-h1-style">you need!</span>
         </h1>
 
         <div className="flex justify-around w-full items-center lg:flex-wrap md:flex-col">

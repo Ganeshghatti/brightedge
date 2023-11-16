@@ -41,8 +41,36 @@ h1 {
   // font-size: clamp(32px, 5vw, 60px) !important;
   // font-weight: 700 !important;
   line-height: 120% !important;
+  position: relative;
 }
-
+.form-numbers-h1-style {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="272" height="50" viewBox="0 0 272 50" fill="none"%3E%3Cpath d="M5.84946 5.5L136 0L266.151 5.5L272 26.5L266.151 47.5L136 50L5.84946 47.5L0 26.5L5.84946 5.5Z" fill="%23FBF55A"%3E%3C/path%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  z-index: -1;
+}
+.form-highlights-h1-style {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="272" height="50" viewBox="0 0 272 50" fill="none"%3E%3Cpath d="M5.84946 5.5L136 0L266.151 5.5L272 26.5L266.151 47.5L136 50L5.84946 47.5L0 26.5L5.84946 5.5Z" fill="%23FBF55A"%3E%3C/path%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  z-index: -1;
+}
+.form-affiliate-h1-style {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="272" height="50" viewBox="0 0 272 50" fill="none"%3E%3Cpath d="M5.84946 5.5L136 0L266.151 5.5L272 26.5L266.151 47.5L136 50L5.84946 47.5L0 26.5L5.84946 5.5Z" fill="%23FBF55A"%3E%3C/path%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  z-index: -1;
+}
+.form-hereisallyouneed-h1-style {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="272" height="50" viewBox="0 0 272 50" fill="none"%3E%3Cpath d="M5.84946 5.5L136 0L266.151 5.5L272 26.5L266.151 47.5L136 50L5.84946 47.5L0 26.5L5.84946 5.5Z" fill="%23FBF55A"%3E%3C/path%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  z-index: -1;
+}
 #form-inputs input,
 #form-inputs form div {
   background-color: white !important;
@@ -63,15 +91,15 @@ h1 {
 }
 .form-hereisallyouneed-card3 {
   border-radius: 12px;
-  border-top: 1px solid var(--Pink, #F72378);
-  border-right: 1px solid var(--Pink, #F72378);
-  border-bottom: 8px solid var(--Pink, #F72378);
-  border-left: 1px solid var(--Pink, #F72378);
+  border-top: 1px solid var(--Pink, #f72378);
+  border-right: 1px solid var(--Pink, #f72378);
+  border-bottom: 8px solid var(--Pink, #f72378);
+  border-left: 1px solid var(--Pink, #f72378);
 }
 .form-hereisallyouneed-card4 {
   border-radius: 12px;
-  border-top: 1px solid var(--Orange, #FF833F);
-  border-right: 1px solid var(--Orange, #FF833F);
-  border-bottom: 8px solid var(--Orange, #FF833F);
-  border-left: 1px solid var(--Orange, #FF833F);
+  border-top: 1px solid var(--Orange, #ff833f);
+  border-right: 1px solid var(--Orange, #ff833f);
+  border-bottom: 8px solid var(--Orange, #ff833f);
+  border-left: 1px solid var(--Orange, #ff833f);
 }
