@@ -242,7 +242,7 @@ export default function Form() {
             style={{ backgroundColor: "#0B1C39" }}
           ></div>
 
-          <div className="w-1/6 px-2 flex flex-col justify-around md:w-2/5  md:flex-col-reverse md:items-start md:mt-12">
+          <div className="w-1/6 px-2 flex flex-col justify-around md:w-2/5  md:flex-col-reverse md:justify-start md:items-center md:mt-12">
             <p
               className="text-3xl font-bold md:text-center md:text-xl"
               style={{ color: "#0B1C39" }}
