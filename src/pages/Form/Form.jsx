@@ -455,33 +455,33 @@ export default function Form() {
           <ul className="flex flex-col w-1/2 list-disc gap-4 md:w-3/4 md:mt-6">
             <li className="text-xl md:text-lg">
               <span className="font-bold" style={{ color: "#FF833F" }}>
-                Revolutionary Model:
+                Revolutionary Model:&nbsp;
               </span>
               Redefining the franchise program with a groundbreaking flexible
               approach.
             </li>
             <li className="text-xl md:text-lg">
               <span className="font-bold" style={{ color: "#FF833F" }}>
-                Zero Royalties:
+                Zero Royalties:&nbsp;
               </span>
               Keep all your hard-earned profits without paying any royalties.
             </li>
             <li className="text-xl md:text-lg">
               <span className="font-bold" style={{ color: "#FF833F" }}>
-                Franchise Freedom:
+                Franchise Freedom:&nbsp;
               </span>
               Say goodbye to franchise fees and exit fees, putting you in
               control.
             </li>
             <li className="text-xl md:text-lg">
               <span className="font-bold" style={{ color: "#FF833F" }}>
-                Simplicity Matters:
+                Simplicity Matters:&nbsp;
               </span>
               A straightforward agreement that makes business. ownership easier.
             </li>
             <li className="text-xl md:text-lg">
               <span className="font-bold" style={{ color: "#FF833F" }}>
-                Welcome to the Affiliate Program:
+                Welcome to the Affiliate Program:&nbsp;
               </span>
               A new era in franchising awaits.
             </li>
