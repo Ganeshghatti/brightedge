@@ -242,7 +242,7 @@ export default function Form() {
             style={{ backgroundColor: "#0B1C39" }}
           ></div>
 
-          <div className="w-1/6 px-2 flex flex-col justify-around md:w-2/5  md:flex-col-reverse md:items-center md:mt-12">
+          <div className="w-1/6 px-2 flex flex-col justify-around md:w-2/5  md:flex-col-reverse md:items-start md:mt-12">
             <p
               className="text-3xl font-bold md:text-center md:text-xl"
               style={{ color: "#0B1C39" }}
@@ -495,9 +495,9 @@ export default function Form() {
       >
         <h1
           className="text-6xl font-extrabold md:text-center md:text-5xl"
-          style={{ color: "#32355D", padding: "0 15vw" }}
+          style={{ color: "#32355D", padding: "0 6vw" }}
         >
-          Here’s all&nbsp;
+          Here’s all&nbsp;<br className="hidden md:block"/>
           <span className="form-hereisallyouneed-h1-style">you need!</span>
         </h1>
 
