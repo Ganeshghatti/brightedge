@@ -414,10 +414,11 @@ export default function Form() {
       >
         <h1
           className="text-6xl font-extrabold md:text-center md:text-5xl"
-          style={{ color: "#32355D", padding: "0 15vw" }}
+          style={{ color: "#32355D" }}
         >
-          Our Affiliate
-          <span className="form-affiliate-h1-style">&nbsp;Program</span>
+          Our Affiliate&nbsp;
+          <br className="hidden md:block"/>
+          <span className="form-affiliate-h1-style">Program</span>
         </h1>
         <img
           src="./Assets/Images/form/Video.png"
