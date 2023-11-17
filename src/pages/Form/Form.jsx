@@ -7,13 +7,41 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import TextField from "@mui/material/TextField";
-import { MenuItem } from "@mui/base/MenuItem";
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-} from "@nextui-org/react";
+import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+import { useTheme } from '@mui/material/styles';
+import MobileStepper from '@mui/material/MobileStepper';
+import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
+const images = [
+  {
+    label: 'San Francisco – Oakland Bay Bridge, United States',
+    imgPath:
+      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+  },
+  {
+    label: 'Bird',
+    imgPath:
+      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+  },
+  {
+    label: 'Bali, Indonesia',
+    imgPath:
+      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
+  },
+  {
+    label: 'Goč, Serbia',
+    imgPath:
+      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+  },
+];
+
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -42,7 +70,21 @@ export default function Form() {
     { label: "(+1)United States", value: "+1" },
     { label: "(+44)United Kingdom", value: "+44" },
   ];
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = images.length;
 
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleStepChange = (step) => {
+    setActiveStep(step);
+  };
   return (
     <div
       id="form"
@@ -491,19 +533,23 @@ export default function Form() {
 
       <section
         id="form-hereisallyouneed"
-        className="py-16 gap-12 w-full flex flex-col items-center"
+        className="py-16 gap-12 w-11/12 flex flex-col items-center"
       >
         <h1
           className="text-6xl font-extrabold md:text-center md:text-5xl"
           style={{ color: "#32355D", padding: "0 6vw" }}
         >
-          Here’s all&nbsp;<br className="hidden md:block"/>
+          Here’s all&nbsp;
+          <br className="hidden md:block" />
           <span className="form-hereisallyouneed-h1-style">you need!</span>
         </h1>
 
         <div className="flex justify-around w-full items-center lg:flex-wrap md:flex-col">
-          <div className="form-hereisallyouneed-card1 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:mt-6">
-            <p style={{ color: "#7F46FF" }} className="text-4xl font-bold">
+          <div className="form-hereisallyouneed-card1 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 md:h-48 lg:mt-6 md:mt-6">
+            <p
+              style={{ color: "#7F46FF" }}
+              className="text-4xl font-bold md:text-2xl"
+            >
               Investment:
             </p>
             <svg
@@ -553,14 +599,17 @@ export default function Form() {
                 stroke-linejoin="round"
               />
             </svg>
-            <p className="text-2xl font-normal">
+            <p className="text-2xl font-normal md:text-xl">
               ₹4 Lakhs - ₹10
               <br /> Lakhs
             </p>
           </div>
 
-          <div className="form-hereisallyouneed-card2 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:mt-6">
-            <p style={{ color: "#1682FB" }} className="text-4xl font-bold">
+          <div className="form-hereisallyouneed-card2 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:h-48 md:mt-6">
+            <p
+              style={{ color: "#1682FB" }}
+              className="text-4xl font-bold md:text-2xl"
+            >
               Space:
             </p>
             <svg
@@ -587,14 +636,17 @@ export default function Form() {
                 stroke-linejoin="round"
               />
             </svg>
-            <p className="text-2xl font-normal">
+            <p className="text-2xl font-normal md:text-xl">
               About 1200
               <br /> Sq.ft and above
             </p>
           </div>
 
-          <div className="form-hereisallyouneed-card3 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:mt-6">
-            <p style={{ color: "#F72378" }} className="text-4xl font-bold">
+          <div className="form-hereisallyouneed-card3 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:mt-6 md:h-48">
+            <p
+              style={{ color: "#F72378" }}
+              className="text-4xl font-bold md:text-2xl"
+            >
               Passion:
             </p>
             <svg
@@ -612,13 +664,16 @@ export default function Form() {
                 stroke-linejoin="round"
               />
             </svg>
-            <p className="text-2xl font-normal">
+            <p className="text-2xl font-normal md:text-xl">
               For early childhood
               <br /> education
             </p>
           </div>
-          <div className="form-hereisallyouneed-card4 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:mt-6">
-            <p style={{ color: "#7F46FF" }} className="text-4xl font-bold">
+          <div className="form-hereisallyouneed-card4 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:h-48 md:mt-6">
+            <p
+              style={{ color: "#7F46FF" }}
+              className="text-4xl font-bold md:text-2xl"
+            >
               Focus:
             </p>
             <svg
@@ -653,12 +708,117 @@ export default function Form() {
                 stroke-linejoin="round"
               />
             </svg>
-            <p className="text-2xl font-normal">
+            <p className="text-2xl font-normal md:text-xl">
               For
               <br /> entrepreneurship
             </p>
           </div>
         </div>
+      </section>
+
+      <section
+        id="top5differentiator"
+        className="flex flex-col items-center gap-8 w-full py-16 "
+      >
+        <div className="flex justify-around w-11/12  md:flex-col-reverse md:gap-4">
+          <div className="flex flex-col justify-center w-1/2 px-8 md:w-full md:items-center">
+            <h1
+              className="text-6xl font-extrabold md:text-center md:text-5xl"
+              style={{ color: "#1682FB" }}
+            >
+              Parent’s Choice:
+            </h1>
+            <p className="text-3xl font-bold">Bright Start... Right Start!</p>
+          </div>
+          <div className="w-1/2 flex justify-end md:w-full md:justify-center">
+            <img
+              src="./Assets/Images/form/BrightKidsmont.png"
+              alt=""
+              className="md:w-1/2"
+            />
+          </div>
+        </div>
+        <div className="w-full flex justify-start">
+          <img
+            src="./Assets/Images/form/Video2.png"
+            className="w-11/12"
+            alt=""
+          />
+        </div>
+        <p className="text-center text-4xl font-bold md:text-left">
+          Unbeatable Top 5 Bright Kid Differentiators!
+        </p>
+        <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
+          <Paper
+            square
+            elevation={0}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              height: 50,
+              pl: 2,
+              bgcolor: "background.default",
+            }}
+          >
+            <Typography>{images[activeStep].label}</Typography>
+          </Paper>
+          <AutoPlaySwipeableViews
+            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+            index={activeStep}
+            onChangeIndex={handleStepChange}
+            enableMouseEvents
+          >
+            {images.map((step, index) => (
+              <div key={step.label}>
+                {Math.abs(activeStep - index) <= 2 ? (
+                  <Box
+                    component="img"
+                    sx={{
+                      height: 255,
+                      display: "block",
+                      maxWidth: 400,
+                      overflow: "hidden",
+                      width: "100%",
+                    }}
+                    src={step.imgPath}
+                    alt={step.label}
+                  />
+                ) : null}
+              </div>
+            ))}
+          </AutoPlaySwipeableViews>
+          <MobileStepper
+            steps={maxSteps}
+            position="static"
+            activeStep={activeStep}
+            nextButton={
+              <Button
+                size="small"
+                onClick={handleNext}
+                disabled={activeStep === maxSteps - 1}
+              >
+                {theme.direction === "rtl" ? (
+                  <KeyboardArrowLeft />
+                ) : (
+                  <KeyboardArrowRight />
+                )}
+              </Button>
+            }
+            backButton={
+              <Button
+                size="small"
+                onClick={handleBack}
+                disabled={activeStep === 0}
+              >
+                {theme.direction === "rtl" ? (
+                  <KeyboardArrowRight />
+                ) : (
+                  <KeyboardArrowLeft />
+                )}
+              </Button>
+            }
+          />
+        </Box>
       </section>
     </div>
   );
