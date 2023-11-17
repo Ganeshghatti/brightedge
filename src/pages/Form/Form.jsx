@@ -937,7 +937,10 @@ export default function Form() {
             className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
-            <p className="text-2xl font-bold md:text-xl" style={{ color: "#7F46FF" }}>
+            <p
+              className="text-2xl font-bold md:text-xl"
+              style={{ color: "#7F46FF" }}
+            >
               1. Services:
             </p>
             <p className="text-xl md:text-lg">
@@ -950,7 +953,10 @@ export default function Form() {
             className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
-            <p className="text-2xl font-bold md:text-xl" style={{ color: "#7F46FF" }}>
+            <p
+              className="text-2xl font-bold md:text-xl"
+              style={{ color: "#7F46FF" }}
+            >
               2. Best Materials Cost:
             </p>
             <p className="text-xl md:text-lg">
@@ -964,7 +970,10 @@ export default function Form() {
             className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
-            <p className="text-2xl font-bold md:text-xl" style={{ color: "#7F46FF" }}>
+            <p
+              className="text-2xl font-bold md:text-xl"
+              style={{ color: "#7F46FF" }}
+            >
               3. Digital Assets:
             </p>
             <p className="text-xl md:text-lg">
@@ -977,7 +986,10 @@ export default function Form() {
             className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
-            <p className="text-2xl font-bold md:text-xl" style={{ color: "#7F46FF" }}>
+            <p
+              className="text-2xl font-bold md:text-xl"
+              style={{ color: "#7F46FF" }}
+            >
               4. Additional Revenue:
             </p>
             <p className="text-xl md:text-lg">
@@ -991,7 +1003,10 @@ export default function Form() {
             className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
-            <p className="text-2xl font-bold md:text-xl" style={{ color: "#7F46FF" }}>
+            <p
+              className="text-2xl font-bold md:text-xl"
+              style={{ color: "#7F46FF" }}
+            >
               5. Expert Mentoring:
             </p>
             <p className="text-xl md:text-lg">
@@ -1050,7 +1065,10 @@ export default function Form() {
         >
           Our Awards &<span className="form-awards-h1-style"> Accolades</span>
         </h1>
-        <p className="text-xl w-3/4 md:w-11/12 text-center" style={{ color: "#0B1C39" }}>
+        <p
+          className="text-xl w-3/4 md:w-11/12 text-center"
+          style={{ color: "#0B1C39" }}
+        >
           Celebrating
           <span style={{ color: "#FF833F" }}>16+ years of excellence</span> and
           innovation, we are thrilled to share our remarkable journey of success
@@ -1075,6 +1093,70 @@ export default function Form() {
           className="hidden md:block w-11/12"
           alt=""
         />
+      </section>
+
+      <section
+        id="form-pathwaytosuccess"
+        className="flex flex-col items-center gap-16 w-full py-12"
+      >
+        <h1
+          className="text-6xl font-extrabold text-center md:text-5xl px-1/2"
+          style={{ color: "#32355D" }}
+        >
+          Pathway to
+          <span className="form-pathwaytosuccess-h1-style"> Success</span>
+        </h1>
+        <img
+          src="./Assets/Images/form/Roadmappc.png"
+          alt=""
+          className="w-3/4 md:hidden"
+        />
+        <img
+          src="./Assets/Images/form/Roadmapphone.png"
+          alt=""
+          className="w-11/12 hidden md:block"
+        />
+        <Button
+          radius="full"
+          className="bg-gradient-to-tr text-white shadow-lg px-24 py-9 text-lg font-bold md:hidden"
+          style={{ backgroundColor: "#F72378" }}
+        >
+          <div>
+            Visit our full Website:
+            <br />
+            <a href="http://www.brightkidmont.com">www.brightkidmont.com</a>
+          </div>
+        </Button>
+        <img
+          src="./Assets/Images/form/Ellipse.png"
+          alt=""
+          className="w-screen md:hidden"
+        />
+        <img
+          src="./Assets/Images/form/Ellipsephone.png"
+          alt=""
+          className="w-screen hidden md:block"
+        />
+
+        <div>
+          <img src="./Assets/Images/logo.png" alt="" />
+          <div className="flex gap-6 md:flex-col">
+            <a
+              href="mailto:info@brightkidmont.com"
+              className="text-xl"
+              style={{ color: "#32355D" }}
+            >
+              info@brightkidmont.com
+            </a>
+            <a
+              href="tel:+919342533377"
+              className="text-xl"
+              style={{ color: "#32355D" }}
+            >
+              +91 93425 33377
+            </a>
+          </div>
+        </div>
       </section>
     </div>
   );
