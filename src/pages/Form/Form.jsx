@@ -7,41 +7,50 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import TextField from "@mui/material/TextField";
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import { useTheme } from '@mui/material/styles';
-import MobileStepper from '@mui/material/MobileStepper';
-import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import SwipeableViews from "react-swipeable-views";
+import { autoPlay } from "react-swipeable-views-utils";
+import { useTheme } from "@mui/material/styles";
+import MobileStepper from "@mui/material/MobileStepper";
+import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
-    imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+    title: "Best Student Hamper: ",
+    imgPath: "./Assets/Images/form/image1carousel.png",
+    description:
+      "Amaze parents and enrich kids. We offer a world-class Smart book series, complemented by an anytime-anywhere Teacher, a Craft Kit, and a Multiple Intelligence portal for kids.",
   },
   {
-    label: 'Bird',
-    imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+    title: "Best Student Hamper: ",
+    imgPath: "./Assets/Images/form/image2carousel.png",
+    description:
+      "Amaze parents and enrich kids. We offer a world-class Smart book series, complemented by an anytime-anywhere Teacher, a Craft Kit, and a Multiple Intelligence portal for kids.",
   },
   {
-    label: 'Bali, Indonesia',
-    imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
+    title: "Best Student Hamper: ",
+    imgPath: "./Assets/Images/form/image3carousel.png",
+    description:
+      "Amaze parents and enrich kids. We offer a world-class Smart book series, complemented by an anytime-anywhere Teacher, a Craft Kit, and a Multiple Intelligence portal for kids.",
   },
   {
-    label: 'Goč, Serbia',
-    imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+    title: "Best Student Hamper: ",
+    imgPath: "./Assets/Images/form/image4carousel.png",
+    description:
+      "Amaze parents and enrich kids. We offer a world-class Smart book series, complemented by an anytime-anywhere Teacher, a Craft Kit, and a Multiple Intelligence portal for kids.",
+  },
+  {
+    title: "Best Student Hamper: ",
+    imgPath: "./Assets/Images/form/image5carousel.png",
+    description:
+      "Amaze parents and enrich kids. We offer a world-class Smart book series, complemented by an anytime-anywhere Teacher, a Craft Kit, and a Multiple Intelligence portal for kids.",
   },
 ];
-
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -748,20 +757,7 @@ export default function Form() {
         <p className="text-center text-4xl font-bold md:text-left">
           Unbeatable Top 5 Bright Kid Differentiators!
         </p>
-        <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
-          <Paper
-            square
-            elevation={0}
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              height: 50,
-              pl: 2,
-              bgcolor: "background.default",
-            }}
-          >
-            <Typography>{images[activeStep].label}</Typography>
-          </Paper>
+        <Box>
           <AutoPlaySwipeableViews
             axis={theme.direction === "rtl" ? "x-reverse" : "x"}
             index={activeStep}
@@ -771,18 +767,15 @@ export default function Form() {
             {images.map((step, index) => (
               <div key={step.label}>
                 {Math.abs(activeStep - index) <= 2 ? (
-                  <Box
-                    component="img"
-                    sx={{
-                      height: 255,
-                      display: "block",
-                      maxWidth: 400,
-                      overflow: "hidden",
-                      width: "100%",
-                    }}
-                    src={step.imgPath}
-                    alt={step.label}
-                  />
+                  <Box className="flex w-full items-start p-12">
+                    <div className="w-1/2 flex justify-center items-center">
+                      <img src={step.imgPath} className="w-3/4 rounded-lg" />
+                    </div>
+                    <div className="w-1/2 flex flex-col justify-start">
+                      <p className="font-bold text-2xl" style={{color:"#1682FB"}}>{step.title} </p>
+                      <p className="text-xl font-normal" style={{color:"#0B1C39"}}>{step.description}</p>
+                    </div>
+                  </Box>
                 ) : null}
               </div>
             ))}
