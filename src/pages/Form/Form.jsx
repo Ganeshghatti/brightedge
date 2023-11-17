@@ -9,7 +9,7 @@ import "@fontsource/roboto/700.css";
 import TextField from "@mui/material/TextField";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import SwipeableViews from "react-swipeable-views";
+// import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
@@ -17,7 +17,7 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+// const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
@@ -726,7 +726,7 @@ export default function Form() {
       </section>
 
       {/* <section
-        id="top5differentiator"
+        id="form-top5differentiator"
         className="flex flex-col items-center gap-8 w-full py-16 "
       >
         <div className="flex justify-around w-11/12  md:flex-col-reverse md:gap-4">
@@ -917,8 +917,19 @@ export default function Form() {
         </Box>
       </section> */}
 
-      <section id="flexible">
-
+      <section
+        id="form-flexible"
+        className="flex flex-col items-center py-16 gap-6"
+      >
+        <img src="./Assets/Images/form/BEMlogo.png" alt="" />
+        <h1
+          className="text-6xl font-extrabold text-center md:text-5xl px-1/2"
+          style={{ color: "#32355D"}}
+        >
+          New Preschool Franchise has never been Here’s all&nbsp;
+          <span className="form-flexible-h1-style"> so flexible!</span>
+        </h1>
+        <p className="text-3xl md:text-2xl font-bold" style={{color:"#7F46FF"}}>Your Preschool: Your Budget: Your Way</p>
       </section>
     </div>
   );

@@ -61,6 +61,13 @@ h1 {
   background-position: bottom;
   z-index: -1;
 }
+.form-flexible-h1-style {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="272" height="50" viewBox="0 0 272 50" fill="none"%3E%3Cpath d="M5.84946 5.5L136 0L266.151 5.5L272 26.5L266.151 47.5L136 50L5.84946 47.5L0 26.5L5.84946 5.5Z" fill="%23FBF55A"%3E%3C/path%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  z-index: -1;
+}
 @media (min-width: 867px) {
   #form-affiliate h1::before {
     content: url("../../../public/Assets/Images/form/icon_8.png");
@@ -128,7 +135,12 @@ h1 {
   border-bottom: 8px solid var(--Orange, #ff833f);
   border-left: 1px solid var(--Orange, #ff833f);
 }
-
-.MuiMobileStepper-dots{
+#form-flexible h1 {
+  padding: 0 20vw;
+  @media (max-width: 867px) {
+    padding: 0 10vw;
+  }
+}
+.MuiMobileStepper-dots {
   display: none !important;
 }
