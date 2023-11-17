@@ -924,12 +924,31 @@ export default function Form() {
         <img src="./Assets/Images/form/BEMlogo.png" alt="" />
         <h1
           className="text-6xl font-extrabold text-center md:text-5xl px-1/2"
-          style={{ color: "#32355D"}}
+          style={{ color: "#32355D" }}
         >
           New Preschool Franchise has never been Here’s all&nbsp;
           <span className="form-flexible-h1-style"> so flexible!</span>
         </h1>
-        <p className="text-3xl md:text-2xl font-bold" style={{color:"#7F46FF"}}>Your Preschool: Your Budget: Your Way</p>
+        <p
+          className="text-3xl md:text-2xl font-bold"
+          style={{ color: "#7F46FF" }}
+        >
+          Your Preschool: Your Budget: Your Way
+        </p>
+        <div className="flex flex-wrap justify-center w-full">
+          <div
+            className="w-1/3 flex flex-col items-start justify-around h-40 pl-8 pr-16 rounded-lg"
+            style={{ border: "1px solid #7F46FF" }}
+          >
+            <p className="text-2xl font-bold" style={{ color: "#7F46FF" }}>
+              1. Services:
+            </p>
+            <p className="text-xl">
+              Enjoy the benefits of our highly affordable and fixed nominal
+              service fees -<b> No Royalty, No Franchise Fees.</b>
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   );
