@@ -9,15 +9,12 @@ import "@fontsource/roboto/700.css";
 import TextField from "@mui/material/TextField";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-// import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-
-// const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
@@ -930,25 +927,154 @@ export default function Form() {
           <span className="form-flexible-h1-style"> so flexible!</span>
         </h1>
         <p
-          className="text-3xl md:text-2xl font-bold"
+          className="text-3xl md:text-2xl font-bold text-center w-3/4"
           style={{ color: "#7F46FF" }}
         >
           Your Preschool: Your Budget: Your Way
         </p>
-        <div className="flex flex-wrap justify-center w-full">
+        <div className="flex flex-wrap justify-center w-full gap-8 md:flex-col md:items-center">
           <div
-            className="w-1/3 flex flex-col items-start justify-around h-40 pl-8 pr-16 rounded-lg"
+            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
-            <p className="text-2xl font-bold" style={{ color: "#7F46FF" }}>
+            <p className="text-2xl font-bold md:text-xl" style={{ color: "#7F46FF" }}>
               1. Services:
             </p>
-            <p className="text-xl">
+            <p className="text-xl md:text-lg">
               Enjoy the benefits of our highly affordable and fixed nominal
               service fees -<b> No Royalty, No Franchise Fees.</b>
             </p>
           </div>
+
+          <div
+            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            style={{ border: "1px solid #7F46FF" }}
+          >
+            <p className="text-2xl font-bold md:text-xl" style={{ color: "#7F46FF" }}>
+              2. Best Materials Cost:
+            </p>
+            <p className="text-xl md:text-lg">
+              As a leading manufacturer of high-quality Montessori items and
+              <b>preschool furniture</b>, we provide all your preschool needs at
+              the best cost.
+            </p>
+          </div>
+
+          <div
+            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            style={{ border: "1px solid #7F46FF" }}
+          >
+            <p className="text-2xl font-bold md:text-xl" style={{ color: "#7F46FF" }}>
+              3. Digital Assets:
+            </p>
+            <p className="text-xl md:text-lg">
+              Our <b>award-winning digital assets</b> are truly best-in-class,
+              offering unmatched support for your preschool's growth.
+            </p>
+          </div>
+
+          <div
+            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            style={{ border: "1px solid #7F46FF" }}
+          >
+            <p className="text-2xl font-bold md:text-xl" style={{ color: "#7F46FF" }}>
+              4. Additional Revenue:
+            </p>
+            <p className="text-xl md:text-lg">
+              We share the earnings from <b>Montessori Teachers Training</b> and
+              Vedic Maths courses conducted at your center, contributing to your
+              financial success.
+            </p>
+          </div>
+
+          <div
+            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            style={{ border: "1px solid #7F46FF" }}
+          >
+            <p className="text-2xl font-bold md:text-xl" style={{ color: "#7F46FF" }}>
+              5. Expert Mentoring:
+            </p>
+            <p className="text-xl md:text-lg">
+              Benefit from the guidance and expertise of our highly experienced
+              <b>leadership team.</b>
+            </p>
+          </div>
         </div>
+      </section>
+
+      <section
+        id="form-addmissiongurantee"
+        className="flex flex-col items-center gap-2 w-full py-12"
+      >
+        <p
+          className="text-center text-3xl font-bold"
+          style={{ color: "rgba(50, 53, 93, 0.5)" }}
+        >
+          Check our
+        </p>
+        <h1
+          className="text-6xl font-extrabold text-center md:text-5xl px-1/2 "
+          style={{ color: "#32355D" }}
+        >
+          Comprehensive
+          <br /> Admission Guar
+          <span className="form-addmissiongurantee-h1-style">antee Plan</span>
+        </h1>
+        <div className="w-4/5 flex items-center justify-around py-12 md:w-full">
+          <img
+            src="./Assets/Images/form/Illu.png"
+            alt=""
+            className="md:hidden"
+          />
+          <p
+            className="text-left md:text-center w-3/5 text-xl md:w-11/12"
+            style={{ color: "#0B1C39" }}
+          >
+            We don't just stop at helping you build a top-notch preschool. We
+            take it a step further with our Comprehensive Admission Guarantee
+            Plan. Our commitment to your
+            <span style={{ color: "#7F46FF" }}> success is unwavering</span>,
+            and our <span style={{ color: "#7F46FF" }}>marketing efforts</span>
+            under this plan are second to none.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="form-awards"
+        className="flex flex-col items-center gap-8 w-full py-12"
+      >
+        <h1
+          className="text-6xl font-extrabold text-center md:text-5xl px-1/2"
+          style={{ color: "#32355D" }}
+        >
+          Our Awards &<span className="form-awards-h1-style"> Accolades</span>
+        </h1>
+        <p className="text-xl w-3/4 md:w-11/12 text-center" style={{ color: "#0B1C39" }}>
+          Celebrating
+          <span style={{ color: "#FF833F" }}>16+ years of excellence</span> and
+          innovation, we are thrilled to share our remarkable journey of success
+          and customer validation! With numerous prestigious awards in
+          recognition of our cutting-edge digital solutions, curriculum, and
+          teachers' training, we take immense pride in empowering over
+          <span style={{ color: "#FF833F" }}>35,000 bright young minds</span>
+          across the country. Join the growing community of satisfied preschools
+          who have witnessed the transformative impact of our tailored
+          <span style={{ color: "#FF833F" }}>curriculum</span> and
+          <span style={{ color: "#FF833F" }}>
+            preschool learning materials!
+          </span>
+        </p>
+        <img
+          src="./Assets/Images/form/Certificates.png"
+          className="block md:hidden w-11/12"
+          alt=""
+        />
+        <img
+          src="./Assets/Images/form/Certificatesmobile.png"
+          className="hidden md:block w-11/12"
+          alt=""
+        />
       </section>
     </div>
   );
