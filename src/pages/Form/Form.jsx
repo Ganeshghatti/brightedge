@@ -9,7 +9,7 @@ import "@fontsource/roboto/700.css";
 import TextField from "@mui/material/TextField";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import { autoPlay } from "react-swipeable-views-utils";
+// import { autoPlay } from "react-swipeable-views-utils";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
 import Paper from "@mui/material/Paper";
