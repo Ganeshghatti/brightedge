@@ -767,50 +767,153 @@ export default function Form() {
             {images.map((step, index) => (
               <div key={step.label}>
                 {Math.abs(activeStep - index) <= 2 ? (
-                  <Box className="flex w-full items-start p-12">
-                    <div className="w-1/2 flex justify-center items-center">
-                      <img src={step.imgPath} className="w-3/4 rounded-lg" />
+                  <Box className="flex w-11/12 items-start p-12 m-auto md:flex-col">
+                    <div className="w-1/2 flex justify-center items-center md:w-11/12">
+                      <img src={step.imgPath} className="w-2/3  rounded-3xl" />
                     </div>
-                    <div className="w-1/2 flex flex-col justify-start">
-                      <p className="font-bold text-2xl" style={{color:"#1682FB"}}>{step.title} </p>
-                      <p className="text-xl font-normal" style={{color:"#0B1C39"}}>{step.description}</p>
+                    <div className="w-1/2 flex flex-col justify-between gap-36 px-6 md:px-0 xl:gap-24 lg:gap-16 md:w-11/12">
+                      <div>
+                        <p
+                          className="font-bold text-3xl"
+                          style={{ color: "#1682FB" }}
+                        >
+                          {index + 1}.{step.title} 
+                        </p>
+                        <p
+                          className="text-2xl font-normal"
+                          style={{ color: "#0B1C39" }}
+                        >
+                          {step.description}
+                        </p>
+                      </div>
+                      <MobileStepper
+                        style={{ alignSelf: "end" }}
+                        steps={maxSteps}
+                        position="static"
+                        className="w-32"
+                        activeStep={activeStep}
+                        nextButton={
+                          <span
+                            size="small"
+                            onClick={handleNext}
+                            disabled={activeStep === maxSteps - 1}
+                          >
+                            {theme.direction === "rtl" ? (
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 28 28"
+                                fill="none"
+                              >
+                                <g opacity="0.5">
+                                  <circle
+                                    cx="13.738"
+                                    cy="13.738"
+                                    r="13.238"
+                                    transform="matrix(-1 0 0 1 27.5234 0.523926)"
+                                    fill="white"
+                                    stroke="#0B1C39"
+                                  />
+                                  <path
+                                    d="M14.873 19.2295L10.0527 14.3955L14.873 9.56143"
+                                    stroke="#0B1C39"
+                                    stroke-width="1.60679"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </g>
+                              </svg>
+                            ) : (
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 28 28"
+                                fill="none"
+                              >
+                                <circle
+                                  cx="14.2615"
+                                  cy="14.262"
+                                  r="13.738"
+                                  fill="#1682FB"
+                                />
+                                <path
+                                  d="M13.1738 19.2295L17.9942 14.3955L13.1738 9.56143"
+                                  stroke="white"
+                                  stroke-width="1.60679"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            )}
+                          </span>
+                        }
+                        backButton={
+                          <span
+                            size="small"
+                            onClick={handleBack}
+                            disabled={activeStep === 0}
+                          >
+                            {theme.direction === "rtl" ? (
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 28 28"
+                                fill="none"
+                              >
+                                <circle
+                                  cx="14.2615"
+                                  cy="14.262"
+                                  r="13.738"
+                                  fill="#1682FB"
+                                />
+                                <path
+                                  d="M13.1738 19.2295L17.9942 14.3955L13.1738 9.56143"
+                                  stroke="white"
+                                  stroke-width="1.60679"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            ) : (
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 28 28"
+                                fill="none"
+                              >
+                                <g opacity="0.5">
+                                  <circle
+                                    cx="13.738"
+                                    cy="13.738"
+                                    r="13.238"
+                                    transform="matrix(-1 0 0 1 27.5234 0.523926)"
+                                    fill="white"
+                                    stroke="#0B1C39"
+                                  />
+                                  <path
+                                    d="M14.873 19.2295L10.0527 14.3955L14.873 9.56143"
+                                    stroke="#0B1C39"
+                                    stroke-width="1.60679"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </g>
+                              </svg>
+                            )}
+                          </span>
+                        }
+                        dotStyle={{ display: "none" }}
+                      />
                     </div>
                   </Box>
                 ) : null}
               </div>
             ))}
           </AutoPlaySwipeableViews>
-          <MobileStepper
-            steps={maxSteps}
-            position="static"
-            activeStep={activeStep}
-            nextButton={
-              <Button
-                size="small"
-                onClick={handleNext}
-                disabled={activeStep === maxSteps - 1}
-              >
-                {theme.direction === "rtl" ? (
-                  <KeyboardArrowLeft />
-                ) : (
-                  <KeyboardArrowRight />
-                )}
-              </Button>
-            }
-            backButton={
-              <Button
-                size="small"
-                onClick={handleBack}
-                disabled={activeStep === 0}
-              >
-                {theme.direction === "rtl" ? (
-                  <KeyboardArrowRight />
-                ) : (
-                  <KeyboardArrowLeft />
-                )}
-              </Button>
-            }
-          />
         </Box>
       </section>
     </div>
