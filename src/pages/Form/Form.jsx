@@ -725,7 +725,7 @@ export default function Form() {
         </div>
       </section>
 
-      <section
+      {/* <section
         id="top5differentiator"
         className="flex flex-col items-center gap-8 w-full py-16 "
       >
@@ -915,6 +915,10 @@ export default function Form() {
             ))}
           </AutoPlaySwipeableViews>
         </Box>
+      </section> */}
+
+      <section id="flexible">
+
       </section>
     </div>
   );
