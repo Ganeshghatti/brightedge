@@ -981,7 +981,7 @@ export default function Form() {
 
       <section
         id="form-addmissiongurantee"
-        className="flex flex-col items-center gap-2 w-full py-12"
+        className="flex flex-col items-center gap-2 w-full py-12 md:w-11/12"
       >
         <p
           className="text-center text-3xl font-bold"
@@ -989,8 +989,9 @@ export default function Form() {
         >
           Check our
         </p>
+        
         <h1
-          className="text-6xl font-extrabold text-center md:text-5xl px-1/2 "
+          className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
         >
           Comprehensive
