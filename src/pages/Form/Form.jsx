@@ -15,6 +15,9 @@ import MobileStepper from "@mui/material/MobileStepper";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import FormCarousel from "./FormCarousel";
 
 const images = [
   {
@@ -49,6 +52,23 @@ const images = [
   },
 ];
 
+const carousel = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+    slidesToSlide: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+    slidesToSlide: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    slidesToSlide: 1,
+  },
+};
 export default function Form() {
   const [formData, setFormData] = useState({
     name: "",
@@ -722,7 +742,7 @@ export default function Form() {
         </div>
       </section>
 
-      {/* <section
+      <section
         id="form-top5differentiator"
         className="flex flex-col items-center gap-8 w-full py-16 "
       >
@@ -754,165 +774,42 @@ export default function Form() {
         <p className="text-center text-4xl font-bold md:text-left">
           Unbeatable Top 5 Bright Kid Differentiators!
         </p>
-        <Box>
-          <AutoPlaySwipeableViews
-            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-            index={activeStep}
-            onChangeIndex={handleStepChange}
-            enableMouseEvents
+        <FormCarousel />
+        <div>
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            showDots={false}
+            responsive={carousel}
+            ssr={true}
+            infinite={true}
+            autoPlay={true}
+            customTransition="all 5"
+            transitionDuration={500}
+            arrows={false}
+            containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            dotListClass="custom-dot-list-style"
+            focusOnSelect={false}
           >
-            {images.map((step, index) => (
-              <div key={step.label}>
-                {Math.abs(activeStep - index) <= 2 ? (
-                  <Box className="flex w-11/12 items-start p-12 m-auto md:flex-col">
-                    <div className="w-1/2 flex justify-center items-center md:w-11/12">
-                      <img src={step.imgPath} className="w-2/3  rounded-3xl" />
-                    </div>
-                    <div className="w-1/2 flex flex-col justify-between gap-36 px-6 md:px-0 xl:gap-24 lg:gap-16 md:w-11/12">
-                      <div>
-                        <p
-                          className="font-bold text-3xl"
-                          style={{ color: "#1682FB" }}
-                        >
-                          {index + 1}.{step.title} 
-                        </p>
-                        <p
-                          className="text-2xl font-normal"
-                          style={{ color: "#0B1C39" }}
-                        >
-                          {step.description}
-                        </p>
-                      </div>
-                      <MobileStepper
-                        style={{ alignSelf: "end" }}
-                        steps={maxSteps}
-                        position="static"
-                        className="w-32"
-                        activeStep={activeStep}
-                        nextButton={
-                          <span
-                            size="small"
-                            onClick={handleNext}
-                            disabled={activeStep === maxSteps - 1}
-                          >
-                            {theme.direction === "rtl" ? (
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="28"
-                                height="28"
-                                viewBox="0 0 28 28"
-                                fill="none"
-                              >
-                                <g opacity="0.5">
-                                  <circle
-                                    cx="13.738"
-                                    cy="13.738"
-                                    r="13.238"
-                                    transform="matrix(-1 0 0 1 27.5234 0.523926)"
-                                    fill="white"
-                                    stroke="#0B1C39"
-                                  />
-                                  <path
-                                    d="M14.873 19.2295L10.0527 14.3955L14.873 9.56143"
-                                    stroke="#0B1C39"
-                                    stroke-width="1.60679"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                </g>
-                              </svg>
-                            ) : (
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="28"
-                                height="28"
-                                viewBox="0 0 28 28"
-                                fill="none"
-                              >
-                                <circle
-                                  cx="14.2615"
-                                  cy="14.262"
-                                  r="13.738"
-                                  fill="#1682FB"
-                                />
-                                <path
-                                  d="M13.1738 19.2295L17.9942 14.3955L13.1738 9.56143"
-                                  stroke="white"
-                                  stroke-width="1.60679"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </svg>
-                            )}
-                          </span>
-                        }
-                        backButton={
-                          <span
-                            size="small"
-                            onClick={handleBack}
-                            disabled={activeStep === 0}
-                          >
-                            {theme.direction === "rtl" ? (
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="28"
-                                height="28"
-                                viewBox="0 0 28 28"
-                                fill="none"
-                              >
-                                <circle
-                                  cx="14.2615"
-                                  cy="14.262"
-                                  r="13.738"
-                                  fill="#1682FB"
-                                />
-                                <path
-                                  d="M13.1738 19.2295L17.9942 14.3955L13.1738 9.56143"
-                                  stroke="white"
-                                  stroke-width="1.60679"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </svg>
-                            ) : (
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="28"
-                                height="28"
-                                viewBox="0 0 28 28"
-                                fill="none"
-                              >
-                                <g opacity="0.5">
-                                  <circle
-                                    cx="13.738"
-                                    cy="13.738"
-                                    r="13.238"
-                                    transform="matrix(-1 0 0 1 27.5234 0.523926)"
-                                    fill="white"
-                                    stroke="#0B1C39"
-                                  />
-                                  <path
-                                    d="M14.873 19.2295L10.0527 14.3955L14.873 9.56143"
-                                    stroke="#0B1C39"
-                                    stroke-width="1.60679"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                </g>
-                              </svg>
-                            )}
-                          </span>
-                        }
-                        dotStyle={{ display: "none" }}
-                      />
-                    </div>
-                  </Box>
-                ) : null}
-              </div>
-            ))}
-          </AutoPlaySwipeableViews>
-        </Box>
-      </section> */}
+            <img
+              src="./Assets/Images/form/Video2.png"
+              className="w-11/12"
+              alt=""
+            />
+            <img
+              src="./Assets/Images/form/Video2.png"
+              className="w-11/12"
+              alt=""
+            />{" "}
+            <img
+              src="./Assets/Images/form/Video2.png"
+              className="w-11/12"
+              alt=""
+            />
+          </Carousel>
+        </div>
+      </section>
 
       <section
         id="form-flexible"
