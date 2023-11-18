@@ -124,7 +124,7 @@ export default function Form() {
           style={{ padding: "0 6vw" }}
         >
           <h1
-            className="text-6xl font-extrabold lg:text-5xl md:text-5xl"
+            className="text-6xl font-extrabold lg:text-5xl md:text-4xl"
             style={{ color: "#32355D" }}
           >
             Start your own
@@ -246,7 +246,7 @@ export default function Form() {
         className="w-full flex flex-col items-center justify-center gap-16 py-16 px-12 "
       >
         <h1
-          className="text-6xl font-extrabold md:text-center md:text-5xl"
+          className="text-6xl font-extrabold md:text-center md:text-4xl"
           style={{ color: "#32355D", padding: "0 15vw" }}
         >
           Endurance<span className="form-numbers-h1-style"> & Success</span>
@@ -341,7 +341,7 @@ export default function Form() {
           alt=""
         />
         <h1
-          className="text-6xl font-extrabold w-1/5 md:text-center lg:w-2/5 md:w-full md:text-5xl"
+          className="text-6xl font-extrabold w-1/5 md:text-center lg:w-2/5 md:w-full md:text-4xl"
           style={{ color: "#32355D" }}
         >
           Our Pricing
@@ -484,7 +484,7 @@ export default function Form() {
         className="py-16 gap-12 w-full flex flex-col items-center"
       >
         <h1
-          className="text-6xl font-extrabold md:text-center md:text-5xl"
+          className="text-6xl font-extrabold md:text-center md:text-4xl"
           style={{ color: "#32355D" }}
         >
           Our Affiliate&nbsp;
@@ -560,7 +560,7 @@ export default function Form() {
         className="py-16 gap-12 w-11/12 flex flex-col items-center"
       >
         <h1
-          className="text-6xl font-extrabold md:text-center md:text-5xl"
+          className="text-6xl font-extrabold md:text-center md:text-4xl"
           style={{ color: "#32355D", padding: "0 6vw" }}
         >
           Here’s all&nbsp;
@@ -747,12 +747,14 @@ export default function Form() {
         <div className="flex justify-around w-11/12  md:flex-col-reverse md:gap-4">
           <div className="flex flex-col justify-center w-1/2 px-8 md:w-full md:items-center">
             <h1
-              className="text-6xl font-extrabold md:text-center md:text-5xl"
+              className="text-6xl font-extrabold md:text-center md:text-4xl"
               style={{ color: "#1682FB" }}
             >
               Parent’s Choice:
             </h1>
-            <p className="text-3xl font-bold">Bright Start... Right Start!</p>
+            <p className="text-3xl font-bold md:text-center">
+              Bright Start... Right Start!
+            </p>
           </div>
           <div className="w-1/2 flex justify-end md:w-full md:justify-center">
             <img
@@ -769,7 +771,7 @@ export default function Form() {
             alt=""
           />
         </div>
-        <p className="text-center text-4xl font-bold md:text-left">
+        <p className="text-center text-4xl font-bold md:text-left md:pl-4">
           Unbeatable Top 5 Bright Kid Differentiators!
         </p>
         <div className="w-11/12">
@@ -792,7 +794,7 @@ export default function Form() {
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
-              <div className="w-2/5 flex flex-col items-start gap-6 py-6 md:w-full">
+              <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
                 <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
                   1 . Best Student Hamper: 
                 </p>
@@ -803,13 +805,13 @@ export default function Form() {
                 </p>
               </div>
             </div>
-            <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
+            <div className="w-full flex justify-center gap-16 md:flex-col  md:w-11/12">
               <img
                 src="./Assets/Images/form/image2carousel.png"
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
-              <div className="w-2/5 flex flex-col items-start gap-6 py-6 md:w-full">
+              <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
                 <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
                   2 . Montessori Toy Library: 
                 </p>
@@ -826,7 +828,7 @@ export default function Form() {
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
-              <div className="w-2/5 flex flex-col items-start gap-6 py-6 md:w-full">
+              <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
                 <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
                   3 . Award-Winning Curriculum
                 </p>
@@ -843,7 +845,7 @@ export default function Form() {
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
-              <div className="w-2/5 flex flex-col items-start gap-6 py-6 md:w-full">
+              <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
                 <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
                   4 . Digital Concept Teacher Portal:
                 </p>
@@ -860,7 +862,7 @@ export default function Form() {
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
-              <div className="w-2/5 flex flex-col items-start gap-6 py-6 md:w-full">
+              <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
                 <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
                   5 . All-in Mobile App 
                 </p>
@@ -882,7 +884,7 @@ export default function Form() {
       >
         <img src="./Assets/Images/form/BEMlogo.png" alt="" />
         <h1
-          className="text-6xl font-extrabold text-center md:text-5xl px-1/2"
+          className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
         >
           New Preschool Franchise has never been Here’s all&nbsp;
@@ -981,7 +983,7 @@ export default function Form() {
 
       <section
         id="form-addmissiongurantee"
-        className="flex flex-col items-center gap-2 w-full py-12 md:w-11/12"
+        className="flex flex-col items-center gap-2 w-full py-12"
       >
         <p
           className="text-center text-3xl font-bold"
@@ -989,7 +991,7 @@ export default function Form() {
         >
           Check our
         </p>
-        
+
         <h1
           className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
@@ -1023,7 +1025,7 @@ export default function Form() {
         className="flex flex-col items-center gap-8 w-full py-12"
       >
         <h1
-          className="text-6xl font-extrabold text-center md:text-5xl px-1/2"
+          className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
         >
           Our Awards &<span className="form-awards-h1-style"> Accolades</span>
@@ -1038,10 +1040,10 @@ export default function Form() {
           and customer validation! With numerous prestigious awards in
           recognition of our cutting-edge digital solutions, curriculum, and
           teachers' training, we take immense pride in empowering over
-          <span style={{ color: "#FF833F" }}>35,000 bright young minds</span>
+          <span style={{ color: "#FF833F" }}> 35,000 bright young minds</span>
           across the country. Join the growing community of satisfied preschools
           who have witnessed the transformative impact of our tailored
-          <span style={{ color: "#FF833F" }}>curriculum</span> and
+          <span style={{ color: "#FF833F" }}> curriculum</span> and
           <span style={{ color: "#FF833F" }}>
             preschool learning materials!
           </span>
@@ -1063,7 +1065,7 @@ export default function Form() {
         className="flex flex-col items-center gap-16 w-full py-12"
       >
         <h1
-          className="text-6xl font-extrabold text-center md:text-5xl px-1/2"
+          className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
         >
           Pathway to
@@ -1121,6 +1123,45 @@ export default function Form() {
           </div>
         </div>
       </section>
+
+      <footer className="py-12 w-full flex justify-around pl-12 md:pl-0 items-center md:flex-col md:gap-6">
+        <div className="flex flex-col gap-4 w-1/5 md:w-4/5">
+          <p className="text-base font-normal md:text-center" style={{color:"#0B1C39"}}>
+            # 807, 8th Floor, BRIGADE RUBIX, HMT Road, Yeshwanthpur, Bengaluru,
+            Karnataka, India - 560022
+          </p>
+          <p className="text-lg font-bold md:text-center">Socials</p>
+          <div className="flex gap-2 md:justify-center">
+            <img src="./Assets/Images/form/logo/facebook.svg" />
+            <img src="./Assets/Images/form/logo/instagram.svg" />
+            <img src="./Assets/Images/form/logo/linkedin.svg" />
+            <img src="./Assets/Images/form/logo/twitter.svg" />
+            <img src="./Assets/Images/form/logo/youtube.svg" />
+          </div>
+        </div>
+        <ul style={{color:"#0B1C39"}} className="w-1/5 md:w-4/5">
+          <p className="text-lg font-bold pb-2" style={{color:"#0B1C39"}}>Useful Links</p>
+          <li>Bright Edge</li>
+          <li>Bright Kid Montessori</li>
+          <li>Bright Kid At Home</li>
+          <li>Bright Edu Mont</li>
+          <li>Bright Montessori</li>
+          <li>Brilla Toys & Kits</li>
+        </ul>
+        <ul style={{color:"#0B1C39"}} className="w-1/5 md:w-4/5">
+          <p className="text-lg font-bold pb-2" style={{color:"#0B1C39"}}>Information</p>
+          <li>Locate a Center</li>
+          <li>Course & Training</li>
+          <li>Vedic Maths</li>
+          <li>Contact Us</li>
+          <li>Terms and Conditions</li>
+          <li>Privacy Policy</li>
+        </ul>
+        <ul style={{color:"#0B1C39"}} className="w-1/5 md:w-4/5">
+          <li>Refund Policy</li>
+          <li>Privacy Policy for</li>
+        </ul>
+      </footer>
     </div>
   );
 }
