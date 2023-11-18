@@ -9,7 +9,6 @@ import "@fontsource/roboto/700.css";
 import TextField from "@mui/material/TextField";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-// import { autoPlay } from "react-swipeable-views-utils";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
 import Paper from "@mui/material/Paper";
@@ -17,7 +16,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import FormCarousel from "./FormCarousel";
 
 const images = [
   {
@@ -52,16 +50,16 @@ const images = [
   },
 ];
 
-const carousel = {
+const carouseldata = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    slidesToSlide: 3,
+    items: 1,
+    slidesToSlide: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2,
+    items: 1,
+    slidesToSlide: 1,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -744,7 +742,7 @@ export default function Form() {
 
       <section
         id="form-top5differentiator"
-        className="flex flex-col items-center gap-8 w-full py-16 "
+        className="flex flex-col items-center gap-12 w-full py-16 "
       >
         <div className="flex justify-around w-11/12  md:flex-col-reverse md:gap-4">
           <div className="flex flex-col justify-center w-1/2 px-8 md:w-full md:items-center">
@@ -774,39 +772,106 @@ export default function Form() {
         <p className="text-center text-4xl font-bold md:text-left">
           Unbeatable Top 5 Bright Kid Differentiators!
         </p>
-        <FormCarousel />
-        <div>
+        <div className="w-11/12">
           <Carousel
+            responsive={carouseldata}
             swipeable={true}
             draggable={true}
             showDots={false}
-            responsive={carousel}
             ssr={true}
             infinite={true}
             autoPlay={true}
             customTransition="all 5"
             transitionDuration={500}
-            arrows={false}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
             dotListClass="custom-dot-list-style"
             focusOnSelect={false}
           >
-            <img
-              src="./Assets/Images/form/Video2.png"
-              className="w-11/12"
-              alt=""
-            />
-            <img
-              src="./Assets/Images/form/Video2.png"
-              className="w-11/12"
-              alt=""
-            />{" "}
-            <img
-              src="./Assets/Images/form/Video2.png"
-              className="w-11/12"
-              alt=""
-            />
+            <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
+              <img
+                src="./Assets/Images/form/image1carousel.png"
+                className="w-2/5 rounded-xl md:w-full"
+                alt=""
+              />
+              <div className="w-2/5 flex flex-col items-start gap-6 py-6 md:w-full">
+                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                  1 . Best Student Hamper: 
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                  Amaze parents and enrich kids. We offer a world-class Smart
+                  book series, complemented by an anytime-anywhere Teacher, a
+                  Craft Kit, and a Multiple Intelligence portal for kids.
+                </p>
+              </div>
+            </div>
+            <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
+              <img
+                src="./Assets/Images/form/image2carousel.png"
+                className="w-2/5 rounded-xl md:w-full"
+                alt=""
+              />
+              <div className="w-2/5 flex flex-col items-start gap-6 py-6 md:w-full">
+                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                  2 . Montessori Toy Library: 
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                  Your school will have access to an extensive Montessori Toy
+                  Library, fostering a stimulating and hands-on learning
+                  experience for your students.
+                </p>
+              </div>
+            </div>
+            <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
+              <img
+                src="./Assets/Images/form/image3carousel.png"
+                className="w-2/5 rounded-xl md:w-full"
+                alt=""
+              />
+              <div className="w-2/5 flex flex-col items-start gap-6 py-6 md:w-full">
+                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                  3 . Award-Winning Curriculum
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                  Our curriculum and teacher engagement programs have received
+                  accolades for their innovation and effectiveness, ensuring
+                  your preschool stands out from the rest.
+                </p>
+              </div>
+            </div>
+            <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
+              <img
+                src="./Assets/Images/form/image4carousel.png"
+                className="w-2/5 rounded-xl md:w-full"
+                alt=""
+              />
+              <div className="w-2/5 flex flex-col items-start gap-6 py-6 md:w-full">
+                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                  4 . Digital Concept Teacher Portal:
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                  With our cutting-edge technology, every classroom is empowered
+                  to deliver world-class lessons, enriching both teachers and
+                  students alike.
+                </p>
+              </div>
+            </div>
+            <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
+              <img
+                src="./Assets/Images/form/image5carousel.png"
+                className="w-2/5 rounded-xl md:w-full"
+                alt=""
+              />
+              <div className="w-2/5 flex flex-col items-start gap-6 py-6 md:w-full">
+                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                  5 . All-in Mobile App 
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                  Our comprehensive mobile app streamlines attendance, parent
+                  communication, skill mapping of children, toy library
+                  management, and fee tracking - everything you need at your
+                  fingertips.
+                </p>
+              </div>
+            </div>
           </Carousel>
         </div>
       </section>
