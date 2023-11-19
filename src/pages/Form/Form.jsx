@@ -16,6 +16,11 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormControl from "@mui/material/FormControl";
+import FormLabel from "@mui/material/FormLabel";
 
 const images = [
   {
@@ -91,11 +96,10 @@ export default function Form() {
     phoneNumber: "",
     email: "",
     address: "",
-    textarea: "",
+    option: "",
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
     setFormData({
       ...formData,
       [name]: value,
@@ -104,28 +108,10 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("object")
     console.log(formData);
   };
-  const options = [
-    { label: "(+91)India", value: "+91" },
-    { label: "(+1)United States", value: "+1" },
-    { label: "(+44)United Kingdom", value: "+44" },
-  ];
-  const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = images.length;
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleStepChange = (step) => {
-    setActiveStep(step);
-  };
   return (
     <div
       id="form"
@@ -144,7 +130,7 @@ export default function Form() {
             className="text-6xl font-extrabold lg:text-5xl md:text-4xl"
             style={{ color: "#32355D" }}
           >
-            Start your own
+            Make an impactful
             <p className="" style={{ color: "#7F46FF" }}>
               Preschool
             </p>
@@ -165,7 +151,6 @@ export default function Form() {
           </p>
         </div>
         <form
-          onSubmit={handleSubmit}
           className="w-1/2 px-10 flex flex-col justify-around items-center gap-4 md:w-full md:mt-8"
           style={{ padding: "0 6vw" }}
         >
@@ -224,22 +209,52 @@ export default function Form() {
             onChange={handleChange}
             className="w-full"
           />
-
-          <TextField
-            id="filled-multiline-static"
-            variant="outlined"
-            name="textarea"
-            multiline
-            value={formData.textarea}
-            label="Type your message here...."
-            onChange={handleChange}
-            className="w-full"
-            rows={4}
-          />
+          <div className="border-1 border-solid border-gray-400 p-6 rounded-lg w-full">
+            <FormControl>
+              <FormLabel id="demo-radio-buttons-group-label">Query</FormLabel>
+              <RadioGroup
+                aria-labelledby="demo-radio-buttons-group-label"
+                defaultValue="female"
+                name="option"
+              >
+                <FormControlLabel
+                  value="Open a new preschool"
+                  control={<Radio />}
+                  label="Open a new preschool"
+                  onChange={handleChange}
+                />
+                <FormControlLabel
+                  value="Elevate my preschool"
+                  control={<Radio />}
+                  label="Elevate my preschool"
+                  onChange={handleChange}
+                />
+                <FormControlLabel
+                  value="Need Preschool smartbooks"
+                  control={<Radio />}
+                  label="Need Preschool smartbooks"
+                  onChange={handleChange}
+                />
+                <FormControlLabel
+                  value="Need Preschol Materials"
+                  control={<Radio />}
+                  label="Need Preschol Materials"
+                  onChange={handleChange}
+                />
+                <FormControlLabel
+                  value="other"
+                  control={<Radio />}
+                  label="Other"
+                  onChange={handleChange}
+                />
+              </RadioGroup>
+            </FormControl>
+          </div>
           <Button
             radius="full"
             className="bg-gradient-to-tr text-white shadow-lg px-12 py-6 text-lg font-bold"
             style={{ backgroundColor: "#F72378" }}
+            onClick={handleSubmit}
           >
             Enquire Now!
           </Button>
@@ -599,12 +614,12 @@ export default function Form() {
             infinite={true}
             autoPlay={true}
             customTransition="all 5"
-            className="w-full"
+            className="w-full form-testimonials-div"
             transitionDuration={500}
             dotListClass="custom-dot-list-style"
             focusOnSelect={false}
           >
-            <div className="flex flex-col gap-16 py-8 px-12 justify-center w-4/5 m-auto rounded-xl border-2 border-gray-600 border-solid">
+            <div className="flex flex-col gap-16 py-12 px-12 justify-center w-4/5 m-auto rounded-xl border-2 border-gray-600 border-solid">
               <p className="text-lg text-center">
                 I love creating new think every single days so let’s do it
                 together it was wonderful to work with you.
@@ -617,38 +632,16 @@ export default function Form() {
                 ></div>
                 <div className="flex flex-col items-center">
                   <p
-                    className="text-xl font-normal"
+                    className="text-lg font-normal text-center"
                     style={{ color: "#0B1C39" }}
                   >
                     Adnan Shah
                   </p>
-                  <p>Partner</p>
+                  <p className="text-lg font-normal text-center">Partner</p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-16 py-8 px-12 justify-center m-auto xl:gap-8 w-4/5 rounded-xl border-2 border-gray-600 border-solid">
-              <p className="text-lg text-center"> 
-                I love creating new think every single days so let’s do it
-                together it was wonderful to work with you.
-              </p>
-              <div className="flex  w-full justify-around items-center">
-                <img src="./Assets/Images/form/man.png" alt="" />
-                <div
-                  className="w-3 h-0.5"
-                  style={{ backgroundColor: "#959595" }}
-                ></div>
-                <div className="flex flex-col items-center">
-                  <p
-                    className="text-xl font-normal"
-                    style={{ color: "#0B1C39" }}
-                  >
-                    Adnan Shah
-                  </p>
-                  <p>Partner</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-16 py-8 px-12 justify-center m-auto xl:gap-8 w-4/5 rounded-xl border-2 border-gray-600 border-solid">
+            <div className="flex flex-col gap-16 py-12 px-12 justify-center m-auto xl:gap-8 w-4/5 rounded-xl border-2 border-gray-600 border-solid">
               <p className="text-lg text-center">
                 I love creating new think every single days so let’s do it
                 together it was wonderful to work with you.
@@ -661,16 +654,16 @@ export default function Form() {
                 ></div>
                 <div className="flex flex-col items-center">
                   <p
-                    className="text-xl font-normal"
+                    className="text-lg font-normal text-center"
                     style={{ color: "#0B1C39" }}
                   >
                     Adnan Shah
                   </p>
-                  <p>Partner</p>
+                  <p className="text-lg font-normal text-center">Partner</p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-16 py-8 px-12 justify-center xl:gap-8 m-auto w-4/5 rounded-xl border-2 border-gray-600 border-solid">
+            <div className="flex flex-col gap-16 py-12 px-12 justify-center m-auto xl:gap-8 w-4/5 rounded-xl border-2 border-gray-600 border-solid">
               <p className="text-lg text-center">
                 I love creating new think every single days so let’s do it
                 together it was wonderful to work with you.
@@ -683,16 +676,16 @@ export default function Form() {
                 ></div>
                 <div className="flex flex-col items-center">
                   <p
-                    className="text-xl font-normal"
+                    className="text-lg font-normal text-center"
                     style={{ color: "#0B1C39" }}
                   >
                     Adnan Shah
                   </p>
-                  <p>Partner</p>
+                  <p className="text-lg font-normal text-center">Partner</p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-16 py-8 px-12 justify-center xl:gap-8 m-auto w-4/5 rounded-xl border-2 border-gray-600 border-solid">
+            <div className="flex flex-col gap-16 py-12 px-12 justify-center xl:gap-8 m-auto w-4/5 rounded-xl border-2 border-gray-600 border-solid">
               <p className="text-lg text-center">
                 I love creating new think every single days so let’s do it
                 together it was wonderful to work with you.
@@ -705,16 +698,16 @@ export default function Form() {
                 ></div>
                 <div className="flex flex-col items-center">
                   <p
-                    className="text-xl font-normal"
+                    className="text-lg font-normal text-center"
                     style={{ color: "#0B1C39" }}
                   >
                     Adnan Shah
                   </p>
-                  <p>Partner</p>
+                  <p className="text-lg font-normal text-center">Partner</p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-16 py-8 px-12 justify-center w-4/5 m-auto xl:gap-8 rounded-xl border-2 border-gray-600 border-solid">
+            <div className="flex flex-col gap-16 py-12 px-12 justify-center xl:gap-8 m-auto w-4/5 rounded-xl border-2 border-gray-600 border-solid">
               <p className="text-lg text-center">
                 I love creating new think every single days so let’s do it
                 together it was wonderful to work with you.
@@ -727,12 +720,34 @@ export default function Form() {
                 ></div>
                 <div className="flex flex-col items-center">
                   <p
-                    className="text-xl font-normal"
+                    className="text-lg font-normal text-center"
                     style={{ color: "#0B1C39" }}
                   >
                     Adnan Shah
                   </p>
-                  <p>Partner</p>
+                  <p className="text-lg font-normal text-center">Partner</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-16 py-12 px-12 justify-center w-4/5 m-auto xl:gap-8 rounded-xl border-2 border-gray-600 border-solid">
+              <p className="text-lg text-center">
+                I love creating new think every single days so let’s do it
+                together it was wonderful to work with you.
+              </p>
+              <div className="flex  w-full justify-around items-center">
+                <img src="./Assets/Images/form/man.png" alt="" />
+                <div
+                  className="w-3 h-0.5"
+                  style={{ backgroundColor: "#959595" }}
+                ></div>
+                <div className="flex flex-col items-center">
+                  <p
+                    className="text-lg font-normal text-center"
+                    style={{ color: "#0B1C39" }}
+                  >
+                    Adnan Shah
+                  </p>
+                  <p className="text-lg font-normal text-center">Partner</p>
                 </div>
               </div>
             </div>
@@ -956,7 +971,7 @@ export default function Form() {
             alt=""
           />
         </div>
-        <p className="text-center text-4xl font-bold md:text-left md:pl-4">
+        <p className="text-center text-4xl font-bold md:text-left md:text-2xl md:pl-4">
           Unbeatable Top 5 Bright Kid Differentiators!
         </p>
         <div className="w-11/12">
