@@ -52,14 +52,31 @@ const images = [
 
 const carouseldata = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 1100 },
     items: 1,
     slidesToSlide: 1,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1100, min: 564 },
     items: 1,
     slidesToSlide: 1,
+  },
+  mobile: {
+    breakpoint: { max: 564, min: 0 },
+    items: 1,
+    slidesToSlide: 1,
+  },
+};
+const testimonailsdata = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+    slidesToSlide: 2,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+    slidesToSlide: 2,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -552,6 +569,174 @@ export default function Form() {
               A new era in franchising awaits.
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section
+        id="form-testimonials"
+        className="py-16 gap-6 w-11/12 flex flex-col items-center"
+      >
+        <p
+          className="text-center text-3xl font-bold"
+          style={{ color: "rgba(50, 53, 93, 0.5)" }}
+        >
+          Testimonials
+        </p>
+        <h1
+          className="text-6xl font-extrabold md:text-center md:text-4xl"
+          style={{ color: "#32355D" }}
+        >
+          Don’t take
+          <span className="form-testimonials-h1-style"> our word</span>
+        </h1>
+        <div className="w-full h-auto">
+          <Carousel
+            responsive={testimonailsdata}
+            swipeable={true}
+            draggable={true}
+            showDots={false}
+            ssr={true}
+            infinite={true}
+            autoPlay={true}
+            customTransition="all 5"
+            className="w-full"
+            transitionDuration={500}
+            dotListClass="custom-dot-list-style"
+            focusOnSelect={false}
+          >
+            <div className="flex flex-col gap-16 py-8 px-12 justify-center w-4/5 m-auto rounded-xl border-2 border-gray-600 border-solid">
+              <p className="text-lg text-center">
+                I love creating new think every single days so let’s do it
+                together it was wonderful to work with you.
+              </p>
+              <div className="flex  w-full justify-around items-center">
+                <img src="./Assets/Images/form/man.png" alt="" />
+                <div
+                  className="w-3 h-0.5"
+                  style={{ backgroundColor: "#959595" }}
+                ></div>
+                <div className="flex flex-col items-center">
+                  <p
+                    className="text-xl font-normal"
+                    style={{ color: "#0B1C39" }}
+                  >
+                    Adnan Shah
+                  </p>
+                  <p>Partner</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-16 py-8 px-12 justify-center m-auto xl:gap-8 w-4/5 rounded-xl border-2 border-gray-600 border-solid">
+              <p className="text-lg text-center"> 
+                I love creating new think every single days so let’s do it
+                together it was wonderful to work with you.
+              </p>
+              <div className="flex  w-full justify-around items-center">
+                <img src="./Assets/Images/form/man.png" alt="" />
+                <div
+                  className="w-3 h-0.5"
+                  style={{ backgroundColor: "#959595" }}
+                ></div>
+                <div className="flex flex-col items-center">
+                  <p
+                    className="text-xl font-normal"
+                    style={{ color: "#0B1C39" }}
+                  >
+                    Adnan Shah
+                  </p>
+                  <p>Partner</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-16 py-8 px-12 justify-center m-auto xl:gap-8 w-4/5 rounded-xl border-2 border-gray-600 border-solid">
+              <p className="text-lg text-center">
+                I love creating new think every single days so let’s do it
+                together it was wonderful to work with you.
+              </p>
+              <div className="flex  w-full justify-around items-center">
+                <img src="./Assets/Images/form/man.png" alt="" />
+                <div
+                  className="w-3 h-0.5"
+                  style={{ backgroundColor: "#959595" }}
+                ></div>
+                <div className="flex flex-col items-center">
+                  <p
+                    className="text-xl font-normal"
+                    style={{ color: "#0B1C39" }}
+                  >
+                    Adnan Shah
+                  </p>
+                  <p>Partner</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-16 py-8 px-12 justify-center xl:gap-8 m-auto w-4/5 rounded-xl border-2 border-gray-600 border-solid">
+              <p className="text-lg text-center">
+                I love creating new think every single days so let’s do it
+                together it was wonderful to work with you.
+              </p>
+              <div className="flex  w-full justify-around items-center">
+                <img src="./Assets/Images/form/man.png" alt="" />
+                <div
+                  className="w-3 h-0.5"
+                  style={{ backgroundColor: "#959595" }}
+                ></div>
+                <div className="flex flex-col items-center">
+                  <p
+                    className="text-xl font-normal"
+                    style={{ color: "#0B1C39" }}
+                  >
+                    Adnan Shah
+                  </p>
+                  <p>Partner</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-16 py-8 px-12 justify-center xl:gap-8 m-auto w-4/5 rounded-xl border-2 border-gray-600 border-solid">
+              <p className="text-lg text-center">
+                I love creating new think every single days so let’s do it
+                together it was wonderful to work with you.
+              </p>
+              <div className="flex  w-full justify-around items-center">
+                <img src="./Assets/Images/form/man.png" alt="" />
+                <div
+                  className="w-3 h-0.5"
+                  style={{ backgroundColor: "#959595" }}
+                ></div>
+                <div className="flex flex-col items-center">
+                  <p
+                    className="text-xl font-normal"
+                    style={{ color: "#0B1C39" }}
+                  >
+                    Adnan Shah
+                  </p>
+                  <p>Partner</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-16 py-8 px-12 justify-center w-4/5 m-auto xl:gap-8 rounded-xl border-2 border-gray-600 border-solid">
+              <p className="text-lg text-center">
+                I love creating new think every single days so let’s do it
+                together it was wonderful to work with you.
+              </p>
+              <div className="flex  w-full justify-around items-center">
+                <img src="./Assets/Images/form/man.png" alt="" />
+                <div
+                  className="w-3 h-0.5"
+                  style={{ backgroundColor: "#959595" }}
+                ></div>
+                <div className="flex flex-col items-center">
+                  <p
+                    className="text-xl font-normal"
+                    style={{ color: "#0B1C39" }}
+                  >
+                    Adnan Shah
+                  </p>
+                  <p>Partner</p>
+                </div>
+              </div>
+            </div>
+          </Carousel>
         </div>
       </section>
 
@@ -1126,7 +1311,10 @@ export default function Form() {
 
       <footer className="py-12 w-full flex justify-around pl-12 md:pl-0 items-center md:flex-col md:gap-6">
         <div className="flex flex-col gap-4 w-1/5 md:w-4/5">
-          <p className="text-base font-normal md:text-center" style={{color:"#0B1C39"}}>
+          <p
+            className="text-base font-normal md:text-center"
+            style={{ color: "#0B1C39" }}
+          >
             # 807, 8th Floor, BRIGADE RUBIX, HMT Road, Yeshwanthpur, Bengaluru,
             Karnataka, India - 560022
           </p>
@@ -1139,8 +1327,10 @@ export default function Form() {
             <img src="./Assets/Images/form/logo/youtube.svg" />
           </div>
         </div>
-        <ul style={{color:"#0B1C39"}} className="w-1/5 md:w-4/5">
-          <p className="text-lg font-bold pb-2" style={{color:"#0B1C39"}}>Useful Links</p>
+        <ul style={{ color: "#0B1C39" }} className="w-1/5 md:w-4/5">
+          <p className="text-lg font-bold pb-2" style={{ color: "#0B1C39" }}>
+            Useful Links
+          </p>
           <li>Bright Edge</li>
           <li>Bright Kid Montessori</li>
           <li>Bright Kid At Home</li>
@@ -1148,8 +1338,10 @@ export default function Form() {
           <li>Bright Montessori</li>
           <li>Brilla Toys & Kits</li>
         </ul>
-        <ul style={{color:"#0B1C39"}} className="w-1/5 md:w-4/5">
-          <p className="text-lg font-bold pb-2" style={{color:"#0B1C39"}}>Information</p>
+        <ul style={{ color: "#0B1C39" }} className="w-1/5 md:w-4/5">
+          <p className="text-lg font-bold pb-2" style={{ color: "#0B1C39" }}>
+            Information
+          </p>
           <li>Locate a Center</li>
           <li>Course & Training</li>
           <li>Vedic Maths</li>
@@ -1157,7 +1349,7 @@ export default function Form() {
           <li>Terms and Conditions</li>
           <li>Privacy Policy</li>
         </ul>
-        <ul style={{color:"#0B1C39"}} className="w-1/5 md:w-4/5">
+        <ul style={{ color: "#0B1C39" }} className="w-1/5 md:w-4/5">
           <li>Refund Policy</li>
           <li>Privacy Policy for</li>
         </ul>
