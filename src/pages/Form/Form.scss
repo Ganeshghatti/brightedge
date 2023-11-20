@@ -203,7 +203,7 @@ h1 {
 #form-flexible {
   @media (min-width: 867px) {
     background-image: url("../../../public/Assets/Images/form/purplecloud.jpg");
-    background-size: cover;
-    background-position: center bottom !important;
+    background-size: contain;
+    background-position: center;
   }
 }

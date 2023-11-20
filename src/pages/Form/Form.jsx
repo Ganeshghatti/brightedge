@@ -1107,7 +1107,7 @@ export default function Form() {
         </p>
         <div className="flex flex-wrap justify-center w-full gap-8 md:flex-col md:items-center">
           <div
-            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1123,7 +1123,7 @@ export default function Form() {
           </div>
 
           <div
-            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1140,7 +1140,7 @@ export default function Form() {
           </div>
 
           <div
-            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1156,7 +1156,7 @@ export default function Form() {
           </div>
 
           <div
-            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1173,7 +1173,7 @@ export default function Form() {
           </div>
 
           <div
-            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 bg-white rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1188,12 +1188,12 @@ export default function Form() {
             </p>
           </div>
         </div>
-      </section>
+      {/* </section> */}
 
-      <section
+      {/* <section
         id="form-addmissiongurantee"
         className="flex flex-col items-center gap-2 w-full py-12"
-      >
+      > */}
         <p
           className="text-center text-3xl font-bold"
           style={{ color: "rgba(50, 53, 93, 0.5)" }}
