@@ -422,6 +422,7 @@ export default function Form() {
             <img
               src="./Assets/Images/form/icon_8.png-removebg-preview.png"
               alt=""
+              className="md:hidden"
             />
           </p>
         </div>
@@ -834,7 +835,7 @@ export default function Form() {
             </svg>
             <p className="text-2xl font-normal md:text-xl">
               ₹4 Lakhs - ₹10
-              <br /> Lakhs
+              <br md:hidden/> Lakhs
             </p>
           </div>
 
@@ -871,7 +872,7 @@ export default function Form() {
             </svg>
             <p className="text-2xl font-normal md:text-xl">
               About 1200
-              <br /> Sq.ft and above
+              <br md:hidden/> Sq.ft and above
             </p>
           </div>
 
@@ -899,7 +900,7 @@ export default function Form() {
             </svg>
             <p className="text-2xl font-normal md:text-xl">
               For early childhood
-              <br /> education
+              <br md:hidden/> education
             </p>
           </div>
           <div className="form-hereisallyouneed-card4 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:h-48 md:mt-6">
@@ -943,7 +944,7 @@ export default function Form() {
             </svg>
             <p className="text-2xl font-normal md:text-xl">
               For
-              <br /> entrepreneurship
+              <br md:hidden/> entrepreneurship
             </p>
           </div>
         </div>
@@ -961,7 +962,7 @@ export default function Form() {
             >
               Parent’s Choice:
             </h1>
-            <p className="text-3xl font-bold md:text-center">
+            <p className="text-3xl font-bold md:text-center md:text-xl">
               Bright Start... Right Start!
             </p>
           </div>
@@ -1091,7 +1092,7 @@ export default function Form() {
         id="form-flexible"
         className="flex flex-col items-center py-16 gap-6"
       >
-        <img src="./Assets/Images/form/BEMlogo.png" alt="" />
+        <img src="./Assets/Images/form/BEMlogo.png" alt="" className="md:w-24"/>
         <h1
           className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
@@ -1107,7 +1108,7 @@ export default function Form() {
         </p>
         <div className="flex flex-wrap justify-center w-full gap-8 md:flex-col md:items-center">
           <div
-            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1123,7 +1124,7 @@ export default function Form() {
           </div>
 
           <div
-            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1140,7 +1141,7 @@ export default function Form() {
           </div>
 
           <div
-            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1156,7 +1157,7 @@ export default function Form() {
           </div>
 
           <div
-            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1173,7 +1174,7 @@ export default function Form() {
           </div>
 
           <div
-            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 bg-white rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 bg-white rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
