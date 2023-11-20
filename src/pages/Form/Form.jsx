@@ -1102,18 +1102,18 @@ export default function Form() {
         </h1>
         <p
           className="text-3xl md:text-2xl font-bold text-center w-3/4"
-          style={{ color: "#1682FB" }}
+          style={{ color: "#7F46FF" }}
         >
           Your Preschool: Your Budget: Your Way
         </p>
         <div className="flex flex-wrap justify-center w-full gap-8 md:flex-col md:items-center">
           <div
-            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
-            style={{ border: "1px solid #1682FB" }}
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            style={{ border: "1px solid #7F46FF" }}
           >
             <p
               className="text-2xl font-bold md:text-xl"
-              style={{ color: "#1682FB" }}
+              style={{ color: "#7F46FF" }}
             >
               1. Services:
             </p>
@@ -1125,28 +1125,28 @@ export default function Form() {
 
           <div
             className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
-            style={{ border: "1px solid #1682FB" }}
+            style={{ border: "1px solid #7F46FF" }}
           >
             <p
               className="text-2xl font-bold md:text-xl"
-              style={{ color: "#1682FB" }}
+              style={{ color: "#7F46FF" }}
             >
               2. Best Materials Cost:
             </p>
             <p className="text-xl md:text-lg">
               As a leading manufacturer of high-quality Montessori items and
-              <b>preschool furniture</b>, we provide all your preschool needs at
+              <b> preschool furniture</b>, we provide all your preschool needs at
               the best cost.
             </p>
           </div>
 
           <div
             className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
-            style={{ border: "1px solid #1682FB" }}
+            style={{ border: "1px solid #7F46FF" }}
           >
             <p
               className="text-2xl font-bold md:text-xl"
-              style={{ color: "#1682FB" }}
+              style={{ color: "#7F46FF" }}
             >
               3. Digital Assets:
             </p>
@@ -1158,11 +1158,11 @@ export default function Form() {
 
           <div
             className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
-            style={{ border: "1px solid #1682FB" }}
+            style={{ border: "1px solid #7F46FF" }}
           >
             <p
               className="text-2xl font-bold md:text-xl"
-              style={{ color: "#1682FB" }}
+              style={{ color: "#7F46FF" }}
             >
               4. Additional Revenue:
             </p>
@@ -1175,17 +1175,17 @@ export default function Form() {
 
           <div
             className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 bg-white rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
-            style={{ border: "1px solid #1682FB" }}
+            style={{ border: "1px solid #7F46FF" }}
           >
             <p
               className="text-2xl font-bold md:text-xl"
-              style={{ color: "#1682FB" }}
+              style={{ color: "#7F46FF" }}
             >
               5. Expert Mentoring:
             </p>
             <p className="text-xl md:text-lg">
               Benefit from the guidance and expertise of our highly experienced
-              <b>leadership team.</b>
+              <b> leadership team.</b>
             </p>
           </div>
         </div>
