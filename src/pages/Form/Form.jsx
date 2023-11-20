@@ -1355,27 +1355,27 @@ export default function Form() {
           <p className="text-lg font-bold pb-2" style={{ color: "#0B1C39" }}>
             Useful Links
           </p>
-          <li>Bright Edge</li>
-          <li>Bright Kid Montessori</li>
-          <li>Bright Kid At Home</li>
-          <li>Bright Edu Mont</li>
-          <li>Bright Montessori</li>
-          <li>Brilla Toys & Kits</li>
+          <li className="mb-1">Bright Edge</li>
+          <li className="mb-1">Bright Kid Montessori</li>
+          <li className="mb-1">Bright Kid At Home</li>
+          <li className="mb-1">Bright Edu Mont</li>
+          <li className="mb-1">Bright Montessori</li>
+          <li className="mb-1">Brilla Toys & Kits</li>
         </ul>
         <ul style={{ color: "#0B1C39" }} className="w-1/5 md:w-4/5">
-          <p className="text-lg font-bold pb-2" style={{ color: "#0B1C39" }}>
+          <p className="text-lg font-bold mb-2" style={{ color: "#0B1C39" }}>
             Information
           </p>
-          <li>Locate a Center</li>
-          <li>Course & Training</li>
-          <li>Vedic Maths</li>
-          <li>Contact Us</li>
-          <li>Terms and Conditions</li>
-          <li>Privacy Policy</li>
+          <li className="mb-1">Locate a Center</li>
+          <li className="mb-1">Course & Training</li>
+          <li className="mb-1">Vedic Maths</li>
+          <li className="mb-1">Contact Us</li>
+          <li className="mb-1">Terms and Conditions</li>
+          <li className="mb-1">Privacy Policy</li>
         </ul>
         <ul style={{ color: "#0B1C39" }} className="w-1/5 md:w-4/5">
-          <li>Refund Policy</li>
-          <li>Privacy Policy for</li>
+          <li className="mb-1">Refund Policy</li>
+          <li className="mb-1">Privacy Policy for Bright Beep</li>
         </ul>
       </footer>
     </div>
