@@ -595,8 +595,8 @@ export default function Form() {
         className="py-16 gap-6 w-11/12 flex flex-col items-center"
       >
         <p
-          className="text-center text-3xl font-bold"
-          style={{ color: "rgba(50, 53, 93, 0.5)" }}
+          className="text-center text-3xl font-bold md:text-xl"
+          style={{ color: "rgba(50, 53, 93, 0.5)", padding: "0 10vw" }}
         >
           Testimonials
         </p>
@@ -763,8 +763,8 @@ export default function Form() {
         className="py-16 gap-12 w-11/12 flex flex-col items-center"
       >
         <p
-          className="text-center text-3xl font-bold"
-          style={{ color: "rgba(50, 53, 93, 0.5)" }}
+          className="text-center text-3xl font-bold md:text-xl"
+          style={{ color: "rgba(50, 53, 93, 0.5)", padding: "0 10vw" }}
         >
           Opening a New Preschool:{" "}
         </p>
@@ -1195,8 +1195,8 @@ export default function Form() {
         className="flex flex-col items-center gap-2 w-full py-12"
       > */}
         <p
-          className="text-center text-3xl font-bold"
-          style={{ color: "rgba(50, 53, 93, 0.5)" }}
+          className="text-center text-3xl font-bold md:text-xl mt-20"
+          style={{ color: "rgba(50, 53, 93, 0.5)", padding: "0 10vw" }}
         >
           Check our
         </p>
@@ -1317,14 +1317,14 @@ export default function Form() {
           <div className="flex gap-6 md:flex-col">
             <a
               href="mailto:info@brightkidmont.com"
-              className="text-xl"
+              className="text-xl text-center"
               style={{ color: "#32355D" }}
             >
               info@brightkidmont.com
             </a>
             <a
               href="tel:+919342533377"
-              className="text-xl"
+              className="text-xl text-center"
               style={{ color: "#32355D" }}
             >
               +91 93425 33377
