@@ -1188,9 +1188,9 @@ export default function Form() {
             </p>
           </div>
         </div>
-      {/* </section> */}
+        {/* </section> */}
 
-      {/* <section
+        {/* <section
         id="form-addmissiongurantee"
         className="flex flex-col items-center gap-2 w-full py-12"
       > */}
@@ -1223,7 +1223,7 @@ export default function Form() {
             take it a step further with our Comprehensive Admission Guarantee
             Plan. Our commitment to your
             <span style={{ color: "#7F46FF" }}> success is unwavering</span>,
-            and our <span style={{ color: "#7F46FF" }}>marketing efforts</span>
+            and our <span style={{ color: "#7F46FF" }}>marketing efforts </span>
             under this plan are second to none.
           </p>
         </div>
@@ -1244,17 +1244,17 @@ export default function Form() {
           style={{ color: "#0B1C39" }}
         >
           Celebrating
-          <span style={{ color: "#FF833F" }}>16+ years of excellence</span> and
+          <span style={{ color: "#FF833F" }}> 16+ years of excellence</span> and
           innovation, we are thrilled to share our remarkable journey of success
           and customer validation! With numerous prestigious awards in
           recognition of our cutting-edge digital solutions, curriculum, and
           teachers' training, we take immense pride in empowering over
-          <span style={{ color: "#FF833F" }}> 35,000 bright young minds</span>
+          <span style={{ color: "#FF833F" }}> 35,000 bright young minds </span>
           across the country. Join the growing community of satisfied preschools
           who have witnessed the transformative impact of our tailored
           <span style={{ color: "#FF833F" }}> curriculum</span> and
           <span style={{ color: "#FF833F" }}>
-            preschool learning materials!
+            &nbsp;preschool learning materials!
           </span>
         </p>
         <img
