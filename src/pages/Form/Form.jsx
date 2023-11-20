@@ -21,6 +21,7 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
+import { faArrowAltCircleDown } from "@fortawesome/free-regular-svg-icons";
 
 const images = [
   {
@@ -532,27 +533,20 @@ export default function Form() {
           className="w-11/12 self-end"
           alt=""
         />
-        <div className="flex justify-around items-center md:flex-col">
-          <div className="flex flex-col justify-center w-1/4 md:w-11/12">
-            <div>
-              <p
-                style={{ color: "#FF833F" }}
-                className="text-4xl font-extrabold text-left md:text-3xl"
-              >
-                Not an average franchise program.
-              </p>
-              <p
-                style={{ color: "#0B1C39" }}
-                className="text-xl font-normal md:text-lg"
-              >
-                Watch the video for on overview.
-              </p>
-            </div>
-            {/* <img
-              src="./Assets/Images/form/affiliateimg.png"
-              className="object-contain"
-              alt=""
-            /> */}
+        <div className="flex justify-around items-start md:flex-col form-affiliate-cloud-div">
+          <div className="flex flex-col justify-start w-1/4 md:w-11/12">
+            <p
+              style={{ color: "#FF833F" }}
+              className="text-4xl font-extrabold text-left md:text-3xl"
+            >
+              Not an average franchise program.
+            </p>
+            <p
+              style={{ color: "#0B1C39" }}
+              className="text-xl font-normal md:text-lg"
+            >
+              Watch the video for on overview.
+            </p>
           </div>
           <ul className="flex flex-col w-1/2 list-disc gap-4 md:w-3/4 md:mt-6">
             <li className="text-xl md:text-lg">
@@ -595,19 +589,21 @@ export default function Form() {
         id="form-testimonials"
         className="py-16 gap-6 w-11/12 flex flex-col items-center"
       >
-        <p
-          className="text-center text-3xl font-bold md:text-xl"
-          style={{ color: "rgba(50, 53, 93, 0.5)", padding: "0 10vw" }}
-        >
-          Testimonials
-        </p>
-        <h1
-          className="text-6xl font-extrabold md:text-center md:text-4xl"
-          style={{ color: "#32355D" }}
-        >
-          Don’t take
-          <span className="form-testimonials-h1-style"> our word</span>
-        </h1>
+        <div className="form-testimonials-smallcloud-div">
+          <p
+            className="text-center text-3xl font-bold md:text-xl"
+            style={{ color: "rgba(50, 53, 93, 0.5)", padding: "0 10vw" }}
+          >
+            Testimonials
+          </p>
+          <h1
+            className="text-6xl font-extrabold md:text-center md:text-4xl"
+            style={{ color: "#32355D" }}
+          >
+            Don’t take
+            <span className="form-testimonials-h1-style"> our word</span>
+          </h1>
+        </div>
         <div className="w-full h-auto">
           <Carousel
             responsive={testimonailsdata}
@@ -835,7 +831,7 @@ export default function Form() {
             </svg>
             <p className="text-2xl font-normal md:text-xl">
               ₹4 Lakhs - ₹10
-              <br md:hidden/> Lakhs
+              <br md:hidden /> Lakhs
             </p>
           </div>
 
@@ -872,7 +868,7 @@ export default function Form() {
             </svg>
             <p className="text-2xl font-normal md:text-xl">
               About 1200
-              <br md:hidden/> Sq.ft and above
+              <br md:hidden /> Sq.ft and above
             </p>
           </div>
 
@@ -900,7 +896,7 @@ export default function Form() {
             </svg>
             <p className="text-2xl font-normal md:text-xl">
               For early childhood
-              <br md:hidden/> education
+              <br md:hidden /> education
             </p>
           </div>
           <div className="form-hereisallyouneed-card4 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:h-48 md:mt-6">
@@ -944,7 +940,7 @@ export default function Form() {
             </svg>
             <p className="text-2xl font-normal md:text-xl">
               For
-              <br md:hidden/> entrepreneurship
+              <br md:hidden /> entrepreneurship
             </p>
           </div>
         </div>
@@ -1092,7 +1088,11 @@ export default function Form() {
         id="form-flexible"
         className="flex flex-col items-center py-16 gap-6"
       >
-        <img src="./Assets/Images/form/BEMlogo.png" alt="" className="md:w-24"/>
+        <img
+          src="./Assets/Images/form/BEMlogo.png"
+          alt=""
+          className="md:w-24"
+        />
         <h1
           className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
@@ -1135,8 +1135,8 @@ export default function Form() {
             </p>
             <p className="text-xl md:text-lg">
               As a leading manufacturer of high-quality Montessori items and
-              <b> preschool furniture</b>, we provide all your preschool needs at
-              the best cost.
+              <b> preschool furniture</b>, we provide all your preschool needs
+              at the best cost.
             </p>
           </div>
 
