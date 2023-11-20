@@ -1102,18 +1102,18 @@ export default function Form() {
         </h1>
         <p
           className="text-3xl md:text-2xl font-bold text-center w-3/4"
-          style={{ color: "#7F46FF" }}
+          style={{ color: "#1682FB" }}
         >
           Your Preschool: Your Budget: Your Way
         </p>
         <div className="flex flex-wrap justify-center w-full gap-8 md:flex-col md:items-center">
           <div
             className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
-            style={{ border: "1px solid #7F46FF" }}
+            style={{ border: "1px solid #1682FB" }}
           >
             <p
               className="text-2xl font-bold md:text-xl"
-              style={{ color: "#7F46FF" }}
+              style={{ color: "#1682FB" }}
             >
               1. Services:
             </p>
@@ -1125,11 +1125,11 @@ export default function Form() {
 
           <div
             className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
-            style={{ border: "1px solid #7F46FF" }}
+            style={{ border: "1px solid #1682FB" }}
           >
             <p
               className="text-2xl font-bold md:text-xl"
-              style={{ color: "#7F46FF" }}
+              style={{ color: "#1682FB" }}
             >
               2. Best Materials Cost:
             </p>
@@ -1142,11 +1142,11 @@ export default function Form() {
 
           <div
             className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
-            style={{ border: "1px solid #7F46FF" }}
+            style={{ border: "1px solid #1682FB" }}
           >
             <p
               className="text-2xl font-bold md:text-xl"
-              style={{ color: "#7F46FF" }}
+              style={{ color: "#1682FB" }}
             >
               3. Digital Assets:
             </p>
@@ -1158,11 +1158,11 @@ export default function Form() {
 
           <div
             className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
-            style={{ border: "1px solid #7F46FF" }}
+            style={{ border: "1px solid #1682FB" }}
           >
             <p
               className="text-2xl font-bold md:text-xl"
-              style={{ color: "#7F46FF" }}
+              style={{ color: "#1682FB" }}
             >
               4. Additional Revenue:
             </p>
@@ -1175,11 +1175,11 @@ export default function Form() {
 
           <div
             className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 bg-white rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
-            style={{ border: "1px solid #7F46FF" }}
+            style={{ border: "1px solid #1682FB" }}
           >
             <p
               className="text-2xl font-bold md:text-xl"
-              style={{ color: "#7F46FF" }}
+              style={{ color: "#1682FB" }}
             >
               5. Expert Mentoring:
             </p>
