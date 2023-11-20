@@ -89,7 +89,7 @@ h1 {
   background-position: bottom;
   z-index: -1;
 }
-.form-testimonials-h1-style{
+.form-testimonials-h1-style {
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="272" height="50" viewBox="0 0 272 50" fill="none"%3E%3Cpath d="M5.84946 5.5L136 0L266.151 5.5L272 26.5L266.151 47.5L136 50L5.84946 47.5L0 26.5L5.84946 5.5Z" fill="%23FBF55A"%3E%3C/path%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-size: cover;
@@ -188,7 +188,7 @@ h1 {
     padding: 0 10vw;
   }
 }
-#form-testimonials H1{
+#form-testimonials H1 {
   padding: 0 20vw;
   @media (max-width: 867px) {
     padding: 0 10vw;
@@ -197,6 +197,13 @@ h1 {
 .MuiMobileStepper-dots {
   display: none !important;
 }
-.form-testimonials-div{
-  background: linear-gradient(90deg, #FFF 75%, rgba(244, 244, 244, 0.00) 100%);
+.form-testimonials-div {
+  background: linear-gradient(90deg, #fff 75%, rgba(244, 244, 244, 0) 100%);
+}
+#form-flexible {
+  @media (min-width: 867px) {
+    background-image: url("../../../public/Assets/Images/form/purplecloud.jpg");
+    background-size: cover;
+    background-position: center bottom !important;
+  }
 }

@@ -108,7 +108,7 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("object")
+    console.log("object");
     console.log(formData);
   };
 
@@ -388,12 +388,12 @@ export default function Form() {
             border: " 1px solid  #1682FB",
           }}
         >
-          <p className="text-2xl font-normal">New Preschool Packages:</p>
+          <p className="text-2xl font-normal">Opening new Preschool:</p>
           <p
             className="text-3xl font-normal 2xl:text-2xl"
             style={{ color: "#0B1C39" }}
           >
-            Starts at
+            Package starts at
             <br />
             <span className="font-bold" style={{ color: "#32355D" }}>
               ₹3.50 Lakhs only
@@ -419,6 +419,10 @@ export default function Form() {
                 stroke-linejoin="round"
               />
             </svg>
+            <img
+              src="./Assets/Images/form/icon_8.png-removebg-preview.png"
+              alt=""
+            />
           </p>
         </div>
 
@@ -431,16 +435,15 @@ export default function Form() {
           }}
         >
           <p className="text-2xl font-normal">
-            Existing Preschool Support Packages:
+            Elevating Exsisting Preschool:{" "}
           </p>
           <p
             className="text-3xl font-normal 2xl:text-2xl"
             style={{ color: "#0B1C39" }}
           >
-            Starts at
-            <br />
+            Resources at <br />
             <span className="font-bold" style={{ color: "#32355D" }}>
-              ₹20,000 p.a only
+              Unbeatable Prices{" "}
             </span>
           </p>
           <p
@@ -759,6 +762,12 @@ export default function Form() {
         id="form-hereisallyouneed"
         className="py-16 gap-12 w-11/12 flex flex-col items-center"
       >
+        <p
+          className="text-center text-3xl font-bold"
+          style={{ color: "rgba(50, 53, 93, 0.5)" }}
+        >
+          Opening a New Preschool:{" "}
+        </p>
         <h1
           className="text-6xl font-extrabold md:text-center md:text-4xl"
           style={{ color: "#32355D", padding: "0 6vw" }}
@@ -895,7 +904,7 @@ export default function Form() {
           </div>
           <div className="form-hereisallyouneed-card4 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:h-48 md:mt-6">
             <p
-              style={{ color: "#7F46FF" }}
+              style={{ color: "#FF833F" }}
               className="text-4xl font-bold md:text-2xl"
             >
               Focus:
@@ -1250,7 +1259,7 @@ export default function Form() {
         </p>
         <img
           src="./Assets/Images/form/Certificates.png"
-          className="block md:hidden w-11/12"
+          className="block md:hidden w-4/5"
           alt=""
         />
         <img
@@ -1303,7 +1312,7 @@ export default function Form() {
           className="w-screen hidden md:block"
         />
 
-        <div>
+        <div className="flex flex-col items-center">
           <img src="./Assets/Images/logo.png" alt="" />
           <div className="flex gap-6 md:flex-col">
             <a
