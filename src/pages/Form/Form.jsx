@@ -436,16 +436,14 @@ export default function Form() {
             border: "1px solid #FBF55A",
           }}
         >
-          <p className="text-2xl font-normal">
-            Elevating Exsisting Preschool:{" "}
-          </p>
+          <p className="text-2xl font-normal">Elevating Exsisting Preschool:</p>
           <p
             className="text-3xl font-normal 2xl:text-2xl"
             style={{ color: "#0B1C39" }}
           >
             Resources at <br />
             <span className="font-bold" style={{ color: "#32355D" }}>
-              Unbeatable Prices{" "}
+              Unbeatable Prices
             </span>
           </p>
           <p
@@ -528,11 +526,14 @@ export default function Form() {
           <br className="hidden md:block" />
           <span className="form-affiliate-h1-style">Program</span>
         </h1>
-        <img
-          src="./Assets/Images/form/Video.png"
-          className="w-11/12 self-end"
-          alt=""
-        />
+        <iframe
+          title="vimeo-player"
+          src="https://player.vimeo.com/video/645805338?h=7d0abb1ae3"
+          width="640"
+          height="360"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
         <div className="flex justify-around items-start md:flex-col form-affiliate-cloud-div">
           <div className="flex flex-col justify-start w-1/4 md:w-11/12">
             <p
@@ -763,7 +764,7 @@ export default function Form() {
           className="text-center text-3xl font-bold md:text-xl"
           style={{ color: "rgba(50, 53, 93, 0.5)", padding: "0 10vw" }}
         >
-          Opening a New Preschool:{" "}
+          Opening a New Preschool:
         </p>
         <h1
           className="text-6xl font-extrabold md:text-center md:text-4xl"
@@ -971,11 +972,14 @@ export default function Form() {
           </div>
         </div>
         <div className="w-full flex justify-start">
-          <img
-            src="./Assets/Images/form/Video2.png"
-            className="w-11/12"
-            alt=""
-          />
+          <iframe
+            title="vimeo-player"
+            src="https://player.vimeo.com/video/642923538?h=ceaf8d6f86"
+            width="640"
+            height="360"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
         <p className="text-center text-4xl font-bold md:text-left md:text-2xl md:pl-4">
           Unbeatable Top 5 Bright Kid Differentiators!
@@ -1303,7 +1307,7 @@ export default function Form() {
           </div>
         </Button>
         <img
-          src="./Assets/Images/form/Ellipse.png"
+          src="./Assets/Images/form/Ellipselaptop.png"
           alt=""
           className="w-screen md:hidden"
         />
@@ -1312,7 +1316,7 @@ export default function Form() {
           alt=""
           className="w-screen hidden md:block"
         />
-
+        <div className="footer-yellow-gradient" />
         <div className="flex flex-col items-center">
           <img src="./Assets/Images/logo.png" alt="" />
           <div className="flex gap-6 md:flex-col">
