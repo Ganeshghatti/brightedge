@@ -1,12 +1,14 @@
 import React from "react";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const CustomRightArrow = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      className={`custom-arrow custom-right-arrow absolute right-10 top-1/2`}
+      className={`custom-arrow custom-right-arrow absolute right-5 top-1/2`}
     >
-      <svg
+      <ArrowRightIcon style={{color:"white"}}/>
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         width="45"
         height="45"
@@ -31,7 +33,7 @@ const CustomRightArrow = ({ onClick }) => {
             />
           </clipPath>
         </defs>
-      </svg>
+      </svg> */}
     </button>
   );
 };

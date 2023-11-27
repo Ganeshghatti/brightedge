@@ -594,7 +594,7 @@ export default function Form() {
 
       <section
         id="form-testimonials"
-        className="py-16 gap-6 w-11/12 flex flex-col items-center"
+        className="py-16 gap-10 w-11/12 flex flex-col items-center"
       >
         <div className="form-testimonials-smallcloud-div">
           <p
@@ -611,7 +611,7 @@ export default function Form() {
             <span className="form-testimonials-h1-style"> our word</span>
           </h1>
         </div>
-        <div className="w-full border-2 border-solid border-black h-auto">
+        <div className="w-full h-auto">
           <Carousel
             responsive={testimonailsdata}
             swipeable={true}
@@ -621,27 +621,129 @@ export default function Form() {
             infinite={true}
             autoPlay={true}
             customTransition="all 5"
-            className="w-full form-testimonials-div"
             transitionDuration={500}
             dotListClass="custom-dot-list-style"
             focusOnSelect={false}
             customLeftArrow={<CustomLeftArrow />}
             customRightArrow={<CustomRightArrow />}
           >
-            <div className="flex w-4/5 rounded-xl ">
+            <div
+              className="w-11/12 h-64 md:h-auto flex justify-between md:flex-col md:w-11/12 rounded mr-4"
+              style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
+            >
               <img
-                src="./Assets/Images/form/testimonials_shweta.jpg"
+                src="./Assets/Images/form/tina.jpg"
+                className="w-64 h-64 object-cover md:w-full"
                 alt=""
-                className="object-cover"
               />
-              <div className="flex flex-col justify-start gap-6">
-                <p style={{ color: "#0B1C39" }} className="text-2xl font-bold">
-                  Shweta
+              <div
+                className="flex-1 flex-col items-start gap-1.5 p-6"
+                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)" }}
+              >
+                <p style={{ color: "gray" }} className="font-normal text-base">
+                  Wissen Mont Preschool, Madurai
                 </p>
-                <p style={{ color: "gray" }} className="text-base">
-                  Bright Kid Montessori Horamavu, Bangalore
+                <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
+                  Tina Prasanth  
                 </p>
-                <p className="text-base">
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base overflow-scroll"
+                >
+                  Bright Edu Mont provided the best teachers' training, enabling
+                  practical learning for children. Grateful for their support in
+                  building my centre. Education, a self-organizing work, is
+                  enhanced by their academic support, contributing to the
+                  success of my centre.
+                </p>
+              </div>
+            </div>
+            <div
+              className="w-11/12 h-64 flex md:h-auto justify-between md:flex-col md:w-11/12 rounded mr-4"
+              style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
+            >
+              <img
+                src="./Assets/Images/form/sher.jpg"
+                className="w-64 h-64 object-cover md:w-full"
+                alt=""
+              />
+              <div
+                className="flex-1 flex-col items-start gap-1.5 p-6"
+                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)" }}
+              >
+                <p style={{ color: "gray" }} className="font-normal text-base">
+                  Sunrise Valley School, Haryana
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
+                  Sher Singh  
+                </p>
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base overflow-scroll"
+                >
+                  Thrilled with excellent academic support, online training, and
+                  strong Montessori resources from Bright Kids Bangalore.
+                  Parents love the curriculum and monthly activity guidelines.
+                  Grateful for Bright Kids' strong and excellent support.
+                </p>
+              </div>
+            </div>
+            <div
+              className="w-11/12 h-64 flex md:h-auto justify-between md:flex-col md:w-11/12 rounded mr-4"
+              style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
+            >
+              <img
+                src="./Assets/Images/form/anupama.jpg"
+                className="w-64 h-64 object-cover md:w-full"
+                alt=""
+              />
+              <div
+                className="flex-1 flex-col items-start gap-1.5 p-6"
+                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)" }}
+              >
+                <p style={{ color: "gray" }} className="font-normal text-base">
+                  Bright Kid Montessori, Jakkur, Bangalore
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
+                  Anupama Sengupta
+                </p>
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base overflow-scroll"
+                >
+                  Proud franchisee of Bright Kid Montessori House. Owning a
+                  Bright kid School has been enriching. Very happy with the
+                  support and quality of materials. Our commitment to excellence
+                  in education is evident in our vibrant learning environment.
+                  Grateful to Susmita Ma'am for the franchise opportunity.
+                  Excited to contribute to the success of Bright Kid Montessori
+                  House. Thank you!
+                </p>
+              </div>
+            </div>
+            <div
+              className="w-11/12 h-64 flex md:h-auto justify-between md:flex-col md:w-11/12 rounded mr-4"
+              style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
+            >
+              <img
+                src="./Assets/Images/form/shweta.jpg"
+                className="w-64 h-64 object-cover md:w-full"
+                alt=""
+              />
+              <div
+                className="flex-1 flex-col items-start gap-1.5 p-6 md:w-full  overflow-scroll"
+                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)" }}
+              >
+                <p style={{ color: "gray" }} className="font-normal text-base">
+                  Bright Kid Montessori Horamavu, Bangalore{" "}
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
+                  Shweta 
+                </p>
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base"
+                >
                   Leading the successful Hormavu Center since 2012. Our Bright
                   Kit Academy and extracurricular activities ensure holistic
                   child development. Bright start, right start - our motto for
@@ -653,56 +755,6 @@ export default function Form() {
                 </p>
               </div>
             </div>
-            {/* <div className="flex w-4/5 rounded-xl ">
-              <img
-                src="./Assets/Images/form/testimonials_shweta.jpg"
-                alt=""
-                className="object-cover"
-              />
-              <div className="flex flex-col justify-start gap-6">
-                <p style={{ color: "#0B1C39" }} className="text-2xl font-bold">
-                  Shweta
-                </p>
-                <p style={{ color: "gray" }} className="text-base">
-                  Bright Kid Montessori Horamavu, Bangalore
-                </p>
-                <p className="text-base">
-                  Leading the successful Hormavu Center since 2012. Our Bright
-                  Kit Academy and extracurricular activities ensure holistic
-                  child development. Bright start, right start - our motto for
-                  creating a better world. We follow the child, preparing the
-                  environment in Horamavu. Grateful to our team, partners Mr.
-                  Prasanta Sanyal and Mrs. Susmita Sanyal for support. Thanks to
-                  all for making my dream a success. Continuous support is
-                  appreciated. Good luck!
-                </p>
-              </div>
-            </div>{" "}
-            <div className="flex w-4/5 rounded-xl ">
-              <img
-                src="./Assets/Images/form/testimonials_shweta.jpg"
-                alt=""
-                className="object-cover"
-              />
-              <div className="flex flex-col justify-start gap-6">
-                <p style={{ color: "#0B1C39" }} className="text-2xl font-bold">
-                  Shweta
-                </p>
-                <p style={{ color: "gray" }} className="text-base">
-                  Bright Kid Montessori Horamavu, Bangalore
-                </p>
-                <p className="text-base">
-                  Leading the successful Hormavu Center since 2012. Our Bright
-                  Kit Academy and extracurricular activities ensure holistic
-                  child development. Bright start, right start - our motto for
-                  creating a better world. We follow the child, preparing the
-                  environment in Horamavu. Grateful to our team, partners Mr.
-                  Prasanta Sanyal and Mrs. Susmita Sanyal for support. Thanks to
-                  all for making my dream a success. Continuous support is
-                  appreciated. Good luck!
-                </p>
-              </div>
-            </div> */}
           </Carousel>
         </div>
       </section>
@@ -951,7 +1003,7 @@ export default function Form() {
           >
             <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
               <img
-                src="./Assets/Images/form/image1carousel.png"
+                src="./Assets/Images/form/carousel2.jpg"
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
@@ -968,7 +1020,7 @@ export default function Form() {
             </div>
             <div className="w-full flex justify-center gap-16 md:flex-col  md:w-11/12">
               <img
-                src="./Assets/Images/form/image2carousel.png"
+                src="./Assets/Images/form/carousel3.jpg"
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
@@ -985,7 +1037,7 @@ export default function Form() {
             </div>
             <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
               <img
-                src="./Assets/Images/form/image3carousel.png"
+                src="./Assets/Images/form/carousel4.jpg"
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
@@ -1002,7 +1054,7 @@ export default function Form() {
             </div>
             <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
               <img
-                src="./Assets/Images/form/image4carousel.png"
+                src="./Assets/Images/form/carousel5.jpg"
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
@@ -1019,7 +1071,7 @@ export default function Form() {
             </div>
             <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
               <img
-                src="./Assets/Images/form/image5carousel.png"
+                src="./Assets/Images/form/carousel1.jpg"
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
