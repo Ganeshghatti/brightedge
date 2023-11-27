@@ -22,6 +22,8 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import { faArrowAltCircleDown } from "@fortawesome/free-regular-svg-icons";
+import CustomLeftArrow from "../../Components/CustomLeftArrow";
+import CustomRightArrow from "../../Components/CustomRightArrow";
 
 const images = [
   {
@@ -76,13 +78,13 @@ const carouseldata = {
 const testimonailsdata = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4,
-    slidesToSlide: 2,
+    items: 2,
+    slidesToSlide: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2,
+    items: 1,
+    slidesToSlide: 1,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -92,12 +94,12 @@ const testimonailsdata = {
 };
 export default function Form() {
   const [formData, setFormData] = useState({
-    name: "",
-    countrycode: "",
-    phoneNumber: "",
-    email: "",
-    address: "",
-    option: "",
+    FIRST_NAME: "",
+    SMS__COUNTRY_CODE: "",
+    SMS: "",
+    EMAIL: "",
+    LOCATION: "",
+    YOUR_MESSAGE: "",
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -109,7 +111,6 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("object");
     console.log(formData);
   };
 
@@ -154,21 +155,26 @@ export default function Form() {
         <form
           className="w-1/2 px-10 flex flex-col justify-around items-center gap-4 md:w-full md:mt-8"
           style={{ padding: "0 6vw" }}
+          id="sib-form"
+          method="POST"
+          action="https://1763470a.sibforms.com/serve/MUIFADrGC7a8vWRbOQRe8IAdirv7k0lMfKThze9jkNsB3Z56ijxoMCxy4baO_I3txXqsicWnX6CZBbxxHHziLPd6NzfuYpubbNQ38mIuZHC4rGb0ExlwNDHFVu8DPpWMSlSuUSMBY_HqjkdDmX6gbyjWPIpookoJW5dPnuFAS-h9-d9i8r_wjPyrNqT7IEiPARQjLgKnb2yEZ7PS"
+          data-type="subscription"
+          // onSubmit={handleSubmit}
         >
           <TextField
             id="outlined-basic"
             variant="outlined"
             type="text"
-            name="name"
+            name="FIRST_NAME"
             label="Name"
-            value={formData.name}
+            value={formData.FIRST_NAME}
             onChange={handleChange}
             className="w-full"
           />
           <div className="flex justify-start w-full gap-4">
             <select
-              name="countrycode"
-              value={formData.countrycode}
+              name="SMS__COUNTRY_CODE"
+              value={formData.SMS__COUNTRY_CODE}
               onChange={handleChange}
               className="w-1/3 h-full z-10 py-4 px-4 flex justify-center rounded bg-white border-1 border-solid border-gray-400 cursor-pointer text-gray-500"
             >
@@ -181,8 +187,8 @@ export default function Form() {
               id="outlined-basic"
               variant="outlined"
               type="text"
-              name="phoneNumber"
-              value={formData.phoneNumber}
+              name="SMS"
+              value={formData.SMS}
               label="phone number"
               onChange={handleChange}
               className="flex-1"
@@ -193,8 +199,8 @@ export default function Form() {
             id="outlined-basic"
             variant="outlined"
             type="email"
-            name="email"
-            value={formData.email}
+            name="EMAIL"
+            value={formData.EMAIL}
             label="email"
             onChange={handleChange}
             className="w-full"
@@ -204,8 +210,8 @@ export default function Form() {
             id="outlined-basic"
             variant="outlined"
             type="text"
-            name="address"
-            value={formData.address}
+            name="LOCATION"
+            value={formData.LOCATION}
             label="Postal/Area PIN code"
             onChange={handleChange}
             className="w-full"
@@ -216,7 +222,7 @@ export default function Form() {
               <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
                 defaultValue="female"
-                name="option"
+                name="YOUR_MESSAGE"
               >
                 <FormControlLabel
                   value="Open a new preschool"
@@ -255,7 +261,7 @@ export default function Form() {
             radius="full"
             className="bg-gradient-to-tr text-white shadow-lg px-12 py-6 text-lg font-bold"
             style={{ backgroundColor: "#F72378" }}
-            onClick={handleSubmit}
+            type="submit"
           >
             Enquire Now!
           </Button>
@@ -605,7 +611,7 @@ export default function Form() {
             <span className="form-testimonials-h1-style"> our word</span>
           </h1>
         </div>
-        <div className="w-full h-auto">
+        <div className="w-full border-2 border-solid border-black h-auto">
           <Carousel
             responsive={testimonailsdata}
             swipeable={true}
@@ -619,139 +625,84 @@ export default function Form() {
             transitionDuration={500}
             dotListClass="custom-dot-list-style"
             focusOnSelect={false}
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}
           >
-            <div className="flex flex-col gap-16 py-12 px-12 justify-center w-4/5 m-auto rounded-xl border-2 border-gray-600 border-solid">
-              <p className="text-lg text-center">
-                I love creating new think every single days so let’s do it
-                together it was wonderful to work with you.
-              </p>
-              <div className="flex  w-full justify-around items-center">
-                <img src="./Assets/Images/form/man.png" alt="" />
-                <div
-                  className="w-3 h-0.5"
-                  style={{ backgroundColor: "#959595" }}
-                ></div>
-                <div className="flex flex-col items-center">
-                  <p
-                    className="text-lg font-normal text-center"
-                    style={{ color: "#0B1C39" }}
-                  >
-                    Adnan Shah
-                  </p>
-                  <p className="text-lg font-normal text-center">Partner</p>
-                </div>
+            <div className="flex w-4/5 rounded-xl ">
+              <img
+                src="./Assets/Images/form/testimonials_shweta.jpg"
+                alt=""
+                className="object-cover"
+              />
+              <div className="flex flex-col justify-start gap-6">
+                <p style={{ color: "#0B1C39" }} className="text-2xl font-bold">
+                  Shweta
+                </p>
+                <p style={{ color: "gray" }} className="text-base">
+                  Bright Kid Montessori Horamavu, Bangalore
+                </p>
+                <p className="text-base">
+                  Leading the successful Hormavu Center since 2012. Our Bright
+                  Kit Academy and extracurricular activities ensure holistic
+                  child development. Bright start, right start - our motto for
+                  creating a better world. We follow the child, preparing the
+                  environment in Horamavu. Grateful to our team, partners Mr.
+                  Prasanta Sanyal and Mrs. Susmita Sanyal for support. Thanks to
+                  all for making my dream a success. Continuous support is
+                  appreciated. Good luck!
+                </p>
               </div>
             </div>
-            <div className="flex flex-col gap-16 py-12 px-12 justify-center m-auto xl:gap-8 w-4/5 rounded-xl border-2 border-gray-600 border-solid">
-              <p className="text-lg text-center">
-                I love creating new think every single days so let’s do it
-                together it was wonderful to work with you.
-              </p>
-              <div className="flex  w-full justify-around items-center">
-                <img src="./Assets/Images/form/man.png" alt="" />
-                <div
-                  className="w-3 h-0.5"
-                  style={{ backgroundColor: "#959595" }}
-                ></div>
-                <div className="flex flex-col items-center">
-                  <p
-                    className="text-lg font-normal text-center"
-                    style={{ color: "#0B1C39" }}
-                  >
-                    Adnan Shah
-                  </p>
-                  <p className="text-lg font-normal text-center">Partner</p>
-                </div>
+            {/* <div className="flex w-4/5 rounded-xl ">
+              <img
+                src="./Assets/Images/form/testimonials_shweta.jpg"
+                alt=""
+                className="object-cover"
+              />
+              <div className="flex flex-col justify-start gap-6">
+                <p style={{ color: "#0B1C39" }} className="text-2xl font-bold">
+                  Shweta
+                </p>
+                <p style={{ color: "gray" }} className="text-base">
+                  Bright Kid Montessori Horamavu, Bangalore
+                </p>
+                <p className="text-base">
+                  Leading the successful Hormavu Center since 2012. Our Bright
+                  Kit Academy and extracurricular activities ensure holistic
+                  child development. Bright start, right start - our motto for
+                  creating a better world. We follow the child, preparing the
+                  environment in Horamavu. Grateful to our team, partners Mr.
+                  Prasanta Sanyal and Mrs. Susmita Sanyal for support. Thanks to
+                  all for making my dream a success. Continuous support is
+                  appreciated. Good luck!
+                </p>
               </div>
-            </div>
-            <div className="flex flex-col gap-16 py-12 px-12 justify-center m-auto xl:gap-8 w-4/5 rounded-xl border-2 border-gray-600 border-solid">
-              <p className="text-lg text-center">
-                I love creating new think every single days so let’s do it
-                together it was wonderful to work with you.
-              </p>
-              <div className="flex  w-full justify-around items-center">
-                <img src="./Assets/Images/form/man.png" alt="" />
-                <div
-                  className="w-3 h-0.5"
-                  style={{ backgroundColor: "#959595" }}
-                ></div>
-                <div className="flex flex-col items-center">
-                  <p
-                    className="text-lg font-normal text-center"
-                    style={{ color: "#0B1C39" }}
-                  >
-                    Adnan Shah
-                  </p>
-                  <p className="text-lg font-normal text-center">Partner</p>
-                </div>
+            </div>{" "}
+            <div className="flex w-4/5 rounded-xl ">
+              <img
+                src="./Assets/Images/form/testimonials_shweta.jpg"
+                alt=""
+                className="object-cover"
+              />
+              <div className="flex flex-col justify-start gap-6">
+                <p style={{ color: "#0B1C39" }} className="text-2xl font-bold">
+                  Shweta
+                </p>
+                <p style={{ color: "gray" }} className="text-base">
+                  Bright Kid Montessori Horamavu, Bangalore
+                </p>
+                <p className="text-base">
+                  Leading the successful Hormavu Center since 2012. Our Bright
+                  Kit Academy and extracurricular activities ensure holistic
+                  child development. Bright start, right start - our motto for
+                  creating a better world. We follow the child, preparing the
+                  environment in Horamavu. Grateful to our team, partners Mr.
+                  Prasanta Sanyal and Mrs. Susmita Sanyal for support. Thanks to
+                  all for making my dream a success. Continuous support is
+                  appreciated. Good luck!
+                </p>
               </div>
-            </div>
-            <div className="flex flex-col gap-16 py-12 px-12 justify-center xl:gap-8 m-auto w-4/5 rounded-xl border-2 border-gray-600 border-solid">
-              <p className="text-lg text-center">
-                I love creating new think every single days so let’s do it
-                together it was wonderful to work with you.
-              </p>
-              <div className="flex  w-full justify-around items-center">
-                <img src="./Assets/Images/form/man.png" alt="" />
-                <div
-                  className="w-3 h-0.5"
-                  style={{ backgroundColor: "#959595" }}
-                ></div>
-                <div className="flex flex-col items-center">
-                  <p
-                    className="text-lg font-normal text-center"
-                    style={{ color: "#0B1C39" }}
-                  >
-                    Adnan Shah
-                  </p>
-                  <p className="text-lg font-normal text-center">Partner</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-16 py-12 px-12 justify-center xl:gap-8 m-auto w-4/5 rounded-xl border-2 border-gray-600 border-solid">
-              <p className="text-lg text-center">
-                I love creating new think every single days so let’s do it
-                together it was wonderful to work with you.
-              </p>
-              <div className="flex  w-full justify-around items-center">
-                <img src="./Assets/Images/form/man.png" alt="" />
-                <div
-                  className="w-3 h-0.5"
-                  style={{ backgroundColor: "#959595" }}
-                ></div>
-                <div className="flex flex-col items-center">
-                  <p
-                    className="text-lg font-normal text-center"
-                    style={{ color: "#0B1C39" }}
-                  >
-                    Adnan Shah
-                  </p>
-                  <p className="text-lg font-normal text-center">Partner</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-16 py-12 px-12 justify-center w-4/5 m-auto xl:gap-8 rounded-xl border-2 border-gray-600 border-solid">
-              <p className="text-lg text-center">
-                I love creating new think every single days so let’s do it
-                together it was wonderful to work with you.
-              </p>
-              <div className="flex  w-full justify-around items-center">
-                <img src="./Assets/Images/form/man.png" alt="" />
-                <div
-                  className="w-3 h-0.5"
-                  style={{ backgroundColor: "#959595" }}
-                ></div>
-                <div className="flex flex-col items-center">
-                  <p
-                    className="text-lg font-normal text-center"
-                    style={{ color: "#0B1C39" }}
-                  >
-                    Adnan Shah
-                  </p>
-                  <p className="text-lg font-normal text-center">Partner</p>
-                </div>
-              </div>
-            </div>
+            </div> */}
           </Carousel>
         </div>
       </section>
@@ -1309,7 +1260,7 @@ export default function Form() {
         <img
           src="./Assets/Images/form/Ellipselaptop.png"
           alt=""
-          className="w-screen md:hidden"
+          className="w-screen md:hidden bg-white"
         />
         <img
           src="./Assets/Images/form/Ellipsephone.png"
