@@ -152,9 +152,17 @@ export default function Form() {
             from start to finish.
           </p>
         </div>
-        <form
-          className="w-1/2 px-10 flex flex-col justify-around items-center gap-4 md:w-full md:mt-8"
+        <iframe
+          src="https://1763470a.sibforms.com/serve/MUIFAAo_s6yx_gEhCgIR8_s2cKy0dGhPNnlI8F8r97zF_hf8svxI9adwH9a88tsQ6scMZcFMOV9wcw4FqNexhc9DTAk6S37BHZSAohWlNRN763vORdQbEdYRoh2g7kZyfKCHPBd0jxbE9NIVgFPECmlKMgmSv4erSu_AIF64ZT4-hjC7P4rX7mrxurJZEptADxEC_V3uzXrbg_O_"
+          frameborder="0"
+          className="w-1/2 px-10 md:w-full md:mt-8 h-full"
           style={{ padding: "0 6vw" }}
+
+        ></iframe>
+        {/* <form
+          style={{ padding: "0 6vw" }}
+          className="w-1/2 px-10 flex flex-col justify-around items-center gap-4 md:w-full md:mt-8"
+
           id="sib-form"
           method="POST"
           action="https://1763470a.sibforms.com/serve/MUIFADrGC7a8vWRbOQRe8IAdirv7k0lMfKThze9jkNsB3Z56ijxoMCxy4baO_I3txXqsicWnX6CZBbxxHHziLPd6NzfuYpubbNQ38mIuZHC4rGb0ExlwNDHFVu8DPpWMSlSuUSMBY_HqjkdDmX6gbyjWPIpookoJW5dPnuFAS-h9-d9i8r_wjPyrNqT7IEiPARQjLgKnb2yEZ7PS"
@@ -277,7 +285,7 @@ export default function Form() {
               Privacy Policy
             </a>
           </p>
-        </form>
+        </form> */}
       </section>
 
       <section
