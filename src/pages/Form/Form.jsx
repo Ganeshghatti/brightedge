@@ -160,13 +160,25 @@ export default function Form() {
           scrolling="auto"
           allowfullscreen
         ></iframe> */}
-
-        <iframe
-          src="https://1763470a.sibforms.com/serve/MUIFAHQegvReJOCpYJdYESb1Z8IJoTbaVf4PK5fhbUmZ5UmrVFQOeT7UdmiXLDGwBLp2Mb5IVCxkLSQBm1PNRF6RY-tT3ODvZ-VbtjAobJgIONVvjtPzIGL5c-sz5lxx49TiSGxhjy4IRIy7345L5vIGGQyvLUI-aCVQoBELicKDzwk1MZ7qJsWyF12AsuW4f-fylrWlQaJGKe_g"
-          className="w-1/2 h-full z-50 md:w-full"
-          id="dynamicIframe"
-        ></iframe>
-
+        <div className="flex flex-col items-center w-1/2 h-full gap-4 md:w-full">
+          <iframe
+            src="https://1763470a.sibforms.com/serve/MUIFAHQegvReJOCpYJdYESb1Z8IJoTbaVf4PK5fhbUmZ5UmrVFQOeT7UdmiXLDGwBLp2Mb5IVCxkLSQBm1PNRF6RY-tT3ODvZ-VbtjAobJgIONVvjtPzIGL5c-sz5lxx49TiSGxhjy4IRIy7345L5vIGGQyvLUI-aCVQoBELicKDzwk1MZ7qJsWyF12AsuW4f-fylrWlQaJGKe_g"
+            className="w-full h-full z-50 md:w-full"
+            id="dynamicIframe"
+          ></iframe>
+          <p className="font-normal text-base text-center">
+            Your email address and mobile number will be safely managed
+            according to our &nbsp;
+            <br />
+            <a
+              href="#"
+              style={{ color: "#1682FB" }}
+              className="font-bold underline"
+            >
+              Privacy Policy
+            </a>
+          </p>
+        </div>
         {/* <form
           style={{ padding: "0 6vw" }}
           className="w-1/2 px-10 flex flex-col justify-around items-center gap-4 md:w-full md:mt-8"
