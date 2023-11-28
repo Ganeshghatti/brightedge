@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, ButtonGroup } from "@nextui-org/react";
 import "./Form.scss";
 import Select from "@mui/material/Select";
@@ -152,17 +152,24 @@ export default function Form() {
             from start to finish.
           </p>
         </div>
-        <iframe
+        {/* <iframe
+          width="540"
+          height="305"
           src="https://1763470a.sibforms.com/serve/MUIFAAo_s6yx_gEhCgIR8_s2cKy0dGhPNnlI8F8r97zF_hf8svxI9adwH9a88tsQ6scMZcFMOV9wcw4FqNexhc9DTAk6S37BHZSAohWlNRN763vORdQbEdYRoh2g7kZyfKCHPBd0jxbE9NIVgFPECmlKMgmSv4erSu_AIF64ZT4-hjC7P4rX7mrxurJZEptADxEC_V3uzXrbg_O_"
           frameborder="0"
-          className="w-1/2 px-10 md:w-full md:mt-8 h-full"
-          style={{ padding: "0 6vw" }}
+          scrolling="auto"
+          allowfullscreen
+        ></iframe> */}
 
+        <iframe
+          src="https://1763470a.sibforms.com/serve/MUIFAHQegvReJOCpYJdYESb1Z8IJoTbaVf4PK5fhbUmZ5UmrVFQOeT7UdmiXLDGwBLp2Mb5IVCxkLSQBm1PNRF6RY-tT3ODvZ-VbtjAobJgIONVvjtPzIGL5c-sz5lxx49TiSGxhjy4IRIy7345L5vIGGQyvLUI-aCVQoBELicKDzwk1MZ7qJsWyF12AsuW4f-fylrWlQaJGKe_g"
+          className="w-1/2 h-full z-50 md:w-full"
+          id="dynamicIframe"
         ></iframe>
+
         {/* <form
           style={{ padding: "0 6vw" }}
           className="w-1/2 px-10 flex flex-col justify-around items-center gap-4 md:w-full md:mt-8"
-
           id="sib-form"
           method="POST"
           action="https://1763470a.sibforms.com/serve/MUIFADrGC7a8vWRbOQRe8IAdirv7k0lMfKThze9jkNsB3Z56ijxoMCxy4baO_I3txXqsicWnX6CZBbxxHHziLPd6NzfuYpubbNQ38mIuZHC4rGb0ExlwNDHFVu8DPpWMSlSuUSMBY_HqjkdDmX6gbyjWPIpookoJW5dPnuFAS-h9-d9i8r_wjPyrNqT7IEiPARQjLgKnb2yEZ7PS"
@@ -267,12 +274,14 @@ export default function Form() {
           </div>
           <Button
             radius="full"
+            form="sib-form"
             className="bg-gradient-to-tr text-white shadow-lg px-12 py-6 text-lg font-bold"
             style={{ backgroundColor: "#F72378" }}
             type="submit"
           >
             Enquire Now!
           </Button>
+
           <p className="font-normal text-base text-center">
             Your email address and mobile number will be safely managed
             according to our &nbsp;
@@ -540,15 +549,18 @@ export default function Form() {
           <br className="hidden md:block" />
           <span className="form-affiliate-h1-style">Program</span>
         </h1>
-        <iframe
-          title="vimeo-player"
-          src="https://player.vimeo.com/video/645805338?h=7d0abb1ae3"
-          width="640"
-          height="360"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-        <div className="flex justify-around items-start md:flex-col form-affiliate-cloud-div">
+
+        <div className="w-full flex justify-center">
+          <iframe
+            title="vimeo-player"
+            src="https://player.vimeo.com/video/645805338?h=7d0abb1ae3"
+            width="640"
+            height="360"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div className="flex justify-around items-start md:flex-col form-affiliate-cloud-div" style={{paddingLeft:"10vw"}}>
           <div className="flex flex-col justify-start w-1/4 md:w-11/12">
             <p
               style={{ color: "#FF833F" }}

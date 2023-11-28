@@ -6,6 +6,28 @@
 }
 #form-inputs {
   width: 100vw;
+  @media (max-width: 770px) {
+    height: auto !important;
+  }
+}
+#dynamicIframe {
+  .sib-form {
+    padding: 0px !important;
+  }
+
+
+  @media (max-width: 350px) {
+    height: 145vh;
+  }
+  @media (max-width: 450px) {
+    height: 140vh;
+  }
+  @media (max-width: 850px) {
+    height: 125vh;
+  }
+  @media (max-width: 950px) {
+    height: 135vh;
+  }
 }
 
 @font-face {
@@ -226,6 +248,3 @@ h1 {
     background-position: 10vw;
   }
 }
-
-
-
