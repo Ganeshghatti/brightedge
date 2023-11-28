@@ -15,7 +15,6 @@
     padding: 0px !important;
   }
 
-
   @media (max-width: 350px) {
     height: 145vh;
   }
@@ -247,4 +246,12 @@ h1 {
     background-repeat: no-repeat;
     background-position: 10vw;
   }
+}
+.semicircle {
+  width: 100vw;
+  height: 30vh;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: -40px -40px 200px 0px #FBF55A;
+  border-radius: 2517px 2517px 0 0;
 }

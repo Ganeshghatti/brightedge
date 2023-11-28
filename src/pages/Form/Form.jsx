@@ -560,7 +560,10 @@ export default function Form() {
             allowfullscreen
           ></iframe>
         </div>
-        <div className="flex justify-around items-start md:flex-col form-affiliate-cloud-div" style={{paddingLeft:"10vw"}}>
+        <div
+          className="flex justify-around items-start md:flex-col form-affiliate-cloud-div"
+          style={{ paddingLeft: "10vw" }}
+        >
           <div className="flex flex-col justify-start w-1/4 md:w-11/12">
             <p
               style={{ color: "#FF833F" }}
@@ -1308,6 +1311,7 @@ export default function Form() {
           Pathway to
           <span className="form-pathwaytosuccess-h1-style"> Success</span>
         </h1>
+
         <img
           src="./Assets/Images/form/Roadmappc.png"
           alt=""
@@ -1329,7 +1333,7 @@ export default function Form() {
             <a href="http://www.brightkidmont.com">www.brightkidmont.com</a>
           </div>
         </Button>
-        <img
+        {/* <img
           src="./Assets/Images/form/Ellipselaptop.png"
           alt=""
           className="w-screen md:hidden bg-white"
@@ -1338,7 +1342,9 @@ export default function Form() {
           src="./Assets/Images/form/Ellipsephone.png"
           alt=""
           className="w-screen hidden md:block"
-        />
+        /> */}
+        <div class="semicircle"></div>
+
         <div className="footer-yellow-gradient" />
         <div className="flex flex-col items-center">
           <img src="./Assets/Images/logo.png" alt="" />
