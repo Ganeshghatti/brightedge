@@ -207,7 +207,11 @@ export default function Navbar() {
           />
         </svg>
         <ul className="flex w-2/3 justify-around  items-center md:hidden">
-          <li style={{ color: "#0B1C39" }}>Partnership</li>
+          <li style={{ color: "#0B1C39" }}>
+            <a href="https://brightkidmont.com/montessori-preschool-franchise">
+              Partnership
+            </a>
+          </li>
           <li>
             <Dropdown>
               <DropdownTrigger>
@@ -215,8 +219,10 @@ export default function Navbar() {
                   className="flex cursor-pointer"
                   style={{ color: "#0B1C39" }}
                 >
-                  Montessori
-                  <svg
+                  <a href="https://brightkidmont.com/montessori-preschool-nursery">
+                    Montessori
+                  </a>
+                  {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -230,15 +236,15 @@ export default function Navbar() {
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
-                  </svg>
+                  </svg> */}
                 </div>
               </DropdownTrigger>
-              <DropdownMenu aria-label="Static Actions">
+              {/* <DropdownMenu aria-label="Static Actions">
                 <DropdownItem color="danger">New file</DropdownItem>
                 <DropdownItem color="danger">Copy link</DropdownItem>
                 <DropdownItem color="danger">Edit file</DropdownItem>
                 <DropdownItem color="danger">Delete file</DropdownItem>
-              </DropdownMenu>
+              </DropdownMenu> */}
             </Dropdown>
           </li>
           <li>
@@ -248,8 +254,9 @@ export default function Navbar() {
                   className="flex cursor-pointer"
                   style={{ color: "#0B1C39" }}
                 >
-                  Resources
-                  <svg
+                  <a href="https://brilla.in/">Resources</a>
+
+                  {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -263,15 +270,15 @@ export default function Navbar() {
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
-                  </svg>
+                  </svg> */}
                 </div>
               </DropdownTrigger>
-              <DropdownMenu aria-label="Static Actions">
+              {/* <DropdownMenu aria-label="Static Actions">
                 <DropdownItem color="danger">New file</DropdownItem>
                 <DropdownItem color="danger">Copy link</DropdownItem>
                 <DropdownItem color="danger">Edit file</DropdownItem>
                 <DropdownItem color="danger">Delete file</DropdownItem>
-              </DropdownMenu>
+              </DropdownMenu> */}
             </Dropdown>
           </li>
           <li>
@@ -281,8 +288,8 @@ export default function Navbar() {
                   className="flex cursor-pointer"
                   style={{ color: "#0B1C39" }}
                 >
-                  More
-                  <svg
+                  <a href="http://www.brightkidmont.com">More</a>
+                  {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -296,15 +303,15 @@ export default function Navbar() {
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
-                  </svg>
+                  </svg> */}
                 </div>
               </DropdownTrigger>
-              <DropdownMenu aria-label="Static Actions">
+              {/* <DropdownMenu aria-label="Static Actions">
                 <DropdownItem color="danger">New file</DropdownItem>
                 <DropdownItem color="danger">Copy link</DropdownItem>
                 <DropdownItem color="danger">Edit file</DropdownItem>
                 <DropdownItem color="danger">Delete file</DropdownItem>
-              </DropdownMenu>
+              </DropdownMenu> */}
             </Dropdown>
           </li>
           <Link to="/form">

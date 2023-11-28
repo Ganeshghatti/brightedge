@@ -401,7 +401,7 @@ export default function Form() {
 
       <section
         id="form-highlights"
-        className="flex w-11/12 justify-around items-center md:flex-col py-16 lg:flex-wrap md:gap-8"
+        className="flex w-full justify-around items-center md:flex-col py-16 lg:flex-wrap md:gap-8"
       >
         <img
           src="./Assets/Images/form/icon_5.png"
@@ -409,7 +409,7 @@ export default function Form() {
           alt=""
         />
         <h1
-          className="text-6xl font-extrabold w-1/5 md:text-center lg:w-2/5 md:w-full md:text-4xl"
+          className="text-6xl font-extrabold w-1/3 md:text-center lg:w-2/5 md:w-full md:text-4xl"
           style={{ color: "#32355D" }}
         >
           Our Pricing
@@ -421,7 +421,7 @@ export default function Form() {
           style={{
             backgroundColor: "#D0E6FE",
             borderRadius: "24px",
-            border: " 1px solid  #1682FB",
+            border: "1px solid #1682FB",
           }}
         >
           <p className="text-2xl font-normal">Opening new Preschool:</p>
