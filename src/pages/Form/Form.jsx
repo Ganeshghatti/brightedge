@@ -174,6 +174,7 @@ export default function Form() {
             variant="outlined"
             type="text"
             name="FIRST_NAME"
+            required
             label="Name"
             value={formData.FIRST_NAME}
             onChange={handleChange}
@@ -197,9 +198,10 @@ export default function Form() {
               type="text"
               name="SMS"
               value={formData.SMS}
-              label="phone number"
+              label="Phone number"
               onChange={handleChange}
               className="flex-1"
+              required
             />
           </div>
 
@@ -209,9 +211,10 @@ export default function Form() {
             type="email"
             name="EMAIL"
             value={formData.EMAIL}
-            label="email"
+            label="Email"
             onChange={handleChange}
             className="w-full"
+            required
           />
 
           <TextField
@@ -223,14 +226,15 @@ export default function Form() {
             label="Postal/Area PIN code"
             onChange={handleChange}
             className="w-full"
+            required
           />
           <div className="border-1 border-solid border-gray-400 p-6 rounded-lg w-full">
             <FormControl>
               <FormLabel id="demo-radio-buttons-group-label">Query</FormLabel>
               <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
-                defaultValue="female"
                 name="YOUR_MESSAGE"
+                required
               >
                 <FormControlLabel
                   value="Open a new preschool"
@@ -684,12 +688,15 @@ export default function Form() {
               <img
                 src="./Assets/Images/form/tina.jpg"
                 className="w-64 h-full md:h-96 object-cover object-center md:w-full"
-                style={{borderRadius:"8px 0 0 8px"}}
+                style={{ borderRadius: "8px 0 0 8px" }}
                 alt=""
               />
               <div
                 className="flex-1 flex-col items-start gap-1.5 p-6 overflow-scroll"
-                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)", borderRadius:"0 8px 8px 0" }}
+                style={{
+                  backgroundColor: "rgba(22, 130, 251, 0.20)",
+                  borderRadius: "0 8px 8px 0",
+                }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
                   Wissen Mont Preschool, Madurai
@@ -715,13 +722,16 @@ export default function Form() {
             >
               <img
                 src="./Assets/Images/form/sher.jpg"
-                className="w-64 h-full md:h-96 object-cover object-center m-auto md:w-full"                style={{borderRadius:"8px 0 0 8px"}}
-
+                className="w-64 h-full md:h-96 object-cover object-center m-auto md:w-full"
+                style={{ borderRadius: "8px 0 0 8px" }}
                 alt=""
               />
               <div
                 className="flex-1 flex-col items-start gap-1.5 p-6 overflow-scroll"
-                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)", borderRadius:"0 8px 8px 0" }}
+                style={{
+                  backgroundColor: "rgba(22, 130, 251, 0.20)",
+                  borderRadius: "0 8px 8px 0",
+                }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
                   Sunrise Valley School, Haryana
@@ -746,13 +756,16 @@ export default function Form() {
             >
               <img
                 src="./Assets/Images/form/anupama.jpg"
-                className="w-64 h-full md:h-96 object-cover md:w-full object-center m-auto"                style={{borderRadius:"8px 0 0 8px" }}
-
+                className="w-64 h-full md:h-96 object-cover md:w-full object-center m-auto"
+                style={{ borderRadius: "8px 0 0 8px" }}
                 alt=""
               />
               <div
                 className="flex-1 flex-col items-start gap-1.5 p-6 overflow-scroll"
-                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)", borderRadius:"0 8px 8px 0" }}
+                style={{
+                  backgroundColor: "rgba(22, 130, 251, 0.20)",
+                  borderRadius: "0 8px 8px 0",
+                }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
                   Bright Kid Montessori, Jakkur, Bangalore
@@ -780,13 +793,16 @@ export default function Form() {
             >
               <img
                 src="./Assets/Images/form/shweta.jpg"
-                className="w-60 h-full md:h-96 m-auto object-cover md:w-full"                style={{borderRadius:"8px 0 0 8px"}}
-
+                className="w-60 h-full md:h-96 m-auto object-cover md:w-full"
+                style={{ borderRadius: "8px 0 0 8px" }}
                 alt=""
               />
               <div
                 className="flex-1 flex-col items-start gap-1.5 p-6 md:w-full  overflow-scroll"
-                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)", borderRadius:"0 8px 8px 0" }}
+                style={{
+                  backgroundColor: "rgba(22, 130, 251, 0.20)",
+                  borderRadius: "0 8px 8px 0",
+                }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
                   Bright Kid Montessori Horamavu, Bangalore{" "}
@@ -1386,14 +1402,13 @@ export default function Form() {
           Pathway to
           <span className="form-pathwaytosuccess-h1-style"> Success</span>
         </h1>
-
         <img
-          src="./Assets/Images/form/Roadmappc.png"
+          src="./Assets/Images/form/Roadmappc1.png"
           alt=""
           className="w-3/4 md:hidden"
         />
         <img
-          src="./Assets/Images/form/Roadmapphone.png"
+          src="./Assets/Images/form/Roadmapphone1.png"
           alt=""
           className="w-11/12 hidden md:block"
         />
@@ -1415,10 +1430,11 @@ export default function Form() {
             className="bg-gradient-to-tr shadow-lg px-32 py-9 text-lg font-bold"
             style={{ color: "#F72378", border: "2px solid #F72378" }}
           >
-            Enquire now for<br/>Admissions
+            Enquire now for
+            <br />
+            Admissions
           </Button>
         </div>
-
         {/* <img
           src="./Assets/Images/form/Ellipselaptop.png"
           alt=""
@@ -1429,9 +1445,8 @@ export default function Form() {
           alt=""
           className="w-screen hidden md:block"
         /> */}
-        <div className="semicircle"></div>
+        <div className="top" />
 
-        <div className="footer-yellow-gradient" />
         <div className="flex flex-col items-center">
           <img src="./Assets/Images/logo.png" alt="" />
           <div className="flex gap-6 md:flex-col">
@@ -1453,7 +1468,7 @@ export default function Form() {
         </div>
       </section>
 
-      <footer className="py-12 w-full flex justify-around pl-12 md:pl-0 items-center md:flex-col md:gap-6 md:py-6" >
+      <footer className="py-12 w-full flex justify-around pl-12 md:pl-0 items-center md:flex-col md:gap-6 md:py-6">
         <div className="flex flex-col gap-4 w-1/5 md:w-4/5">
           <p
             className="text-base font-normal md:text-center"

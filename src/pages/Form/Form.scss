@@ -63,12 +63,10 @@ h1 {
   position: relative;
 }
 .form-numbers-h1-style {
-  width: 272px;
-  height: 50px;
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="272" height="50" viewBox="0 0 272 50" fill="none"%3E%3Cpath d="M5.84946 5.5L136 0L266.151 5.5L272 26.5L266.151 47.5L136 50L5.84946 47.5L0 26.5L5.84946 5.5Z" fill="%23FBF55A"%3E%3C/path%3E%3C/svg%3E');
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 100px 30px;
+  background-size: cover;
+  background-position: bottom;
   z-index: -1;
 }
 .form-highlights-h1-style {
@@ -248,14 +246,29 @@ h1 {
     background-position: 10vw;
   }
 }
-.semicircle {
-  width: 100vw;
-  height: 30vh;
-  border-radius: 50%;
-  background-color: white;
-  box-shadow: -40px -40px 200px 0px #fbf55a;
-  border-radius: 2517px 2517px 0 0;
+
+$size: 45px;
+
+.top {
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border: 2px solid red;
+  background: white;
+  display: inline-block;
 }
+
+.top {
+  height: 1559px;
+  width: 2517px;
+}
+
+.top {
+  border-top-left-radius: 1500px;
+  border-top-right-radius:1500px;
+}
+
 .custom-dot-list-style {
   position: absolute;
   top: 400%;
@@ -270,6 +283,6 @@ h1 {
     display: none !important;
   }
 }
-.font-bold{
+.font-bold {
   font-weight: 900 !important;
 }
