@@ -602,12 +602,20 @@ export default function Form() {
             </div>
           </>
         ) : (
-          <img
-            src="./Assets/Images/form/video1thumbnail.png"
-            style={{ width: "90vw" }}
-            className="self-end cursor-pointer"
-            onClick={vid1f}
-          />
+          <>
+            <img
+              src="./Assets/Images/form/video1thumbnail.png"
+              style={{ width: "90vw" }}
+              className="self-end cursor-pointer md:hidden"
+              onClick={vid2f}
+            />
+            <img
+              src="./Assets/Images/form/video1thumbnailphone.png"
+              style={{ width: "90vw" }}
+              className="self-end cursor-pointer hidden md:block"
+              onClick={vid2f}
+            />
+          </>
         )}
 
         <div
@@ -1070,12 +1078,20 @@ export default function Form() {
             </div>
           </>
         ) : (
-          <img
-            src="./Assets/Images/form/video2thumbnail.png"
-            style={{ width: "90vw" }}
-            className="self-start cursor-pointer"
-            onClick={vid2f}
-          />
+          <>
+            <img
+              src="./Assets/Images/form/video2thumbnail.png"
+              style={{ width: "90vw" }}
+              className="self-start cursor-pointer md:hidden"
+              onClick={vid2f}
+            />
+            <img
+              src="./Assets/Images/form/video2thumbnailphone.png"
+              style={{ width: "90vw" }}
+              className="self-start cursor-pointer hidden md:block"
+              onClick={vid2f}
+            />
+          </>
         )}
 
         <p
