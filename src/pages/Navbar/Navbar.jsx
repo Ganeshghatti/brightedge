@@ -1,15 +1,14 @@
+import {
+  Button,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+} from "@nextui-org/react";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import logo from "./logo1.png";
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownSection,
-  DropdownItem,
-} from "@nextui-org/react";
-import { Button, ButtonGroup } from "@nextui-org/react";
-import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [menu, setmenu] = useState(false);
@@ -46,9 +45,9 @@ export default function Navbar() {
                       <path
                         d="M7 11L12 15L17 11"
                         stroke="#0B1C39"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </div>
@@ -87,9 +86,9 @@ export default function Navbar() {
                       <path
                         d="M7 11L12 15L17 11"
                         stroke="#0B1C39"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </div>
@@ -128,9 +127,9 @@ export default function Navbar() {
                       <path
                         d="M7 11L12 15L17 11"
                         stroke="#0B1C39"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </div>
@@ -187,23 +186,23 @@ export default function Navbar() {
           <path
             d="M4 12H20"
             stroke="#4A4B57"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M4 5H20"
             stroke="#4A4B57"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M4 19H20"
             stroke="#4A4B57"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
         <ul className="flex w-2/3 justify-around  items-center md:hidden">
@@ -232,9 +231,9 @@ export default function Navbar() {
                     <path
                       d="M7 11L12 15L17 11"
                       stroke="#0B1C39"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg> */}
                 </div>
@@ -266,9 +265,9 @@ export default function Navbar() {
                     <path
                       d="M7 11L12 15L17 11"
                       stroke="#0B1C39"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg> */}
                 </div>
@@ -299,9 +298,9 @@ export default function Navbar() {
                     <path
                       d="M7 11L12 15L17 11"
                       stroke="#0B1C39"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg> */}
                 </div>

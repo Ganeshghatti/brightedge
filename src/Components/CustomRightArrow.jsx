@@ -1,5 +1,4 @@
 import React from "react";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const CustomRightArrow = ({ onClick }) => {
   return window.innerWidth > 867 ? (
@@ -19,9 +18,9 @@ const CustomRightArrow = ({ onClick }) => {
         <path
           d="M23.5415 34.7568L32.4692 25.8038L23.5415 16.8509"
           stroke="white"
-          stroke-width="2.97588"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2.97588"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </button>

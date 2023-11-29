@@ -1,29 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { Button, ButtonGroup } from "@nextui-org/react";
-import "./Form.scss";
-import Select from "@mui/material/Select";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import TextField from "@mui/material/TextField";
-import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import { useTheme } from "@mui/material/styles";
-import MobileStepper from "@mui/material/MobileStepper";
-import Paper from "@mui/material/Paper";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import FormControl from "@mui/material/FormControl";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormLabel from "@mui/material/FormLabel";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
-import { faArrowAltCircleDown } from "@fortawesome/free-regular-svg-icons";
+import TextField from "@mui/material/TextField";
+import { Button } from "@nextui-org/react";
+import React, { useState } from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import CustomLeftArrow from "../../Components/CustomLeftArrow";
 import CustomRightArrow from "../../Components/CustomRightArrow";
+import "./Form.scss";
+import submitFormApi from "./api.js";
 
 const images = [
   {
@@ -75,6 +67,7 @@ const carouseldata = {
     slidesToSlide: 1,
   },
 };
+
 const testimonailsdata = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -95,6 +88,7 @@ const testimonailsdata = {
     partialVisibilityGutter: 40,
   },
 };
+
 export default function Form() {
   const [formData, setFormData] = useState({
     FIRST_NAME: "",
@@ -121,9 +115,13 @@ export default function Form() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    // validate before submit
+    await submitFormApi(formData);
+
+    // clear form after submission
   };
 
   return (
@@ -164,41 +162,12 @@ export default function Form() {
             from start to finish.
           </p>
         </div>
-        {/* <iframe
-          width="540"
-          height="305"
-          src="https://1763470a.sibforms.com/serve/MUIFAAo_s6yx_gEhCgIR8_s2cKy0dGhPNnlI8F8r97zF_hf8svxI9adwH9a88tsQ6scMZcFMOV9wcw4FqNexhc9DTAk6S37BHZSAohWlNRN763vORdQbEdYRoh2g7kZyfKCHPBd0jxbE9NIVgFPECmlKMgmSv4erSu_AIF64ZT4-hjC7P4rX7mrxurJZEptADxEC_V3uzXrbg_O_"
-          frameborder="0"
-          scrolling="auto"
-          allowfullscreen
-        ></iframe> */}
-        <div className="flex flex-col items-center w-1/2 h-full gap-4 md:w-full">
-          <iframe
-            src="https://1763470a.sibforms.com/serve/MUIFAHQegvReJOCpYJdYESb1Z8IJoTbaVf4PK5fhbUmZ5UmrVFQOeT7UdmiXLDGwBLp2Mb5IVCxkLSQBm1PNRF6RY-tT3ODvZ-VbtjAobJgIONVvjtPzIGL5c-sz5lxx49TiSGxhjy4IRIy7345L5vIGGQyvLUI-aCVQoBELicKDzwk1MZ7qJsWyF12AsuW4f-fylrWlQaJGKe_g"
-            className="w-full h-full z-50 md:w-full"
-            id="dynamicIframe"
-          ></iframe>
-          <p className="font-normal text-base text-center">
-            Your email address and mobile number will be safely managed
-            according to our &nbsp;
-            <br />
-            <a
-              href="#"
-              style={{ color: "#1682FB" }}
-              className="font-bold underline"
-            >
-              Privacy Policy
-            </a>
-          </p>
-        </div>
-        {/* <form
+
+        <form
           style={{ padding: "0 6vw" }}
           className="w-1/2 px-10 flex flex-col justify-around items-center gap-4 md:w-full md:mt-8"
           id="sib-form"
-          method="POST"
-          action="https://1763470a.sibforms.com/serve/MUIFADrGC7a8vWRbOQRe8IAdirv7k0lMfKThze9jkNsB3Z56ijxoMCxy4baO_I3txXqsicWnX6CZBbxxHHziLPd6NzfuYpubbNQ38mIuZHC4rGb0ExlwNDHFVu8DPpWMSlSuUSMBY_HqjkdDmX6gbyjWPIpookoJW5dPnuFAS-h9-d9i8r_wjPyrNqT7IEiPARQjLgKnb2yEZ7PS"
-          data-type="subscription"
-          // onSubmit={handleSubmit}
+          onSubmit={handleSubmit}
         >
           <TextField
             id="outlined-basic"
@@ -318,7 +287,7 @@ export default function Form() {
               Privacy Policy
             </a>
           </p>
-        </form> */}
+        </form>
       </section>
 
       <section
@@ -470,9 +439,9 @@ export default function Form() {
               <path
                 d="M3.6665 12H21.6665M21.6665 12L15.6665 6M21.6665 12L15.6665 18"
                 stroke="#F72378"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <img
@@ -516,9 +485,9 @@ export default function Form() {
               <path
                 d="M3.6665 12H21.6665M21.6665 12L15.6665 6M21.6665 12L15.6665 18"
                 stroke="#F72378"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </p>
@@ -560,9 +529,9 @@ export default function Form() {
               <path
                 d="M3.6665 12H21.6665M21.6665 12L15.6665 6M21.6665 12L15.6665 18"
                 stroke="#F72378"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </p>
@@ -880,39 +849,39 @@ export default function Form() {
                 d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
                 fill="white"
                 stroke="#7F46FF"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
                 fill="white"
                 stroke="#7F46FF"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M42 24C42 33.9411 33.9411 42 24 42C14.0589 42 6 33.9411 6 24C6 14.0589 14.0589 6 24 6C33.9411 6 42 14.0589 42 24Z"
                 fill="white"
                 stroke="#7F46FF"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M28 16H22C19.7909 16 18 17.7909 18 20C18 22.2091 19.7909 24 22 24H26C28.2091 24 30 25.7909 30 28C30 30.2091 28.2091 32 26 32L19.9998 31.9999"
                 stroke="#7F46FF"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M24 16V14M24 32V34"
                 stroke="#7F46FF"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <p className="text-2xl font-normal md:text-xl">
@@ -938,18 +907,18 @@ export default function Form() {
               <path
                 d="M8 24H24M24 24H40M24 24V40M24 24L24 8"
                 stroke="#1682FB"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-dasharray="0.2 8"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeDasharray="0.2 8"
               />
               <path
                 d="M38 8H10C8.89543 8 8 8.89543 8 10V38C8 39.1046 8.89543 40 10 40H38C39.1046 40 40 39.1046 40 38V10C40 8.89543 39.1046 8 38 8Z"
                 fill="white"
                 stroke="#1682FB"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <p className="text-2xl font-normal md:text-xl">
@@ -975,9 +944,9 @@ export default function Form() {
               <path
                 d="M7.50984 26.6019C6.55212 24.9446 6 22.9952 6 20.9091C6 14.8842 10.6051 10 16.2857 10C19.3578 10 22.1153 11.4284 24 13.6932C25.8847 11.4284 28.6422 10 31.7143 10C37.3949 10 42 14.8842 42 20.9091C42 22.9952 41.4479 24.9446 40.4902 26.6019C36.2171 34.5497 24 40 24 40C24 40 11.7829 34.5497 7.50984 26.6019Z"
                 stroke="#F72378"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <p className="text-2xl font-normal md:text-xl">
@@ -1003,25 +972,25 @@ export default function Form() {
               <path
                 d="M38 24H42M24 38V42M10 24H6M24 10V6"
                 stroke="#FF833F"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M38 24C38 31.732 31.732 38 24 38C16.268 38 10 31.732 10 24C10 16.268 16.268 10 24 10C31.732 10 38 16.268 38 24Z"
                 fill="white"
                 stroke="#FF833F"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M30 24C30 27.3137 27.3137 30 24 30C20.6863 30 18 27.3137 18 24C18 20.6863 20.6863 18 24 18C27.3137 18 30 20.6863 30 24Z"
                 fill="white"
                 stroke="#FF833F"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <p className="text-2xl font-normal md:text-xl">
@@ -1442,7 +1411,7 @@ export default function Form() {
           alt=""
           className="w-screen hidden md:block"
         /> */}
-        <div class="semicircle"></div>
+        <div className="semicircle"></div>
 
         <div className="footer-yellow-gradient" />
         <div className="flex flex-col items-center">
