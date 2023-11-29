@@ -675,7 +675,7 @@ export default function Form() {
             customRightArrow={<CustomRightArrow />}
           >
             <div
-              className="w-full border-8 border-white border-solid h-64 md:h-auto md:m-auto ml-96 flex justify-between md:flex-col md:w-11/12 rounded-xl"
+              className="w-full md:m-auto border-8 border-white border-solid h-64 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded"
               style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
             >
               <img
@@ -706,7 +706,7 @@ export default function Form() {
               </div>
             </div>
             <div
-              className="w-full border-8 m-auto border-white border-solid h-64 ml-96 flex md:h-auto justify-between md:flex-col md:w-11/12 rounded"
+              className="w-full md:m-auto border-8 border-white border-solid h-64 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded"
               style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
             >
               <img
@@ -736,7 +736,7 @@ export default function Form() {
               </div>
             </div>
             <div
-              className="w-full border-8 border-white border-solid h-64 flex md:h-auto ml-96 md:m-auto justify-between md:flex-col md:w-11/12 rounded"
+              className="w-full md:m-auto border-8 border-white border-solid h-64 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded"
               style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
             >
               <img
@@ -1044,12 +1044,16 @@ export default function Form() {
             infinite={true}
             autoPlay={true}
             customTransition="all 5"
-            transitionDuration={500}
+            transitionDuration={300}
             focusOnSelect={false}
-            customLeftArrow={<CustomLeftArrow />}
-            customRightArrow={<CustomRightArrow />}cd
+            customLeftArrow={
+              <CustomLeftArrow style={{ display: window.innerWidth < 860 ? 'none' : 'block' }} />
+            }
+            customRightArrow={
+              <CustomRightArrow style={{ display: window.innerWidth < 860 ? 'none' : 'block' }} />
+            }
           >
-            <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
+            <div className="w-full flex justify-center gap-16 md:flex-col md:m-auto md:w-11/12">
               <img
                 src="./Assets/Images/form/carousel2.jpg"
                 className="w-2/5 rounded-xl md:w-full"
@@ -1066,7 +1070,7 @@ export default function Form() {
                 </p>
               </div>
             </div>
-            <div className="w-full flex justify-center gap-16 md:flex-col  md:w-11/12">
+            <div className="w-full flex justify-center gap-16 md:m-auto md:flex-col  md:w-11/12">
               <img
                 src="./Assets/Images/form/carousel3.jpg"
                 className="w-2/5 rounded-xl md:w-full"
@@ -1083,7 +1087,7 @@ export default function Form() {
                 </p>
               </div>
             </div>
-            <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
+            <div className="w-full flex justify-center gap-16 md:m-auto md:flex-col md:w-11/12">
               <img
                 src="./Assets/Images/form/carousel4.jpg"
                 className="w-2/5 rounded-xl md:w-full"
@@ -1100,7 +1104,7 @@ export default function Form() {
                 </p>
               </div>
             </div>
-            <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
+            <div className="w-full flex justify-center gap-16 md:m-auto md:flex-col md:w-11/12">
               <img
                 src="./Assets/Images/form/carousel5.jpg"
                 className="w-2/5 rounded-xl md:w-full"
@@ -1117,7 +1121,7 @@ export default function Form() {
                 </p>
               </div>
             </div>
-            <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
+            <div className="w-full flex justify-center gap-16 md:m-auto md:flex-col md:w-11/12">
               <img
                 src="./Assets/Images/form/carousel1.jpg"
                 className="w-2/5 rounded-xl md:w-full"

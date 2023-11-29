@@ -2,7 +2,7 @@ import React from "react";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const CustomRightArrow = ({ onClick }) => {
-  return (
+  return window.innerWidth > 867 ? (
     <button
       onClick={onClick}
       className={`custom-arrow custom-right-arrow absolute right-5 top-1/2`}
@@ -25,7 +25,7 @@ const CustomRightArrow = ({ onClick }) => {
         />
       </svg>
     </button>
-  );
+  ) : null;
 };
 
 export default CustomRightArrow;
