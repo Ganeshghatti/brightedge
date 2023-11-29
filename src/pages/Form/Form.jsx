@@ -139,7 +139,7 @@ export default function Form() {
           style={{ padding: "0 6vw" }}
         >
           <h1
-            className="text-6xl font-extrabold lg:text-5xl md:text-4xl"
+            className="text-6xl font-bold lg:text-5xl md:text-4xl"
             style={{ color: "#32355D" }}
           >
             Make an impactful
@@ -299,7 +299,7 @@ export default function Form() {
         className="w-full flex flex-col items-center justify-center gap-8 py-16 px-12 md:py-6"
       >
         <h1
-          className="text-6xl font-extrabold md:text-center md:text-4xl"
+          className="text-6xl font-bold md:text-center md:text-4xl"
           style={{ color: "#32355D", padding: "0 15vw" }}
         >
           Endurance<span className="form-numbers-h1-style"> & Success</span>
@@ -313,7 +313,7 @@ export default function Form() {
               Years of Expertise
             </p>
             <p
-              className="text-7xl lg:text-6xl font-extrabold sm:text-5xl"
+              className="text-7xl lg:text-6xl font-bold sm:text-5xl"
               style={{ color: "#F72378" }}
             >
               {/* <span className="opacity-20">0</span> */}
@@ -332,7 +332,7 @@ export default function Form() {
               School Set-ups
             </p>
             <p
-              className="text-7xl lg:text-6xl font-extrabold sm:text-5xl"
+              className="text-7xl lg:text-6xl font-bold sm:text-5xl"
               style={{ color: "#F72378" }}
             >
               {/* <span className="opacity-20 ">0</span> */}
@@ -352,7 +352,7 @@ export default function Form() {
               Children Developed
             </p>
             <p
-              className="text-7xl lg:text-6xl font-extrabold sm:text-5xl"
+              className="text-7xl lg:text-6xl font-bold sm:text-5xl"
               style={{ color: "#F72378" }}
             >
               35000+
@@ -371,7 +371,7 @@ export default function Form() {
               Cities
             </p>
             <p
-              className="text-7xl lg:text-6xl font-extrabold sm:text-5xl"
+              className="text-7xl lg:text-6xl font-bold sm:text-5xl"
               style={{ color: "#F72378" }}
             >
               {/* <span className="opacity-20">0</span> */}
@@ -402,7 +402,7 @@ export default function Form() {
         />
 
         <h1
-          className="text-6xl font-extrabold w-1/4 md:text-center lg:w-2/5 md:w-full md:text-4xl"
+          className="text-6xl font-bold w-1/4 md:text-center lg:w-2/5 md:w-full md:text-4xl"
           style={{ color: "#32355D" }}
         >
           Our Pricing
@@ -598,7 +598,7 @@ export default function Form() {
           <div className="flex flex-col justify-start w-1/4 md:w-11/12">
             <p
               style={{ color: "#FF833F" }}
-              className="text-4xl font-extrabold text-left md:text-3xl"
+              className="text-4xl font-bold text-left md:text-3xl"
             >
               Not an average franchise program.
             </p>
@@ -658,7 +658,7 @@ export default function Form() {
             Testimonials
           </p>
           <h1
-            className="text-6xl font-extrabold md:text-center md:text-4xl lg:text-center"
+            className="text-6xl font-bold md:text-center md:text-4xl lg:text-center"
             style={{ color: "#32355D" }}
           >
             Don’t take
@@ -840,7 +840,7 @@ export default function Form() {
           Opening a New Preschool:
         </p>
         <h1
-          className="text-6xl font-extrabold md:text-center md:text-4xl"
+          className="text-6xl font-bold md:text-center md:text-4xl"
           style={{ color: "#32355D", padding: "0 6vw" }}
         >
           Here’s all&nbsp;
@@ -1027,7 +1027,7 @@ export default function Form() {
         <div className="flex justify-around w-11/12  md:flex-col-reverse md:gap-4">
           <div className="flex flex-col justify-center w-1/2 px-8 md:w-full md:items-center">
             <h1
-              className="text-6xl font-extrabold md:text-center md:text-4xl"
+              className="text-6xl font-bold md:text-center md:text-4xl"
               style={{ color: "#1682FB" }}
             >
               Parent’s Choice:
@@ -1083,7 +1083,7 @@ export default function Form() {
         )}
 
         <p
-          className="text-center text-4xl font-extrabold md:text-left md:text-2xl md:pl-4"
+          className="text-center text-4xl font-bold md:text-left md:text-2xl md:pl-4"
           style={{ color: "#FD9927" }}
         >
           Unbeatable Top 5 Bright Kid Differentiators!
@@ -1211,7 +1211,7 @@ export default function Form() {
           className="w-60 md:w-36"
         />
         <h1
-          className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
+          className="text-6xl font-bold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
         >
           New Preschool Franchise has never been Here’s all&nbsp;
@@ -1324,7 +1324,7 @@ export default function Form() {
         </p>
 
         <h1
-          className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
+          className="text-6xl font-bold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
         >
           Comprehensive
@@ -1356,7 +1356,7 @@ export default function Form() {
         className="flex flex-col items-center gap-8 w-full py-12 md:py-6"
       >
         <h1
-          className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
+          className="text-6xl font-bold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
         >
           Our Awards &<span className="form-awards-h1-style"> Accolades</span>
@@ -1396,7 +1396,7 @@ export default function Form() {
         className="flex flex-col items-center gap-16 w-full py-12 md:py-6"
       >
         <h1
-          className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
+          className="text-6xl font-bold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
         >
           Pathway to
