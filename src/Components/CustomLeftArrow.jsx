@@ -1,5 +1,4 @@
 import React from "react";
-import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 const CustomLeftArrow = ({ onClick }) => {
   return (
