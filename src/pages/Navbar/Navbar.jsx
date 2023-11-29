@@ -24,7 +24,7 @@ export default function Navbar() {
             className="fixed w-screen h-screen top-0 left-0 z-30 navbar-mobile-menu-overlay"
             onClick={menuf}
           ></div>
-          <ul className="flex flex-col fixed top-0 right-0 z-50 w-3/4 h-screen bg-white justify-center  items-center gap-6">
+          <ul className="flex flex-col fixed top-0 right-0 z-50 w-3/4 h-screen bg-white justify-center items-center gap-6">
             <li style={{ color: "#0B1C39" }} onClick={menuf}>
               Partnership
             </li>
@@ -173,7 +173,7 @@ export default function Navbar() {
         style={{ borderBottom: "1px solid gray" }}
       >
         <Link to="/">
-          <img src={logo} alt="" className="w-36" />
+          <img src={logo} alt="" className="w-44 md:w-36" />
         </Link>
         <svg
           xmlns="http://www.w3.org/2000/svg"

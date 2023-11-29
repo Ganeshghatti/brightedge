@@ -104,6 +104,15 @@ export default function Form() {
     LOCATION: "",
     YOUR_MESSAGE: "",
   });
+  const [vid1, setvid1] = useState(false);
+  const vid1f = () => {
+    setvid1(!vid1);
+  };
+
+  const [vid2, setvid2] = useState(false);
+  const vid2f = () => {
+    setvid2(!vid2);
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -314,7 +323,7 @@ export default function Form() {
 
       <section
         id="form-numbers"
-        className="w-full flex flex-col items-center justify-center gap-16 py-16 px-12 "
+        className="w-full flex flex-col items-center justify-center gap-8 py-16 px-12 "
       >
         <h1
           className="text-6xl font-extrabold md:text-center md:text-4xl"
@@ -428,7 +437,7 @@ export default function Form() {
           <span className="form-highlights-h1-style"> Highlights</span>
         </h1>
         <div
-          className="w-1/5 p-8 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full"
+          className="w-1/5 p-6 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full"
           style={{
             backgroundColor: "#D0E6FE",
             borderRadius: "24px",
@@ -475,7 +484,7 @@ export default function Form() {
         </div>
 
         <div
-          className="w-1/5 p-8 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full lg:mt-6"
+          className="w-1/5 p-6 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full lg:mt-6"
           style={{
             backgroundColor: "#FEFDDE ",
             borderRadius: "24px",
@@ -516,7 +525,7 @@ export default function Form() {
         </div>
 
         <div
-          className="w-1/5 p-8 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full lg:mt-6"
+          className="w-1/5 p-6 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full lg:mt-6"
           style={{
             backgroundColor: "#E5DAFF",
             borderRadius: "24px",
@@ -564,25 +573,43 @@ export default function Form() {
         id="form-affiliate"
         className="py-16 gap-12 w-full flex flex-col items-center"
       >
-        <h1
-          className="text-6xl font-extrabold md:text-center md:text-4xl"
-          style={{ color: "#32355D" }}
+        <p
+          className="text-6xl font-bold md:text-center md:text-4xl"
+          style={{ color: "#7F46FF" }}
         >
-          Our Affiliate&nbsp;
-          <br className="hidden md:block" />
-          <span className="form-affiliate-h1-style">Program</span>
-        </h1>
+          Our Preschool
+          <span className="form-affiliate-h1-style"> Partnership </span>Program
+        </p>
+        {vid1 ? (
+          <>
+            <div
+              className="fixed w-screen h-screen top-0 left-0 z-30"
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.608)" }}
+              onClick={vid1f}
+            />
+            <div
+              className="flex justify-center items-center fixed w-screen h-screen top-0 left-0 z-50"
+              onClick={vid1f}
+            >
+              <iframe
+                title="vimeo-player"
+                src="https://player.vimeo.com/video/645805338?h=7d0abb1ae3"
+                width="640"
+                height="360"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </>
+        ) : (
+          <img
+            src="./Assets/Images/form/video1thumbnail.png"
+            style={{ width: "90vw" }}
+            className="self-end cursor-pointer"
+            onClick={vid1f}
+          />
+        )}
 
-        <div className="w-full flex justify-center">
-          <iframe
-            title="vimeo-player"
-            src="https://player.vimeo.com/video/645805338?h=7d0abb1ae3"
-            width="640"
-            height="360"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </div>
         <div
           className="flex justify-around items-start md:flex-col form-affiliate-cloud-div"
           style={{ paddingLeft: "10vw" }}
@@ -675,7 +702,7 @@ export default function Form() {
             customRightArrow={<CustomRightArrow />}
           >
             <div
-              className="w-full md:m-auto border-8 border-white border-solid h-64 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded"
+              className="w-full md:m-auto border-8 border-white border-solid h-64 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded-xl"
               style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
             >
               <img
@@ -882,7 +909,7 @@ export default function Form() {
             </svg>
             <p className="text-2xl font-normal md:text-xl">
               ₹4 Lakhs - ₹10
-              <br md:hidden /> Lakhs
+              <br className="md:hidden" /> Lakhs
             </p>
           </div>
 
@@ -919,7 +946,7 @@ export default function Form() {
             </svg>
             <p className="text-2xl font-normal md:text-xl">
               About 1200
-              <br md:hidden /> Sq.ft and above
+              <br className="md:hidden" /> Sq.ft and above
             </p>
           </div>
 
@@ -947,7 +974,7 @@ export default function Form() {
             </svg>
             <p className="text-2xl font-normal md:text-xl">
               For early childhood
-              <br md:hidden /> education
+              <br className="md:hidden" /> education
             </p>
           </div>
           <div className="form-hereisallyouneed-card4 flex flex-col justify-around px-10 h-64 w-1/5 lg:w-2/5 md:w-11/12 lg:mt-6 md:h-48 md:mt-6">
@@ -991,7 +1018,7 @@ export default function Form() {
             </svg>
             <p className="text-2xl font-normal md:text-xl">
               For
-              <br md:hidden /> entrepreneurship
+              <br className="md:hidden" /> entrepreneurship
             </p>
           </div>
         </div>
@@ -1021,17 +1048,40 @@ export default function Form() {
             />
           </div>
         </div>
-        <div className="w-full flex justify-start">
-          <iframe
-            title="vimeo-player"
-            src="https://player.vimeo.com/video/642923538?h=ceaf8d6f86"
-            width="640"
-            height="360"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <p className="text-center text-4xl font-extrabold md:text-left md:text-2xl md:pl-4" style={{color:"#FD9927"}}>
+        {vid2 ? (
+          <>
+            <div
+              className="fixed w-screen h-screen top-0 left-0 z-30"
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.608)" }}
+              onClick={vid2f}
+            />
+            <div
+              className="flex justify-center items-center fixed w-screen h-screen top-0 left-0 z-50"
+              onClick={vid2f}
+            >
+              <iframe
+                title="vimeo-player"
+                src="https://player.vimeo.com/video/642923538?h=ceaf8d6f86"
+                width="640"
+                height="360"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </>
+        ) : (
+          <img
+            src="./Assets/Images/form/video2thumbnail.png"
+            style={{ width: "90vw" }}
+            className="self-start cursor-pointer"
+            onClick={vid2f}
+          />
+        )}
+
+        <p
+          className="text-center text-4xl font-extrabold md:text-left md:text-2xl md:pl-4"
+          style={{ color: "#FD9927" }}
+        >
           Unbeatable Top 5 Bright Kid Differentiators!
         </p>
         <div className="w-11/12">
@@ -1047,10 +1097,14 @@ export default function Form() {
             transitionDuration={300}
             focusOnSelect={false}
             customLeftArrow={
-              <CustomLeftArrow style={{ display: window.innerWidth < 860 ? 'none' : 'block' }} />
+              <CustomLeftArrow
+                style={{ display: window.innerWidth < 860 ? "none" : "block" }}
+              />
             }
             customRightArrow={
-              <CustomRightArrow style={{ display: window.innerWidth < 860 ? 'none' : 'block' }} />
+              <CustomRightArrow
+                style={{ display: window.innerWidth < 860 ? "none" : "block" }}
+              />
             }
           >
             <div className="w-full flex justify-center gap-16 md:flex-col md:m-auto md:w-11/12">
@@ -1167,7 +1221,7 @@ export default function Form() {
         </p>
         <div className="flex flex-wrap justify-center w-full gap-8 md:flex-col md:items-center">
           <div
-            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-3xl md:w-11/12 md:h-auto md:pl-2 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1183,7 +1237,7 @@ export default function Form() {
           </div>
 
           <div
-            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-3xl md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1200,7 +1254,7 @@ export default function Form() {
           </div>
 
           <div
-            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-3xl md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1216,7 +1270,7 @@ export default function Form() {
           </div>
 
           <div
-            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start bg-white justify-around h-40 pl-8 pr-16 py-4 rounded-3xl md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1233,7 +1287,7 @@ export default function Form() {
           </div>
 
           <div
-            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 bg-white rounded-lg md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
+            className="w-2/5 flex flex-col items-start justify-around h-40 pl-8 pr-16 py-4 bg-white rounded-3xl md:w-11/12 md:h-auto md:pl-3 md:pr-4 md:gap-4"
             style={{ border: "1px solid #7F46FF" }}
           >
             <p
@@ -1372,7 +1426,7 @@ export default function Form() {
           alt=""
           className="w-screen hidden md:block"
         /> */}
-        {/* <div class="semicircle"></div> */}
+        <div class="semicircle"></div>
 
         <div className="footer-yellow-gradient" />
         <div className="flex flex-col items-center">
