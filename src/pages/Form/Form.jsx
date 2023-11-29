@@ -80,16 +80,19 @@ const testimonailsdata = {
     breakpoint: { max: 3000, min: 1024 },
     items: 2,
     slidesToSlide: 1,
+    partialVisibilityGutter: 40,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 1,
     slidesToSlide: 1,
+    partialVisibilityGutter: 40,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
     slidesToSlide: 1,
+    partialVisibilityGutter: 40,
   },
 };
 export default function Form() {
@@ -331,7 +334,8 @@ export default function Form() {
               className="text-7xl lg:text-6xl font-extrabold sm:text-5xl"
               style={{ color: "#F72378" }}
             >
-              <span className="opacity-20">0</span>16+
+              {/* <span className="opacity-20">0</span> */}
+              16+
             </p>
           </div>
           <div
@@ -349,7 +353,8 @@ export default function Form() {
               className="text-7xl lg:text-6xl font-extrabold sm:text-5xl"
               style={{ color: "#F72378" }}
             >
-              <span className="opacity-20 ">0</span>200+
+              {/* <span className="opacity-20 ">0</span> */}
+              200+
             </p>
           </div>
           <div
@@ -387,7 +392,8 @@ export default function Form() {
               className="text-7xl lg:text-6xl font-extrabold sm:text-5xl"
               style={{ color: "#F72378" }}
             >
-              <span className="opacity-20">0</span>30+
+              {/* <span className="opacity-20">0</span> */}
+              30+
             </p>
           </div>
         </div>
@@ -401,15 +407,20 @@ export default function Form() {
 
       <section
         id="form-highlights"
-        className="flex w-full justify-around items-center md:flex-col py-16 lg:flex-wrap md:gap-8"
+        className="flex w-11/12 justify-around items-center md:flex-col py-16 lg:flex-wrap md:gap-8"
       >
         <img
           src="./Assets/Images/form/icon_5.png"
           className="absolute  mb-96 left-2/3 lg:hidden md:hidden"
           alt=""
         />
+        <img
+          src="./Assets/Images/form/trapezium.png"
+          className="absolute right-0 mb-96 lg:hidden md:hidden"
+        />
+
         <h1
-          className="text-6xl font-extrabold w-1/3 md:text-center lg:w-2/5 md:w-full md:text-4xl"
+          className="text-6xl font-extrabold w-1/4 md:text-center lg:w-2/5 md:w-full md:text-4xl"
           style={{ color: "#32355D" }}
         >
           Our Pricing
@@ -639,7 +650,7 @@ export default function Form() {
             Testimonials
           </p>
           <h1
-            className="text-6xl font-extrabold md:text-center md:text-4xl"
+            className="text-6xl font-extrabold md:text-center md:text-4xl lg:text-center"
             style={{ color: "#32355D" }}
           >
             Don’t take
@@ -651,7 +662,7 @@ export default function Form() {
             responsive={testimonailsdata}
             swipeable={true}
             draggable={true}
-            showDots={false}
+            showDots={true}
             ssr={true}
             infinite={true}
             autoPlay={true}
@@ -659,20 +670,21 @@ export default function Form() {
             transitionDuration={500}
             dotListClass="custom-dot-list-style"
             focusOnSelect={false}
+            renderDotsOutside={true}
             customLeftArrow={<CustomLeftArrow />}
             customRightArrow={<CustomRightArrow />}
           >
             <div
-              className="w-11/12 h-64 md:h-auto flex justify-between md:flex-col md:w-11/12 rounded mr-4"
+              className="w-full border-8 border-white border-solid h-64 md:h-auto md:m-auto ml-96 flex justify-between md:flex-col md:w-11/12 rounded-xl"
               style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
             >
               <img
                 src="./Assets/Images/form/tina.jpg"
-                className="w-64 h-64 object-cover md:w-full"
+                className="w-64 h-full md:h-96 object-cover object-center md:w-full"
                 alt=""
               />
               <div
-                className="flex-1 flex-col items-start gap-1.5 p-6"
+                className="flex-1 flex-col items-start gap-1.5 p-6 overflow-scroll"
                 style={{ backgroundColor: "rgba(22, 130, 251, 0.20)" }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
@@ -694,16 +706,16 @@ export default function Form() {
               </div>
             </div>
             <div
-              className="w-11/12 h-64 flex md:h-auto justify-between md:flex-col md:w-11/12 rounded mr-4"
+              className="w-full border-8 m-auto border-white border-solid h-64 ml-96 flex md:h-auto justify-between md:flex-col md:w-11/12 rounded"
               style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
             >
               <img
                 src="./Assets/Images/form/sher.jpg"
-                className="w-64 h-64 object-cover md:w-full"
+                className="w-64 h-full md:h-96 object-cover object-center m-auto md:w-full"
                 alt=""
               />
               <div
-                className="flex-1 flex-col items-start gap-1.5 p-6"
+                className="flex-1 flex-col items-start gap-1.5 p-6 overflow-scroll"
                 style={{ backgroundColor: "rgba(22, 130, 251, 0.20)" }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
@@ -724,16 +736,16 @@ export default function Form() {
               </div>
             </div>
             <div
-              className="w-11/12 h-64 flex md:h-auto justify-between md:flex-col md:w-11/12 rounded mr-4"
+              className="w-full border-8 border-white border-solid h-64 flex md:h-auto ml-96 md:m-auto justify-between md:flex-col md:w-11/12 rounded"
               style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
             >
               <img
                 src="./Assets/Images/form/anupama.jpg"
-                className="w-64 h-64 object-cover md:w-full"
+                className="w-64 h-full md:h-96 object-cover md:w-full object-center m-auto"
                 alt=""
               />
               <div
-                className="flex-1 flex-col items-start gap-1.5 p-6"
+                className="flex-1 flex-col items-start gap-1.5 p-6 overflow-scroll"
                 style={{ backgroundColor: "rgba(22, 130, 251, 0.20)" }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
@@ -757,12 +769,12 @@ export default function Form() {
               </div>
             </div>
             <div
-              className="w-11/12 h-64 flex md:h-auto justify-between md:flex-col md:w-11/12 rounded mr-4"
+              className="w-full md:m-auto border-8 border-white border-solid h-64 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded"
               style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
             >
               <img
                 src="./Assets/Images/form/shweta.jpg"
-                className="w-64 h-64 object-cover md:w-full"
+                className="w-60 h-full md:h-96 m-auto object-cover md:w-full"
                 alt=""
               />
               <div
@@ -777,7 +789,7 @@ export default function Form() {
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-base"
+                  className="font-normal text-base mb-6"
                 >
                   Leading the successful Hormavu Center since 2012. Our Bright
                   Kit Academy and extracurricular activities ensure holistic
@@ -796,7 +808,7 @@ export default function Form() {
 
       <section
         id="form-hereisallyouneed"
-        className="py-16 gap-12 w-11/12 flex flex-col items-center"
+        className="py-16 gap-12 w-full flex flex-col items-center"
       >
         <p
           className="text-center text-3xl font-bold md:text-xl"
@@ -1019,7 +1031,7 @@ export default function Form() {
             allowfullscreen
           ></iframe>
         </div>
-        <p className="text-center text-4xl font-bold md:text-left md:text-2xl md:pl-4">
+        <p className="text-center text-4xl font-extrabold md:text-left md:text-2xl md:pl-4" style={{color:"#FD9927"}}>
           Unbeatable Top 5 Bright Kid Differentiators!
         </p>
         <div className="w-11/12">
@@ -1033,8 +1045,9 @@ export default function Form() {
             autoPlay={true}
             customTransition="all 5"
             transitionDuration={500}
-            dotListClass="custom-dot-list-style"
             focusOnSelect={false}
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}cd
           >
             <div className="w-full flex justify-center gap-16 md:flex-col md:w-11/12">
               <img
@@ -1355,7 +1368,7 @@ export default function Form() {
           alt=""
           className="w-screen hidden md:block"
         /> */}
-        <div class="semicircle"></div>
+        {/* <div class="semicircle"></div> */}
 
         <div className="footer-yellow-gradient" />
         <div className="flex flex-col items-center">
