@@ -2,7 +2,7 @@ import React from "react";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 const CustomLeftArrow = ({ onClick }) => {
-  return window.innerWidth > 867 ? (
+  return (
     <button
       onClick={onClick}
       className={`custom-arrow custom-left-arrow absolute left-5 top-1/2`}
@@ -34,8 +34,7 @@ const CustomLeftArrow = ({ onClick }) => {
           strokeLinejoin="round"
         />
       </svg>
-    </button>
-  ) : null;
+    </button>)
 };
 
 export default CustomLeftArrow;

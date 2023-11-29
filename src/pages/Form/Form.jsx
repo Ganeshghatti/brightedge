@@ -153,7 +153,7 @@ export default function Form() {
             style={{ color: "#0B1C39" }}
             className="text-2xl font-normal md:text-xl"
           >
-            <span className="font-extrabold">
+            <span className="font-bold">
               Become the #1 in your area. Just fill out the form and we will get
               you started.
             </span>
@@ -323,7 +323,7 @@ export default function Form() {
 
       <section
         id="form-numbers"
-        className="w-full flex flex-col items-center justify-center gap-8 py-16 px-12 "
+        className="w-full flex flex-col items-center justify-center gap-8 py-16 px-12 md:py-6"
       >
         <h1
           className="text-6xl font-extrabold md:text-center md:text-4xl"
@@ -416,7 +416,7 @@ export default function Form() {
 
       <section
         id="form-highlights"
-        className="flex w-11/12 justify-around items-center md:flex-col py-16 lg:flex-wrap md:gap-8"
+        className="flex w-11/12 justify-around items-center md:flex-col py-16 lg:flex-wrap md:gap-8 md:py-6"
       >
         <img
           src="./Assets/Images/form/icon_5.png"
@@ -571,7 +571,7 @@ export default function Form() {
 
       <section
         id="form-affiliate"
-        className="py-16 gap-12 w-full flex flex-col items-center"
+        className="py-16 gap-12 w-full flex flex-col items-center md:py-6"
       >
         <p
           className="text-6xl font-bold md:text-center md:text-4xl"
@@ -675,7 +675,7 @@ export default function Form() {
 
       <section
         id="form-testimonials"
-        className="py-16 gap-10 w-11/12 flex flex-col items-center"
+        className="py-16 gap-10 w-11/12 flex flex-col items-center md:py-6"
       >
         <div className="form-testimonials-smallcloud-div">
           <p
@@ -703,9 +703,8 @@ export default function Form() {
             autoPlay={true}
             customTransition="all 5"
             transitionDuration={500}
-            dotListClass="custom-dot-list-style"
             focusOnSelect={false}
-            renderDotsOutside={true}
+            renderDotsOutside={false}
             customLeftArrow={<CustomLeftArrow />}
             customRightArrow={<CustomRightArrow />}
           >
@@ -716,11 +715,12 @@ export default function Form() {
               <img
                 src="./Assets/Images/form/tina.jpg"
                 className="w-64 h-full md:h-96 object-cover object-center md:w-full"
+                style={{borderRadius:"8px 0 0 8px"}}
                 alt=""
               />
               <div
                 className="flex-1 flex-col items-start gap-1.5 p-6 overflow-scroll"
-                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)" }}
+                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)", borderRadius:"0 8px 8px 0" }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
                   Wissen Mont Preschool, Madurai
@@ -746,12 +746,13 @@ export default function Form() {
             >
               <img
                 src="./Assets/Images/form/sher.jpg"
-                className="w-64 h-full md:h-96 object-cover object-center m-auto md:w-full"
+                className="w-64 h-full md:h-96 object-cover object-center m-auto md:w-full"                style={{borderRadius:"8px 0 0 8px"}}
+
                 alt=""
               />
               <div
                 className="flex-1 flex-col items-start gap-1.5 p-6 overflow-scroll"
-                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)" }}
+                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)", borderRadius:"0 8px 8px 0" }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
                   Sunrise Valley School, Haryana
@@ -776,12 +777,13 @@ export default function Form() {
             >
               <img
                 src="./Assets/Images/form/anupama.jpg"
-                className="w-64 h-full md:h-96 object-cover md:w-full object-center m-auto"
+                className="w-64 h-full md:h-96 object-cover md:w-full object-center m-auto"                style={{borderRadius:"8px 0 0 8px" }}
+
                 alt=""
               />
               <div
                 className="flex-1 flex-col items-start gap-1.5 p-6 overflow-scroll"
-                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)" }}
+                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)", borderRadius:"0 8px 8px 0" }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
                   Bright Kid Montessori, Jakkur, Bangalore
@@ -809,12 +811,13 @@ export default function Form() {
             >
               <img
                 src="./Assets/Images/form/shweta.jpg"
-                className="w-60 h-full md:h-96 m-auto object-cover md:w-full"
+                className="w-60 h-full md:h-96 m-auto object-cover md:w-full"                style={{borderRadius:"8px 0 0 8px"}}
+
                 alt=""
               />
               <div
                 className="flex-1 flex-col items-start gap-1.5 p-6 md:w-full  overflow-scroll"
-                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)" }}
+                style={{ backgroundColor: "rgba(22, 130, 251, 0.20)", borderRadius:"0 8px 8px 0" }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
                   Bright Kid Montessori Horamavu, Bangalore{" "}
@@ -843,7 +846,7 @@ export default function Form() {
 
       <section
         id="form-hereisallyouneed"
-        className="py-16 gap-12 w-full flex flex-col items-center"
+        className="py-16 gap-6 w-full flex flex-col items-center md:py-6"
       >
         <p
           className="text-center text-3xl font-bold md:text-xl"
@@ -1034,7 +1037,7 @@ export default function Form() {
 
       <section
         id="form-top5differentiator"
-        className="flex flex-col items-center gap-12 w-full py-16 "
+        className="flex flex-col items-center gap-12 w-full py-16 md:py-6"
       >
         <div className="flex justify-around w-11/12  md:flex-col-reverse md:gap-4">
           <div className="flex flex-col justify-center w-1/2 px-8 md:w-full md:items-center">
@@ -1215,12 +1218,12 @@ export default function Form() {
 
       <section
         id="form-flexible"
-        className="flex flex-col items-center py-16 gap-6"
+        className="flex flex-col items-center py-16 gap-5 md:py-6"
       >
         <img
           src="./Assets/Images/form/BEMlogo.png"
           alt=""
-          className="md:w-24"
+          className="w-60 md:w-36"
         />
         <h1
           className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
@@ -1248,7 +1251,8 @@ export default function Form() {
             </p>
             <p className="text-xl md:text-lg">
               Enjoy the benefits of our highly affordable and fixed nominal
-              service fees -<b> No Royalty, No Franchise Fees.</b>
+              service fees -
+              <span className="font-bold"> No Royalty, No Franchise Fees.</span>
             </p>
           </div>
 
@@ -1264,8 +1268,8 @@ export default function Form() {
             </p>
             <p className="text-xl md:text-lg">
               As a leading manufacturer of high-quality Montessori items and
-              <b> preschool furniture</b>, we provide all your preschool needs
-              at the best cost.
+              <span className="font-bold"> preschool furniture</span>, we
+              provide all your preschool needs at the best cost.
             </p>
           </div>
 
@@ -1280,8 +1284,10 @@ export default function Form() {
               3. Digital Assets:
             </p>
             <p className="text-xl md:text-lg">
-              Our <b>award-winning digital assets</b> are truly best-in-class,
-              offering unmatched support for your preschool's growth.
+              Our{" "}
+              <span className="font-bold"> award-winning digital assets</span>{" "}
+              are truly best-in-class, offering unmatched support for your
+              preschool's growth.
             </p>
           </div>
 
@@ -1296,9 +1302,10 @@ export default function Form() {
               4. Additional Revenue:
             </p>
             <p className="text-xl md:text-lg">
-              We share the earnings from <b>Montessori Teachers Training</b> and
-              Vedic Maths courses conducted at your center, contributing to your
-              financial success.
+              We share the earnings from{" "}
+              <span className="font-bold"> Montessori Teachers Training</span>{" "}
+              and Vedic Maths courses conducted at your center, contributing to
+              your financial success.
             </p>
           </div>
 
@@ -1314,7 +1321,7 @@ export default function Form() {
             </p>
             <p className="text-xl md:text-lg">
               Benefit from the guidance and expertise of our highly experienced
-              <b> leadership team.</b>
+              <span className="font-bold"> leadership team.</span>
             </p>
           </div>
         </div>
@@ -1361,7 +1368,7 @@ export default function Form() {
 
       <section
         id="form-awards"
-        className="flex flex-col items-center gap-8 w-full py-12"
+        className="flex flex-col items-center gap-8 w-full py-12 md:py-6"
       >
         <h1
           className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
@@ -1401,7 +1408,7 @@ export default function Form() {
 
       <section
         id="form-pathwaytosuccess"
-        className="flex flex-col items-center gap-16 w-full py-12"
+        className="flex flex-col items-center gap-16 w-full py-12 md:py-6"
       >
         <h1
           className="text-6xl font-extrabold text-center md:text-4xl px-1/2"
@@ -1421,17 +1428,28 @@ export default function Form() {
           alt=""
           className="w-11/12 hidden md:block"
         />
-        <Button
-          radius="full"
-          className="bg-gradient-to-tr text-white shadow-lg px-24 py-9 text-lg font-bold md:hidden"
-          style={{ backgroundColor: "#F72378" }}
-        >
-          <div>
-            Visit our full Website:
-            <br />
-            <a href="http://www.brightkidmont.com">www.brightkidmont.com</a>
-          </div>
-        </Button>
+        <div className="flex gap-6 mt-12 md:hidden ">
+          <Button
+            radius="full"
+            className="bg-gradient-to-tr text-white shadow-lg px-24 py-9 text-lg font-bold"
+            style={{ backgroundColor: "#F72378" }}
+          >
+            <div>
+              Visit our full Website:
+              <br />
+              <a href="http://www.brightkidmont.com">www.brightkidmont.com</a>
+            </div>
+          </Button>
+          <Button
+            radius="full"
+            variant="bordered"
+            className="bg-gradient-to-tr shadow-lg px-32 py-9 text-lg font-bold"
+            style={{ color: "#F72378", border: "2px solid #F72378" }}
+          >
+            Enquire now for<br/>Admissions
+          </Button>
+        </div>
+
         {/* <img
           src="./Assets/Images/form/Ellipselaptop.png"
           alt=""
@@ -1466,7 +1484,7 @@ export default function Form() {
         </div>
       </section>
 
-      <footer className="py-12 w-full flex justify-around pl-12 md:pl-0 items-center md:flex-col md:gap-6">
+      <footer className="py-12 w-full flex justify-around pl-12 md:pl-0 items-center md:flex-col md:gap-6 md:py-6" >
         <div className="flex flex-col gap-4 w-1/5 md:w-4/5">
           <p
             className="text-base font-normal md:text-center"
