@@ -682,7 +682,7 @@ export default function Form() {
             customRightArrow={<CustomRightArrow />}
           >
             <div
-              className="w-full md:m-auto border-8 border-white border-solid h-64 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded-xl"
+              className="w-full md:m-auto border-8 border-white border-solid h-80 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded-xl"
               style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
             >
               <img
@@ -692,7 +692,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex-1 flex-col items-start gap-1.5 p-6 overflow-scroll"
+                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
@@ -717,7 +717,7 @@ export default function Form() {
               </div>
             </div>
             <div
-              className="w-full md:m-auto border-8 border-white border-solid h-64 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded"
+              className="w-full md:m-auto border-8 border-white border-solid h-80 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded"
               style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
             >
               <img
@@ -727,7 +727,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex-1 flex-col items-start gap-1.5 p-6 overflow-scroll"
+                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
@@ -751,7 +751,7 @@ export default function Form() {
               </div>
             </div>
             <div
-              className="w-full md:m-auto border-8 border-white border-solid h-64 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded"
+              className="w-full md:m-auto border-8 border-white border-solid h-80 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded"
               style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
             >
               <img
@@ -761,7 +761,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex-1 flex-col items-start gap-1.5 p-6 overflow-scroll"
+                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
@@ -788,7 +788,7 @@ export default function Form() {
               </div>
             </div>
             <div
-              className="w-full md:m-auto border-8 border-white border-solid h-64 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded"
+              className="w-full md:m-auto border-8 border-white border-solid h-80 flex ml-96 md:h-auto justify-between md:flex-col md:w-11/12 rounded"
               style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)" }}
             >
               <img
@@ -798,7 +798,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex-1 flex-col items-start gap-1.5 p-6 md:w-full  overflow-scroll"
+                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
@@ -856,53 +856,8 @@ export default function Form() {
             >
               Investment:
             </p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
-              viewBox="0 0 48 48"
-              fill="none"
-            >
-              <rect width="48" height="48" fill="white" />
-              <path
-                d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
-                fill="white"
-                stroke="#7F46FF"
-                strokeWidth="4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
-                fill="white"
-                stroke="#7F46FF"
-                strokeWidth="4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M42 24C42 33.9411 33.9411 42 24 42C14.0589 42 6 33.9411 6 24C6 14.0589 14.0589 6 24 6C33.9411 6 42 14.0589 42 24Z"
-                fill="white"
-                stroke="#7F46FF"
-                strokeWidth="4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M28 16H22C19.7909 16 18 17.7909 18 20C18 22.2091 19.7909 24 22 24H26C28.2091 24 30 25.7909 30 28C30 30.2091 28.2091 32 26 32L19.9998 31.9999"
-                stroke="#7F46FF"
-                strokeWidth="4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M24 16V14M24 32V34"
-                stroke="#7F46FF"
-                strokeWidth="4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <img src="./Assets/Images/form/rupeeicon.png" className="h-11 w-11"/>
+
             <p className="text-2xl font-normal md:text-xl">
               ₹4 Lakhs - ₹10
               <br className="md:hidden" /> Lakhs
@@ -924,20 +879,18 @@ export default function Form() {
               fill="none"
             >
               <path
-                d="M8 24H24M24 24H40M24 24V40M24 24L24 8"
+                d="M12 18L10 20V34C10 37.3137 12.6863 40 16 40H18C19.1046 40 20 39.1046 20 38V30C20 28.8954 20.8954 28 22 28H26C27.1046 28 28 28.8954 28 30V38C28 39.1046 28.8954 40 30 40H32C35.3137 40 38 37.3137 38 34V20L36 18"
                 stroke="#1682FB"
-                strokeWidth="4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeDasharray="0.2 8"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
               <path
-                d="M38 8H10C8.89543 8 8 8.89543 8 10V38C8 39.1046 8.89543 40 10 40H38C39.1046 40 40 39.1046 40 38V10C40 8.89543 39.1046 8 38 8Z"
-                fill="white"
+                d="M8 22L24 6L40 22"
                 stroke="#1682FB"
-                strokeWidth="4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
             <p className="text-2xl font-normal md:text-xl">
@@ -1083,7 +1036,7 @@ export default function Form() {
         )}
 
         <p
-          className="text-center text-4xl font-bold md:text-left md:text-2xl md:pl-4"
+          className="text-center text-5xl font-bold md:text-left md:text-3xl md:pl-4"
           style={{ color: "#FD9927" }}
         >
           Unbeatable Top 5 Bright Kid Differentiators!
