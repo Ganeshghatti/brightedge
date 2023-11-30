@@ -692,7 +692,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll"
+                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll md:p-6"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
@@ -727,7 +727,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll"
+                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll  md:p-6"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
@@ -761,7 +761,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll"
+                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll md:p-6"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
@@ -798,7 +798,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll"
+                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll md:p-6"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
