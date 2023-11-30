@@ -165,7 +165,7 @@ export default function Form() {
 
         <form
           style={{ padding: "0 6vw" }}
-          className="w-1/2 px-10 flex flex-col justify-around items-center gap-4 md:w-full mt-20"
+          className="w-1/2 px-10 flex flex-col justify-around items-center gap-4 md:w-full md:mt-5 mt-20"
           id="sib-form"
           onSubmit={handleSubmit}
         >
@@ -582,13 +582,13 @@ export default function Form() {
               src="./Assets/Images/form/video1thumbnail.png"
               style={{ width: "90vw" }}
               className="self-end cursor-pointer md:hidden"
-              onClick={vid2f}
+              onClick={vid1f}
             />
             <img
               src="./Assets/Images/form/video1thumbnailphone.png"
               style={{ width: "90vw" }}
               className="self-end cursor-pointer hidden md:block"
-              onClick={vid2f}
+              onClick={vid1f}
             />
           </>
         )}
