@@ -142,7 +142,7 @@ export default function Form() {
             className="text-6xl font-bold lg:text-5xl md:text-4xl"
             style={{ color: "#32355D" }}
           >
-            Make an impactful
+            Make an Impactful
             <p className="" style={{ color: "#7F46FF" }}>
               Preschool
             </p>
@@ -169,7 +169,7 @@ export default function Form() {
           id="sib-form"
           onSubmit={handleSubmit}
         >
-          <img src="./Assets/Images/form/Fun.png" className="object-contain" />
+          <img src="./Assets/Images/form/AFFORDABLEMaterials.png" className="object-contain" />
           <TextField
             id="outlined-basic"
             variant="outlined"
@@ -461,9 +461,9 @@ export default function Form() {
         <div
           className="w-1/5 p-6 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full lg:mt-6"
           style={{
-            backgroundColor: "#FEFDDE ",
+            backgroundColor: "rgba(255, 131, 63, 0.16)",
             borderRadius: "24px",
-            border: "1px solid #FBF55A",
+            border: "1px solid #FF833F",
           }}
         >
           <p className="text-2xl font-normal">Elevating Exsisting Preschool:</p>
@@ -766,7 +766,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll md:p-6 md:h-24 border-2 border-solid border-red-800"
+                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll  md:p-6"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
@@ -806,7 +806,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll md:p-6 border-2 border-solid border-red-800"
+                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll  md:p-6"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
@@ -1129,10 +1129,10 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                <p style={{ color: "#1682FB" }} className="font-bold text-4xl md:text-2xl">
                   1 . Best Student Hamper: 
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                <p style={{ color: "#0B1C39" }} className="font-normal text-2xl md:text-xl">
                   Amaze parents and enrich kids. We offer a world-class Smart
                   book series, complemented by an anytime-anywhere Teacher, a
                   Craft Kit, and a Multiple Intelligence portal for kids.
@@ -1146,10 +1146,10 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                <p style={{ color: "#1682FB" }} className="font-bold text-4xl md:text-2xl">
                   2 . Montessori Toy Library: 
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                <p style={{ color: "#0B1C39" }} className="font-normal text-2xl md:text-xl">
                   Your school will have access to an extensive Montessori Toy
                   Library, fostering a stimulating and hands-on learning
                   experience for your students.
@@ -1163,10 +1163,10 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                <p style={{ color: "#1682FB" }} className="font-bold text-4xl md:text-2xl">
                   3 . Award-Winning Curriculum
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                <p style={{ color: "#0B1C39" }} className="font-normal text-2xl md:text-xl">
                   Our curriculum and teacher engagement programs have received
                   accolades for their innovation and effectiveness, ensuring
                   your preschool stands out from the rest.
@@ -1180,10 +1180,10 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                <p style={{ color: "#1682FB" }} className="font-bold text-4xl md:text-2xl">
                   4 . Digital Concept Teacher Portal:
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                <p style={{ color: "#0B1C39" }} className="font-normal text-2xl md:text-xl">
                   With our cutting-edge technology, every classroom is empowered
                   to deliver world-class lessons, enriching both teachers and
                   students alike.
@@ -1197,10 +1197,10 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                <p style={{ color: "#1682FB" }} className="font-bold text-4xl md:text-2xl">
                   5 . All-in Mobile App 
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                <p style={{ color: "#0B1C39" }} className="font-normal text-2xl md:text-xl">
                   Our comprehensive mobile app streamlines attendance, parent
                   communication, skill mapping of children, toy library
                   management, and fee tracking - everything you need at your
@@ -1225,7 +1225,7 @@ export default function Form() {
           className="text-6xl font-bold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
         >
-          New Preschool Franchise has never been Here’s all&nbsp;
+          New Preschool Franchise has never been&nbsp;
           <span className="form-flexible-h1-style"> so flexible!</span>
         </h1>
         <p
@@ -1344,7 +1344,7 @@ export default function Form() {
         </h1>
         <div className="w-4/5 flex items-center justify-around py-12 md:w-full">
           <img
-            src="./Assets/Images/form/Illu.png"
+            src="./Assets/Images/form/admissionguranteeplan.png"
             alt=""
             className="md:hidden"
           />
@@ -1454,12 +1454,10 @@ export default function Form() {
           <Button
             radius="full"
             variant="bordered"
-            className="bg-gradient-to-tr shadow-lg px-32 py-9 text-lg font-bold"
+            className="bg-gradient-to-tr shadow-lg px-36 py-9 text-lg font-bold"
             style={{ color: "#F72378", border: "2px solid #F72378" }}
           >
-            Enquire now for
-            <br />
-            Admissions
+            Enquire now 
           </Button>
         </div>
         {/* <img
