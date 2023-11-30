@@ -42,6 +42,18 @@
   font-family: MyridProBlack;
   src: url(../../../public/Assets/Fonts/MyriadPro/MyriadProBlack/MyriadProBlack.otf);
 }
+@font-face {
+  font-family: MyridProSemibold;
+  src: url(../../../public/Assets/Fonts/MyriadPro/MyriadProSemibold/MyriadProSemibold.ttf);
+}
+@font-face {
+  font-family: MyridProHeavy;
+  src: url(../../../public/Assets/Fonts/MyriadPro/MyriadProHeavy/MyriadProHeavy.ttf);
+}
+@font-face {
+  font-family: MyridProMyriadProBlackCondensed;
+  src: url(../../../public/Assets/Fonts/MyriadPro/MyriadProBlackCondensed/MyriadProBlackCondensed.otf);
+}
 #form-inputs-background-container {
   @media (min-width: 770px) {
     background-image: url("../../../public/Assets/Images/form/hero/herobg.png");
@@ -266,7 +278,7 @@ $size: 45px;
 
 .top {
   border-top-left-radius: 1500px;
-  border-top-right-radius:1500px;
+  border-top-right-radius: 1500px;
 }
 
 .custom-dot-list-style {
@@ -284,7 +296,6 @@ $size: 45px;
   }
 }
 .font-bold {
+  font-family: MyridProBold;
   font-weight: 100 !important;
-  font-family: MyridProBlack;
-
 }
