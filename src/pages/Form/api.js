@@ -5,13 +5,13 @@ const uniqueId =
 
 const submitFormApi = async (data) => {
   const formData = new FormData();
-  formData.append("FIRST_NAME", data.FIRST_NAME?.split(" ")[0]);
-  formData.append("LASTNAME", data.FIRST_NAME?.split(" ")?.[1] || "");
+  formData.append("FIRST_NAME", data.FIRST_NAME);
+  formData.append("LASTNAME", data.FIRST_NAME);
   formData.append("SMS__COUNTRY_CODE", data.SMS__COUNTRY_CODE);
   formData.append("SMS", data.SMS);
   formData.append("EMAIL", data.EMAIL);
   formData.append("LOCATION", data.LOCATION);
-  formData.append("email_address_check", null);
+  formData.append("FORMQUERYBEM", data.YOUR_MESSAGE);
   formData.append("locale", "en");
 
   try {

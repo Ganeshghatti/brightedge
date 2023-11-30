@@ -96,8 +96,9 @@ export default function Form() {
     SMS: "",
     EMAIL: "",
     LOCATION: "",
-    YOUR_MESSAGE: "",
+    YOUR_MESSAGE: 1,
   });
+
   const [vid1, setvid1] = useState(false);
   const vid1f = () => {
     setvid1(!vid1);
@@ -107,8 +108,19 @@ export default function Form() {
   const vid2f = () => {
     setvid2(!vid2);
   };
-  const handleChange = (e) => {
+
+  const handleChange = (e, radioId) => {
     const { name, value } = e.target;
+
+    if (name === "YOUR_MESSAGE") {
+      setFormData({
+        ...formData,
+        YOUR_MESSAGE: radioId,
+      });
+
+      return;
+    }
+
     setFormData({
       ...formData,
       [name]: value,
@@ -242,31 +254,31 @@ export default function Form() {
                   value="Open a new preschool"
                   control={<Radio />}
                   label="Open a new preschool"
-                  onChange={handleChange}
+                  onChange={(e) => handleChange(e, 1)}
                 />
                 <FormControlLabel
                   value="Elevate my preschool"
                   control={<Radio />}
                   label="Elevate my preschool"
-                  onChange={handleChange}
+                  onChange={(e) => handleChange(e, 2)}
                 />
                 <FormControlLabel
                   value="Need Preschool smartbooks"
                   control={<Radio />}
                   label="Need Preschool smartbooks"
-                  onChange={handleChange}
+                  onChange={(e) => handleChange(e, 3)}
                 />
                 <FormControlLabel
                   value="Need Preschol Materials"
                   control={<Radio />}
                   label="Need Preschol Materials"
-                  onChange={handleChange}
+                  onChange={(e) => handleChange(e, 4)}
                 />
                 <FormControlLabel
                   value="other"
                   control={<Radio />}
                   label="Other"
-                  onChange={handleChange}
+                  onChange={(e) => handleChange(e, 5)}
                 />
               </RadioGroup>
             </FormControl>
