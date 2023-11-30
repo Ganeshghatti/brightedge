@@ -169,6 +169,7 @@ export default function Form() {
           id="sib-form"
           onSubmit={handleSubmit}
         >
+          <img src="./Assets/Images/form/Fun.png" className="object-contain"/>
           <TextField
             id="outlined-basic"
             variant="outlined"
@@ -228,13 +229,14 @@ export default function Form() {
             className="w-full"
             required
           />
-          <div className="border-1 border-solid border-gray-400 p-6 rounded-lg w-full">
-            <FormControl>
+          <div className="border-1 border-solid border-gray-400 p-6 rounded-lg w-full flex">
+            <FormControl className="flex justify-between">
               <FormLabel id="demo-radio-buttons-group-label">Query</FormLabel>
               <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
                 name="YOUR_MESSAGE"
                 required
+                row
               >
                 <FormControlLabel
                   value="Open a new preschool"
@@ -856,7 +858,10 @@ export default function Form() {
             >
               Investment:
             </p>
-            <img src="./Assets/Images/form/rupeeicon.png" className="h-11 w-11"/>
+            <img
+              src="./Assets/Images/form/rupeeicon.png"
+              className="h-11 w-11"
+            />
 
             <p className="text-2xl font-normal md:text-xl">
               ₹4 Lakhs - ₹10
@@ -1297,8 +1302,14 @@ export default function Form() {
             We don't just stop at helping you build a top-notch preschool. We
             take it a step further with our Comprehensive Admission Guarantee
             Plan. Our commitment to your
-            <span style={{ color: "#7F46FF" }} className="font-bold"> success is unwavering</span>,
-            and our <span style={{ color: "#7F46FF" }} className="font-bold">marketing efforts </span>
+            <span style={{ color: "#7F46FF" }} className="font-bold">
+              {" "}
+              success is unwavering
+            </span>
+            , and our{" "}
+            <span style={{ color: "#7F46FF" }} className="font-bold">
+              marketing efforts{" "}
+            </span>
             under this plan are second to none.
           </p>
         </div>
@@ -1319,15 +1330,25 @@ export default function Form() {
           style={{ color: "#0B1C39" }}
         >
           Celebrating
-          <span style={{ color: "#FF833F" }} className="font-bold"> 16+ years of excellence</span> and
-          innovation, we are thrilled to share our remarkable journey of success
-          and customer validation! With numerous prestigious awards in
+          <span style={{ color: "#FF833F" }} className="font-bold">
+            {" "}
+            16+ years of excellence
+          </span>{" "}
+          and innovation, we are thrilled to share our remarkable journey of
+          success and customer validation! With numerous prestigious awards in
           recognition of our cutting-edge digital solutions, curriculum, and
           teachers' training, we take immense pride in empowering over
-          <span style={{ color: "#FF833F" }} className="font-bold"> 35,000 bright young minds </span>
+          <span style={{ color: "#FF833F" }} className="font-bold">
+            {" "}
+            35,000 bright young minds{" "}
+          </span>
           across the country. Join the growing community of satisfied preschools
           who have witnessed the transformative impact of our tailored
-          <span style={{ color: "#FF833F" }} className="font-bold"> curriculum</span> and
+          <span style={{ color: "#FF833F" }} className="font-bold">
+            {" "}
+            curriculum
+          </span>{" "}
+          and
           <span style={{ color: "#FF833F" }} className="font-bold">
             &nbsp;preschool learning materials!
           </span>
