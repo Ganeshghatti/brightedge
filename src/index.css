@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 body {
-    width: 100% !important;
-    overflow-x: hidden !important;
-    font-family: MyridProRegular;
-  }
+  width: 100% !important;
+  overflow-x: hidden !important;
+  font-family: MyridProRegular;
+}
+
+.custom-left-arrow arrowtestimonials{
+  position: absolute;
+  left: 30vw;
+  top: 80vw;
+}
