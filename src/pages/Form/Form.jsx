@@ -179,52 +179,58 @@ export default function Form() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formData);
+  
+    if (!validator.isEmail(formData.EMAIL)) {
+      setAlert(
+        <Alert style={{ position: 'fixed', bottom: '0', left: '0' }} variant="filled" severity="warning">
+          Enter a valid email
+        </Alert>
+      );
+      setTimeout(() => setAlert(null), 5000); // Close alert after 5 seconds
+      return; // Exit the function if email is not valid
+    }
+  
+    if (!validator.isMobilePhone(formData.SMS)) {
+      setAlert(
+        <Alert style={{ position: 'fixed', bottom: '0', left: '0' }} variant="filled" severity="warning">
+          Enter a valid phone number
+        </Alert>
+      );
+      setTimeout(() => setAlert(null), 5000); // Close alert after 5 seconds
+      return; // Exit the function if phone number is not valid
+    }
+  
     try {
-      if (!validator.isEmail(formData.EMAIL)) {
-        setAlert(
-          <Alert variant="filled" style={{ position: 'fixed', bottom: '0', left: '0' }} severity="warning">
-            Enter a valid email
-          </Alert>
-        );
-        return;
-      }
-    
-      if (!validator.isMobilePhone(formData.SMS)) {
-        setAlert(
-          <Alert variant="filled" style={{ position: 'fixed', bottom: '0', left: '0' }} severity="warning">
-            Enter a valid phone number
-          </Alert>
-        );
-        return; 
-      }
-      
       const response = await SubmitFormApi(formData);
       console.log(response);
       if (response.iserror) {
         setAlert(
-          <Alert variant="filled" style={{ position: 'fixed', bottom: '0', left: '0' }} severity="error">
+          <Alert style={{ position: 'fixed', bottom: '0', left: '0' }} variant="filled" severity="error">
             {response.msg}
           </Alert>
         );
       } else {
         setAlert(
-          <Alert variant="filled" style={{ position: 'fixed', bottom: '0', left: '0' }} severity="success">
+          <Alert style={{ position: 'fixed', bottom: '0', left: '0' }} variant="filled" severity="success">
             {response.msg}
           </Alert>
         );
+        setFormData({
+          FIRST_NAME: "",
+          SMS__COUNTRY_CODE: "",
+          SMS: "",
+          EMAIL: "",
+          LOCATION: "",
+          YOUR_MESSAGE: null,
+        });
       }
-      setFormData({
-        FIRST_NAME: "",
-        SMS__COUNTRY_CODE: "",
-        SMS: "",
-        EMAIL: "",
-        LOCATION: "",
-        YOUR_MESSAGE: null,
-      });
+      setTimeout(() => setAlert(null), 5000); // Close alert after 5 seconds
     } catch (error) {
-      console.log(error, "error");
+      console.error(error, "error");
     }
   };
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -1766,51 +1772,6 @@ export default function Form() {
         </div>
       </section>
 
-      <footer className="py-12 w-full flex justify-around pl-12 md:pl-0 items-center md:flex-col md:gap-6 md:py-6">
-        <div className="flex flex-col gap-4 w-1/5 md:w-4/5">
-          <p
-            className="text-base font-normal md:text-center"
-            style={{ color: "#0B1C39" }}
-          >
-            # 807, 8th Floor, BRIGADE RUBIX, HMT Road, Yeshwanthpur, Bengaluru,
-            Karnataka, India - 560022
-          </p>
-          <p className="text-lg font-bold md:text-center">Socials</p>
-          <div className="flex gap-2 md:justify-center">
-            <img src="./Assets/Images/form/logo/facebook.svg" />
-            <img src="./Assets/Images/form/logo/instagram.svg" />
-            <img src="./Assets/Images/form/logo/linkedin.svg" />
-            <img src="./Assets/Images/form/logo/twitter.svg" />
-            <img src="./Assets/Images/form/logo/youtube.svg" />
-          </div>
-        </div>
-        <ul style={{ color: "#0B1C39" }} className="w-1/5 md:w-4/5">
-          <p className="text-lg font-bold pb-2" style={{ color: "#0B1C39" }}>
-            Useful Links
-          </p>
-          <li className="mb-1">Bright Edge</li>
-          <li className="mb-1">Bright Kid Montessori</li>
-          <li className="mb-1">Bright Kid At Home</li>
-          <li className="mb-1">Bright Edu Mont</li>
-          <li className="mb-1">Bright Montessori</li>
-          <li className="mb-1">Brilla Toys & Kits</li>
-        </ul>
-        <ul style={{ color: "#0B1C39" }} className="w-1/5 md:w-4/5">
-          <p className="text-lg font-bold mb-2" style={{ color: "#0B1C39" }}>
-            Information
-          </p>
-          <li className="mb-1">Locate a Center</li>
-          <li className="mb-1">Course & Training</li>
-          <li className="mb-1">Vedic Maths</li>
-          <li className="mb-1">Contact Us</li>
-          <li className="mb-1">Terms and Conditions</li>
-          <li className="mb-1">Privacy Policy</li>
-        </ul>
-        <ul style={{ color: "#0B1C39" }} className="w-1/5 md:w-4/5">
-          <li className="mb-1">Refund Policy</li>
-          <li className="mb-1">Privacy Policy for Bright Beep</li>
-        </ul>
-      </footer>
     </div>
   );
 }
