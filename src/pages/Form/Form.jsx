@@ -15,10 +15,12 @@ import "react-multi-carousel/lib/styles.css";
 import CustomLeftArrow from "../../Components/CustomLeftArrow";
 import CustomRightArrow from "../../Components/CustomRightArrow";
 import "./Form.scss";
-import submitFormApi from "./api.js";
+import SubmitFormApi from "./api";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
 
 const images = [
   {
@@ -107,9 +109,9 @@ const CustomPrevArrow = (props) => (
       <path
         d="M25 10L15 20L25 30"
         stroke="#1682FB"
-        stroke-width="5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   </button>
@@ -130,9 +132,9 @@ const CustomNextArrow = (props) => (
       <path
         d="M15 30L25 20L15 10"
         stroke="#1682FB"
-        stroke-width="5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   </button>
@@ -146,6 +148,7 @@ export default function Form() {
     LOCATION: "",
     YOUR_MESSAGE: 1,
   });
+  const [alert, setAlert] = useState(null);
 
   const [vid1, setvid1] = useState(false);
   const vid1f = () => {
@@ -155,11 +158,10 @@ export default function Form() {
   const [vid2, setvid2] = useState(false);
   const vid2f = () => {
     setvid2(!vid2);
-  }
+  };
 
   const handleChange = (e, radioId) => {
     const { name, value } = e.target;
-
     if (name === "YOUR_MESSAGE") {
       setFormData({
         ...formData,
@@ -176,9 +178,18 @@ export default function Form() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // validate before submit
-    await submitFormApi(formData);
-    // clear form after submission
+    console.log(formData);
+    try {
+      const response = await SubmitFormApi(formData);
+      console.log(response);
+      if (response.iserror) {
+        setAlert(<Alert variant="filled" severity="error">{response.msg}</Alert>);
+      } else {
+        setAlert(<Alert variant="filled" severity="success">{response.msg}</Alert>);
+      }
+    } catch (error) {
+      console.log(error, "error");
+    }
   };
   const settings = {
     dots: true,
@@ -219,6 +230,9 @@ export default function Form() {
       id="form"
       className="flex flex-col justify-center w-screen items-center"
     >
+      <Stack spacing={2}>
+        {alert}
+      </Stack>
       <section
         id="form-inputs"
         className="flex justify-center w-screen items-center h-screen md:flex-col md:h-auto"
@@ -1148,16 +1162,16 @@ export default function Form() {
               <path
                 d="M12 18L10 20V34C10 37.3137 12.6863 40 16 40H18C19.1046 40 20 39.1046 20 38V30C20 28.8954 20.8954 28 22 28H26C27.1046 28 28 28.8954 28 30V38C28 39.1046 28.8954 40 30 40H32C35.3137 40 38 37.3137 38 34V20L36 18"
                 stroke="#1682FB"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M8 22L24 6L40 22"
                 stroke="#1682FB"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <p className="text-2xl font-normal md:text-xl">
