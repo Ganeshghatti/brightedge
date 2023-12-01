@@ -756,7 +756,7 @@ export default function Form() {
               Watch the video for on overview.
             </p>
           </div>
-          <ul className="flex flex-col w-1/2 list-disc gap-4 md:w-3/4 md:mt-6">
+          <ul className="flex flex-col w-1/2 list-disc gap-4 md:w-11/12 md:mt-6">
             <li className="text-xl md:text-lg">
               <span className="font-bold" style={{ color: "#FF833F" }}>
                 Revolutionary Model:&nbsp;
