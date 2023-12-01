@@ -334,29 +334,29 @@ export default function Form() {
                   label="Open a new preschool"
                   onChange={(e) => handleChange(e, 1)}
                 />
-                 <FormControlLabel
+                <FormControlLabel
                   value="Elevate my preschool"
                   control={<Radio />}
                   label="Elevate my preschool"
-                  onChange={(e) => handleChange(e, 2)}
+                  onChange={handleChange}
                 />
                 <FormControlLabel
                   value="Need Preschool smartbooks"
                   control={<Radio />}
                   label="Need Preschool smartbooks"
-                  onChange={(e) => handleChange(e, 3)}
+                  onChange={handleChange}
                 />
                 <FormControlLabel
                   value="Need Preschol Materials"
                   control={<Radio />}
                   label="Need Preschol Materials"
-                  onChange={(e) => handleChange(e, 4)}
+                  onChange={handleChange}
                 />
                 <FormControlLabel
                   value="other"
                   control={<Radio />}
                   label="Other"
-                  onChange={(e) => handleChange(e, 5)}
+                  onChange={handleChange}
                 />
               </RadioGroup>
             </FormControl>
@@ -1013,7 +1013,7 @@ export default function Form() {
                     window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
                   objectPosition: "bottom center",
                 }}
-                alt=""
+                alt="img"
               />
               <div
                 className="flex flex-col flex-1 justify-center gap-4 items-start px-6 md:p-6 overflow-auto md:h-96"
