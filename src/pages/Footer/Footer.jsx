@@ -18,7 +18,7 @@ export default function Footer() {
           <a href="https://www.facebook.com/brightkidmont/">
             <img src="./Assets/Images/form/logo/facebook.svg" />
           </a>
-          <a href="https://instagram.com/brightkid_montig">
+          <a href="https://instagram.com/brightkid_mont">
             <img src="./Assets/Images/form/logo/instagram.svg" />
           </a>
           <a href="https://www.youtube.com/channel/UCci_ljnk0suwM96-2BEw6TQ">
