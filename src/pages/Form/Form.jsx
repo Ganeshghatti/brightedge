@@ -193,7 +193,7 @@ export default function Form() {
   
     if (!validator.isMobilePhone(formData.SMS)) {
       setAlert(
-        <Alert style={{ position: 'fixed', bottom: '0', left: '0' }} variant="filled" severity="warning">
+        <Alert style={{ position: 'fixed',  bottom: '3%', left: '2%' }} variant="filled" severity="warning">
           Enter a valid phone number
         </Alert>
       );
@@ -206,13 +206,13 @@ export default function Form() {
       console.log(response);
       if (response.iserror) {
         setAlert(
-          <Alert style={{ position: 'fixed', bottom: '0', left: '0' }} variant="filled" severity="error">
+          <Alert style={{ position: 'fixed',  bottom: '3%', left: '2%' }} variant="filled" severity="error">
             {response.msg}
           </Alert>
         );
       } else {
         setAlert(
-          <Alert style={{ position: 'fixed', bottom: '0', left: '0' }} variant="filled" severity="success">
+          <Alert style={{ position: 'fixed', bottom: '3%', left: '2%' }} variant="filled" severity="success">
             {response.msg}
           </Alert>
         );
@@ -443,7 +443,7 @@ export default function Form() {
 
       <section
         id="form-numbers"
-        className="w-full flex flex-col items-center justify-center gap-8 md:mt-8 py-16 px-12 md:py-6"
+        className="w-full flex flex-col items-center justify-center gap-8 md:mt-8 py-16 px-12 md:py-6 mt-10"
       >
         <h1
           className="text-6xl font-bold md:text-center md:text-4xl"
@@ -536,7 +536,7 @@ export default function Form() {
 
       <section
         id="form-highlights"
-        className="flex w-11/12 justify-around items-center md:flex-col py-16 lg:flex-wrap md:gap-8 md:py-6"
+        className="flex w-11/12 justify-around items-center md:flex-col py-16 lg:flex-wrap md:gap-8 md:py-6 "
       >
         <img
           src="./Assets/Images/form/icon_5.png"
