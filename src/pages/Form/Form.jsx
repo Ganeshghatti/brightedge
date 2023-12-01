@@ -936,7 +936,7 @@ export default function Form() {
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-base overflow-scroll"
+                  className="font-normal text-base"
                 >
                   Bright Edu Mont provided the best teachers' training, enabling
                   practical learning for children. Grateful for their support in
@@ -971,7 +971,7 @@ export default function Form() {
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-base overflow-scroll"
+                  className="font-normal text-base"
                 >
                   Bright Edu Mont provided the best teachers' training, enabling
                   practical learning for children. Grateful for their support in
@@ -1006,7 +1006,7 @@ export default function Form() {
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-base overflow-scroll"
+                  className="font-normal text-base"
                 >
                   Bright Edu Mont provided the best teachers' training, enabling
                   practical learning for children. Grateful for their support in
@@ -1041,7 +1041,7 @@ export default function Form() {
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-base overflow-scroll"
+                  className="font-normal text-base"
                 >
                   Bright Edu Mont provided the best teachers' training, enabling
                   practical learning for children. Grateful for their support in
