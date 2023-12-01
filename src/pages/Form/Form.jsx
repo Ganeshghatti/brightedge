@@ -23,6 +23,7 @@ import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import validator from "validator";
 import { Link } from "react-router-dom";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const images = [
   {
@@ -296,23 +297,26 @@ export default function Form() {
   };
 
   const [iframevidheight, setIframevidheight] = useState(720);
+  const tab = useMediaQuery("(max-width: 1200px) && (min-width: 451px)");
+  const phone = useMediaQuery("(max-width:450px)");
+
   useEffect(() => {
-    const setIframeHeight = () => {
-      if (window.innerWidth < 1200) {
+    const setIframeHeightf = () => {
+      if (tab) {
         setIframevidheight(450);
-      } else if (window.innerWidth < 750) {
-        setIframevidheight(300);
+      } else if (phone) {
+        setIframevidheight(260);
       }
     };
 
-    setIframeHeight();
+    setIframeHeightf();
 
-    window.addEventListener("resize", setIframeHeight);
+    window.addEventListener("resize", setIframeHeightf);
 
     return () => {
-      window.removeEventListener("resize", setIframeHeight);
+      window.removeEventListener("resize", setIframeHeightf);
     };
-  }, [iframevidheight]);
+  }, [phone]);
 
   return (
     <div
@@ -762,10 +766,9 @@ export default function Form() {
               onClick={vid1f}
             >
               <iframe
-                id="vimeo-iframe"
                 title="vimeo-player"
                 src="https://player.vimeo.com/video/645805338?h=7d0abb1ae3"
-                width="1280"
+                width="1200"
                 height={iframevidheight}
                 frameborder="0"
                 allowfullscreen
@@ -1382,11 +1385,10 @@ export default function Form() {
               <iframe
                 id="vimeo-iframe"
                 title="vimeo-player"
-                src="https://player.vimeo.com/video/645805338?h=7d0abb1ae3"
+                src="https://player.vimeo.com/video/642923538?h=ceaf8d6f86"
                 width="1280"
                 height={iframevidheight}
                 frameBorder="0"
-                className="border-2 border-solid border-red-900"
                 allowFullScreen
               ></iframe>
             </div>
