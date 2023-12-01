@@ -22,6 +22,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import validator from "validator";
+import { Link } from "react-router-dom";
 
 const images = [
   {
@@ -180,39 +181,55 @@ export default function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-  
+
     if (!validator.isEmail(formData.EMAIL)) {
       setAlert(
-        <Alert style={{ position: 'fixed', bottom: '0', left: '0' }} variant="filled" severity="warning">
+        <Alert
+          style={{ position: "fixed", bottom: "0", left: "0" }}
+          variant="filled"
+          severity="warning"
+        >
           Enter a valid email
         </Alert>
       );
       setTimeout(() => setAlert(null), 5000); // Close alert after 5 seconds
       return; // Exit the function if email is not valid
     }
-  
+
     if (!validator.isMobilePhone(formData.SMS)) {
       setAlert(
-        <Alert style={{ position: 'fixed',  bottom: '3%', left: '2%' }} variant="filled" severity="warning">
+        <Alert
+          style={{ position: "fixed", bottom: "3%", left: "2%" }}
+          variant="filled"
+          severity="warning"
+        >
           Enter a valid phone number
         </Alert>
       );
       setTimeout(() => setAlert(null), 5000); // Close alert after 5 seconds
       return; // Exit the function if phone number is not valid
     }
-  
+
     try {
       const response = await SubmitFormApi(formData);
       console.log(response);
       if (response.iserror) {
         setAlert(
-          <Alert style={{ position: 'fixed',  bottom: '3%', left: '2%' }} variant="filled" severity="error">
+          <Alert
+            style={{ position: "fixed", bottom: "3%", left: "2%" }}
+            variant="filled"
+            severity="error"
+          >
             {response.msg}
           </Alert>
         );
       } else {
         setAlert(
-          <Alert style={{ position: 'fixed', bottom: '3%', left: '2%' }} variant="filled" severity="success">
+          <Alert
+            style={{ position: "fixed", bottom: "3%", left: "2%" }}
+            variant="filled"
+            severity="success"
+          >
             {response.msg}
           </Alert>
         );
@@ -230,7 +247,9 @@ export default function Form() {
       console.error(error, "error");
     }
   };
-  
+  const handlescrolltotop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const settings = {
     dots: true,
     infinite: true,
@@ -1735,8 +1754,9 @@ export default function Form() {
             variant="bordered"
             className="bg-gradient-to-tr shadow-lg px-36 py-9 text-lg font-bold"
             style={{ color: "#F72378", border: "2px solid #F72378" }}
+            onClick={handlescrolltotop}
           >
-            Enquire now
+            <Link to="/form">Enquire now</Link>
           </Button>
         </div>
         {/* <img
@@ -1771,7 +1791,6 @@ export default function Form() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }
