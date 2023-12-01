@@ -155,7 +155,7 @@ export default function Form() {
   const [vid2, setvid2] = useState(false);
   const vid2f = () => {
     setvid2(!vid2);
-    
+  }
   const handleChange = (e, radioId) => {
     const { name, value } = e.target;
 
