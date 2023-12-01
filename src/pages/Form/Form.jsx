@@ -94,7 +94,8 @@ const testimonailsdata = {
 const CustomPrevArrow = (props) => (
   <button
     onClick={props.onClick}
-    className="absolute left-1/3 md:left-1/4 top-full mb-6 cursor-pointer"
+    className="absolute md:left-0 top-full mb-8 cursor-pointer"
+    style={{ left: window.innerWidth > 867 ? "33%" : "15%" }}
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +118,7 @@ const CustomPrevArrow = (props) => (
 const CustomNextArrow = (props) => (
   <button
     onClick={props.onClick}
-    className="absolute left-2/3 md:left-3/4 top-full mb-6 cursor-pointer"
+    className="absolute left-2/3 md:left-3/4 top-full mb-8 cursor-pointer"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -920,7 +921,7 @@ export default function Form() {
             <div className="flex md:h-auto h-80 justify-between md:m-auto ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex">
               <img
                 src="./Assets/Images/form/tina.jpg"
-                className=" md:h-96 object-cover object-center md:w-full"
+                className="w-1/3 md:h-96 object-cover object-center md:w-full"
                 style={{
                   borderRadius:
                     window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
@@ -928,7 +929,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex flex-col  justify-center gap-2 items-start px-6 md:p-6 md:overflow-auto md:h-96"
+                className="flex flex-col flex-1 justify-center gap-2 items-start px-6 md:p-6 md:overflow-auto md:h-96"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius:
@@ -959,7 +960,7 @@ export default function Form() {
             >
               <img
                 src="./Assets/Images/form/sher.jpg"
-                className="md:h-96 object-cover object-center md:w-full"
+                className="w-1/3 md:h-96 object-cover object-center md:w-full"
                 style={{
                   borderRadius:
                     window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
@@ -967,7 +968,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex flex-col justify-center gap-4 items-start px-6 md:p-6 md:overflow-auto md:h-96"
+                className="flex flex-col flex-1 justify-center gap-4 items-start px-6 md:p-6 md:overflow-auto md:h-96"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius:
@@ -997,21 +998,20 @@ export default function Form() {
             >
               <img
                 src="./Assets/Images/form/anupama.jpg"
-                className=" md:h-96 object-cover object-center md:w-full"
+                className="w-1/3 md:h-96 object-cover object-center md:w-full"
                 style={{
                   borderRadius:
-                    window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",                    objectPosition: "bottom center",
-
+                    window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
+                  objectPosition: "bottom center",
                 }}
                 alt=""
               />
               <div
-                className="flex flex-col  justify-center gap-4 items-start px-6 md:p-6 overflow-auto md:h-96"
+                className="flex flex-col flex-1 justify-center gap-4 items-start px-6 md:p-6 overflow-auto md:h-96"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius:
                     window.innerWidth > 867 ? "0 8px 8px 0" : "0 0 8px 8px",
-
                 }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
@@ -1040,7 +1040,7 @@ export default function Form() {
             >
               <img
                 src="./Assets/Images/form/swethaedited.png"
-                className="md:h-96 object-cover md:w-full"
+                className="w-1/3 md:h-96 object-cover md:w-full"
                 style={{
                   borderRadius:
                     window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
@@ -1049,7 +1049,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex flex-col  justify-center gap-4 items-start px-6 md:p-6 md:overflow-auto md:h-96"
+                className="flex flex-col flex-1 justify-center gap-4 items-start px-6 md:p-6 md:overflow-auto md:h-96"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius:
@@ -1310,16 +1310,14 @@ export default function Form() {
             focusOnSelect={false}
             customLeftArrow={
               <CustomLeftArrow
-                style={{ display: window.innerWidth < 860 ? "none" : "block" }}
               />
             }
             customRightArrow={
               <CustomRightArrow
-                style={{ display: window.innerWidth < 860 ? "none" : "block" }}
               />
             }
           >
-            <div className="w-full flex justify-center gap-16 md:flex-col md:m-auto md:gap-0 md:w-11/12">
+            <div className="w-full flex justify-center gap-16 md:flex-col md:m-auto md:gap-0 md:w-11/12 md:pb-20">
               <img
                 src="./Assets/Images/form/carousel2.jpg"
                 className="w-2/5 rounded-xl md:w-full"
@@ -1328,13 +1326,13 @@ export default function Form() {
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
                 <p
                   style={{ color: "#1682FB" }}
-                  className="font-bold text-4xl md:text-2xl"
+                  className="font-bold text-4xl xl:text-2xl lg:text-2xl md:text-2xl"
                 >
                   1 . Best Student Hamper: 
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-2xl md:text-xl"
+                  className="font-normal text-2xl xl:text-xl lg:text-xl md:text-xl"
                 >
                   Amaze parents and enrich kids. We offer a world-class Smart
                   book series, complemented by an anytime-anywhere Teacher, a
@@ -1351,13 +1349,13 @@ export default function Form() {
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
                 <p
                   style={{ color: "#1682FB" }}
-                  className="font-bold text-4xl md:text-2xl"
+                  className="font-bold text-4xl xl:text-2xl lg:text-2xl md:text-2xl"
                 >
                   2 . Montessori Toy Library: 
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-2xl md:text-xl"
+                  className="font-normal text-2xl xl:text-xl lg:text-xl md:text-xl"
                 >
                   Your school will have access to an extensive Montessori Toy
                   Library, fostering a stimulating and hands-on learning
@@ -1374,13 +1372,13 @@ export default function Form() {
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
                 <p
                   style={{ color: "#1682FB" }}
-                  className="font-bold text-4xl md:text-2xl"
+                  className="font-bold text-4xl xl:text-2xl lg:text-2xl md:text-2xl"
                 >
                   3 . Award-Winning Curriculum
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-2xl md:text-xl"
+                  className="font-normal text-2xl xl:text-xl lg:text-xl md:text-xl"
                 >
                   Our curriculum and teacher engagement programs have received
                   accolades for their innovation and effectiveness, ensuring
@@ -1397,13 +1395,13 @@ export default function Form() {
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
                 <p
                   style={{ color: "#1682FB" }}
-                  className="font-bold text-4xl md:text-2xl"
+                  className="font-bold text-4xl xl:text-2xl lg:text-2xl md:text-2xl"
                 >
                   4 . Digital Concept Teacher Portal:
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-2xl md:text-xl"
+                  className="font-normal text-2xl xl:text-xl lg:text-xl md:text-xl"
                 >
                   With our cutting-edge technology, every classroom is empowered
                   to deliver world-class lessons, enriching both teachers and
@@ -1417,16 +1415,16 @@ export default function Form() {
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
-              <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
+              <div className="w-2/5 flex flex-col items-start gap-2 py-1 md:w-full">
                 <p
                   style={{ color: "#1682FB" }}
-                  className="font-bold text-4xl md:text-2xl"
+                  className="font-bold text-4xl xl:text-2xl lg:text-2xl md:text-2xl"
                 >
                   5 . All-in Mobile App 
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-2xl md:text-xl"
+                  className="font-normal text-2xl xl:text-xl lg:text-xl md:text-xl"
                 >
                   Our comprehensive mobile app streamlines attendance, parent
                   communication, skill mapping of children, toy library

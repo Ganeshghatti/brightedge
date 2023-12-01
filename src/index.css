@@ -7,8 +7,22 @@ body {
   font-family: MyridProRegular;
 }
 
-.custom-left-arrow arrowtestimonials{
-  position: absolute;
-  left: 30vw;
-  top: 80vw;
+.custom-left-arrow {
+  top: 75%;
+}
+.custom-right-arrow{
+  top: 75%;
+}
+@media (max-width: 867px) {
+  .custom-left-arrow {
+    top: 85%;
+    left: 0%;
+    z-index: 999;
+  }
+  .custom-right-arrow{
+    top: 85%;
+    left: 0%;
+    z-index: 999;
+
+}
 }
