@@ -146,6 +146,7 @@ export default function Form() {
     LOCATION: "",
     YOUR_MESSAGE: 1,
   });
+
   const [vid1, setvid1] = useState(false);
   const vid1f = () => {
     setvid1(!vid1);
@@ -154,7 +155,7 @@ export default function Form() {
   const [vid2, setvid2] = useState(false);
   const vid2f = () => {
     setvid2(!vid2);
-  };
+  }
 
   const handleChange = (e, radioId) => {
     const { name, value } = e.target;
