@@ -382,15 +382,16 @@ export default function Form() {
           <div className="flex justify-start w-full gap-4">
             <select
               name="SMS__COUNTRY_CODE"
+              defaultValue="+91"
               value={formData.SMS__COUNTRY_CODE}
-              onChange={handleChange}
+              disabled={true}
               className="w-1/3 h-full z-10 py-4 px-4 flex justify-center rounded bg-white border-1 border-solid border-gray-400 cursor-pointer text-gray-500"
             >
-              <option value="">Select country code</option>
-              <option value="+91">(+91) India</option>
-              <option value="+1">(+1) United States</option>
-              <option value="+44">(+44) United Kingdom</option>
+              <option value="+91" selected>
+                (+91) India
+              </option>
             </select>
+
             <TextField
               id="outlined-basic"
               variant="outlined"

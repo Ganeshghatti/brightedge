@@ -25,139 +25,57 @@ export default function Navbar() {
           ></div>
           <ul className="flex flex-col fixed top-0 right-0 z-50 w-3/4 h-screen bg-white justify-center items-center gap-6">
             <li style={{ color: "#0B1C39" }} onClick={menuf}>
-              Partnership
+              <a href="https://brightkidmont.com/montessori-preschool-franchise">
+                Partnership
+              </a>
             </li>
             <li>
-              <Dropdown>
+              <Dropdown onClick={menuf}>
                 <DropdownTrigger>
                   <div
                     className="flex cursor-pointer"
                     style={{ color: "#0B1C39" }}
                   >
-                    Montessori
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M7 11L12 15L17 11"
-                        stroke="#0B1C39"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <a href="https://brightkidmont.com/montessori-preschool-nursery">
+                      Montessori
+                    </a>
                   </div>
                 </DropdownTrigger>
-                <DropdownMenu aria-label="Static Actions">
-                  <DropdownItem color="danger" onClick={menuf}>
-                    New file
-                  </DropdownItem>
-                  <DropdownItem color="danger" onClick={menuf}>
-                    Copy link
-                  </DropdownItem>
-                  <DropdownItem color="danger" onClick={menuf}>
-                    Edit file
-                  </DropdownItem>
-                  <DropdownItem color="danger" onClick={menuf}>
-                    Delete file
-                  </DropdownItem>
-                </DropdownMenu>
               </Dropdown>
             </li>
-            <li>
+
+            <li onClick={menuf}>
               <Dropdown>
                 <DropdownTrigger>
                   <div
                     className="flex cursor-pointer"
                     style={{ color: "#0B1C39" }}
                   >
-                    Resources
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M7 11L12 15L17 11"
-                        stroke="#0B1C39"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <a href="https://brilla.in/">Resources</a>
                   </div>
                 </DropdownTrigger>
-                <DropdownMenu aria-label="Static Actions">
-                  <DropdownItem color="danger" onClick={menuf}>
-                    New file
-                  </DropdownItem>
-                  <DropdownItem color="danger" onClick={menuf}>
-                    Copy link
-                  </DropdownItem>
-                  <DropdownItem color="danger" onClick={menuf}>
-                    Edit file
-                  </DropdownItem>
-                  <DropdownItem color="danger" onClick={menuf}>
-                    Delete file
-                  </DropdownItem>
-                </DropdownMenu>
               </Dropdown>
             </li>
-            <li>
+
+            <li onClick={menuf}>
               <Dropdown>
                 <DropdownTrigger>
                   <div
                     className="flex cursor-pointer"
                     style={{ color: "#0B1C39" }}
                   >
-                    More
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M7 11L12 15L17 11"
-                        stroke="#0B1C39"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <a href="http://www.brightkidmont.com">More</a>
                   </div>
                 </DropdownTrigger>
-                <DropdownMenu aria-label="Static Actions">
-                  <DropdownItem color="danger" onClick={menuf}>
-                    New file
-                  </DropdownItem>
-                  <DropdownItem color="danger" onClick={menuf}>
-                    Copy link
-                  </DropdownItem>
-                  <DropdownItem color="danger" onClick={menuf}>
-                    Edit file
-                  </DropdownItem>
-                  <DropdownItem color="danger" onClick={menuf}>
-                    Delete file
-                  </DropdownItem>
-                </DropdownMenu>
               </Dropdown>
             </li>
             <Link to="/form" onClick={menuf}>
-              <li>Contact</li>
+              <li >Contact</li>
             </Link>
             <Button
               radius="full"
-              className="bg-gradient-to-tr text-white shadow-lg px-4 py-2 text-lg font-bold"
+              className="bg-gradient-to-tr text-white shadow-lg px-4 py-2 text-md font-bold"
               style={{ backgroundColor: "#F72378" }}
-              onClick={menuf}
             >
               Enquire Today!
             </Button>
