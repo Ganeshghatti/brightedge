@@ -11,8 +11,8 @@ export default function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/form" element={<Form />} />
+        <Route path="/" element={<Form />} />
+        {/* <Route path="/form" element={<Form />} /> */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />

@@ -9,7 +9,7 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import TextField from "@mui/material/TextField";
 import { Button } from "@nextui-org/react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CustomLeftArrow from "../../Components/CustomLeftArrow";
@@ -185,7 +185,7 @@ export default function Form() {
     if (!validator.isEmail(formData.EMAIL)) {
       setAlert(
         <Alert
-          style={{ position: "fixed", bottom: "3", left: "2",zIndex:"999" }}
+          style={{ position: "fixed", bottom: "3", left: "2", zIndex: "999" }}
           variant="filled"
           severity="warning"
         >
@@ -199,7 +199,7 @@ export default function Form() {
     if (!validator.isMobilePhone(formData.SMS)) {
       setAlert(
         <Alert
-          style={{ position: "fixed", bottom: "3%", left: "2%",zIndex:"999" }}
+          style={{ position: "fixed", bottom: "3%", left: "2%", zIndex: "999" }}
           variant="filled"
           severity="warning"
         >
@@ -216,7 +216,12 @@ export default function Form() {
       if (response.iserror) {
         setAlert(
           <Alert
-            style={{ position: "fixed", bottom: "3%", left: "2%",zIndex:"999" }}
+            style={{
+              position: "fixed",
+              bottom: "3%",
+              left: "2%",
+              zIndex: "999",
+            }}
             variant="filled"
             severity="error"
           >
@@ -226,7 +231,12 @@ export default function Form() {
       } else {
         setAlert(
           <Alert
-            style={{ position: "fixed", bottom: "3%", left: "2%",zIndex:"999" }}
+            style={{
+              position: "fixed",
+              bottom: "3%",
+              left: "2%",
+              zIndex: "999",
+            }}
             variant="filled"
             severity="success"
           >
@@ -284,6 +294,26 @@ export default function Form() {
       },
     ],
   };
+
+  const [iframevidheight, setIframevidheight] = useState(720);
+  useEffect(() => {
+    const setIframeHeight = () => {
+      if (window.innerWidth < 1200) {
+        setIframevidheight(450);
+      } else if (window.innerWidth < 750) {
+        setIframevidheight(300);
+      }
+    };
+
+    setIframeHeight();
+
+    window.addEventListener("resize", setIframeHeight);
+
+    return () => {
+      window.removeEventListener("resize", setIframeHeight);
+    };
+  }, [iframevidheight]);
+
   return (
     <div
       id="form"
@@ -723,18 +753,20 @@ export default function Form() {
           <>
             <div
               className="fixed w-screen h-screen top-0 left-0 z-30"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.608)" }}
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.608)", zIndex: "999" }}
               onClick={vid1f}
             />
             <div
-              className="flex justify-center items-center fixed w-screen h-screen top-0 left-0 z-50"
+              className="flex justify-center items-center fixed w-screen h-screen top-0 left-0"
+              style={{ zIndex: "999" }}
               onClick={vid1f}
             >
               <iframe
+                id="vimeo-iframe"
                 title="vimeo-player"
                 src="https://player.vimeo.com/video/645805338?h=7d0abb1ae3"
                 width="1280"
-                height="720"
+                height={iframevidheight}
                 frameborder="0"
                 allowfullscreen
               ></iframe>
@@ -1339,20 +1371,23 @@ export default function Form() {
           <>
             <div
               className="fixed w-screen h-screen top-0 left-0 z-30"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.608)" }}
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.608)", zIndex: "999" }}
               onClick={vid2f}
             />
             <div
-              className="flex justify-center items-center fixed w-screen h-screen top-0 left-0 z-50"
+              className="flex justify-center items-center fixed w-screen h-screen top-0 left-0"
+              style={{ zIndex: "999" }}
               onClick={vid2f}
             >
               <iframe
+                id="vimeo-iframe"
                 title="vimeo-player"
-                src="https://player.vimeo.com/video/642923538?h=ceaf8d6f86"
+                src="https://player.vimeo.com/video/645805338?h=7d0abb1ae3"
                 width="1280"
-                height="720"
-                frameborder="0"
-                allowfullscreen
+                height={iframevidheight}
+                frameBorder="0"
+                className="border-2 border-solid border-red-900"
+                allowFullScreen
               ></iframe>
             </div>
           </>
