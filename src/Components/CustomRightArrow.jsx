@@ -4,7 +4,7 @@ const CustomRightArrow = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      className={`custom-arrow custom-right-arrow absolute right-5 top-1/2`}
+      className={`custom-arrow custom-right-arrow absolute left-1/2 ml-24`}
     >
       {/* <ArrowRightIcon style={{ color: "white" }} /> */}
       {window.innerWidth > 867 ? (

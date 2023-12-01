@@ -16,6 +16,9 @@ import CustomLeftArrow from "../../Components/CustomLeftArrow";
 import CustomRightArrow from "../../Components/CustomRightArrow";
 import "./Form.scss";
 import submitFormApi from "./api.js";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const images = [
   {
@@ -88,7 +91,52 @@ const testimonailsdata = {
     partialVisibilityGutter: 40,
   },
 };
+const CustomPrevArrow = (props) => (
+  <button
+    onClick={props.onClick}
+    className="absolute md:left-0 top-full mb-8 cursor-pointer"
+    style={{ left: window.innerWidth > 867 ? "33%" : "15%" }}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+    >
+      <path
+        d="M25 10L15 20L25 30"
+        stroke="#1682FB"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+);
 
+const CustomNextArrow = (props) => (
+  <button
+    onClick={props.onClick}
+    className="absolute left-2/3 md:left-3/4 top-full mb-8 cursor-pointer"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+    >
+      <path
+        d="M15 30L25 20L15 10"
+        stroke="#1682FB"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+);
 export default function Form() {
   const [formData, setFormData] = useState({
     FIRST_NAME: "",
@@ -107,8 +155,7 @@ export default function Form() {
   const [vid2, setvid2] = useState(false);
   const vid2f = () => {
     setvid2(!vid2);
-  };
-
+    
   const handleChange = (e, radioId) => {
     const { name, value } = e.target;
 
@@ -126,16 +173,45 @@ export default function Form() {
       [name]: value,
     });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // validate before submit
     await submitFormApi(formData);
-
-    // clear form after submission
   };
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: testimonailsdata.desktop.items,
+    slidesToScroll: 1,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: testimonailsdata.desktop.breakpoint.max,
+        settings: {
+          slidesToShow: testimonailsdata.desktop.items,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: testimonailsdata.tablet.breakpoint.max,
+        settings: {
+          slidesToShow: testimonailsdata.tablet.items,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: testimonailsdata.mobile.breakpoint.max,
+        settings: {
+          slidesToShow: testimonailsdata.mobile.items,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <div
       id="form"
@@ -154,7 +230,7 @@ export default function Form() {
             className="text-6xl font-bold lg:text-5xl md:text-4xl"
             style={{ color: "#32355D" }}
           >
-            Make an impactful
+            Make an Impactful
             <p className="" style={{ color: "#7F46FF" }}>
               Preschool
             </p>
@@ -181,7 +257,10 @@ export default function Form() {
           id="sib-form"
           onSubmit={handleSubmit}
         >
-          <img src="./Assets/Images/form/Fun.png" className="object-contain" />
+          <img
+            src="./Assets/Images/form/AFFORDABLEMaterials.png"
+            className="object-contain"
+          />
           <TextField
             id="outlined-basic"
             variant="outlined"
@@ -473,9 +552,9 @@ export default function Form() {
         <div
           className="w-1/5 p-6 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full lg:mt-6"
           style={{
-            backgroundColor: "#FEFDDE ",
+            backgroundColor: "rgba(255, 131, 63, 0.16)",
             borderRadius: "24px",
-            border: "1px solid #FBF55A",
+            border: "1px solid #FF833F",
           }}
         >
           <p className="text-2xl font-normal">Elevating Exsisting Preschool:</p>
@@ -679,8 +758,7 @@ export default function Form() {
             <span className="form-testimonials-h1-style"> our word</span>
           </h1>
         </div>
-        <div className="w-full h-auto">
-          <Carousel
+        {/* <Carousel
             responsive={testimonailsdata}
             swipeable={true}
             draggable={true}
@@ -778,7 +856,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll md:p-6 md:h-24 border-2 border-solid border-red-800"
+                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll  md:p-6"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
@@ -818,7 +896,7 @@ export default function Form() {
                 alt=""
               />
               <div
-                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll md:p-6 border-2 border-solid border-red-800"
+                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll  md:p-6"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
@@ -847,39 +925,156 @@ export default function Form() {
                 </p>
               </div>
             </div>
-            {/* <div
-              className="w-full md:m-auto h-208 md:h-auto flex ml-96 md:flex-col md:w-11/12 rounded"
-              style={{ border: "20px solid white", overflow: "hidden" }}
+          </Carousel> */}
+        <div className="w-full">
+          <Slider {...settings} className="flex items-center">
+            <div className="flex md:h-auto h-80 justify-between md:m-auto ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex">
+              <img
+                src="./Assets/Images/form/tina.jpg"
+                className="w-1/3 md:h-96 object-cover object-center md:w-full"
+                style={{
+                  borderRadius:
+                    window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
+                }}
+                alt=""
+              />
+              <div
+                className="flex flex-col flex-1 justify-center gap-2 items-start px-6 md:p-6 md:overflow-auto md:h-96"
+                style={{
+                  backgroundColor: "rgba(22, 130, 251, 0.20)",
+                  borderRadius:
+                    window.innerWidth > 867 ? "0 8px 8px 0" : "0 0 8px 8px",
+                }}
+              >
+                <p style={{ color: "gray" }} className="font-normal text-base">
+                  Wissen Mont Preschool, Madurai
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
+                  Tina Prasanth  
+                </p>
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base overflow-auto"
+                >
+                  Bright Edu Mont provided the best teachers' training, enabling
+                  practical learning for children. Grateful for their support in
+                  building my centre. Education, a self-organizing work, is
+                  enhanced by their academic support, contributing to the
+                  success of my centre.
+                </p>
+              </div>
+            </div>
+            <div
+              className="flex md:h-auto h-80 justify-between md:m-auto ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
+              style={{ border: "20px solid white" }}
+            >
+              <img
+                src="./Assets/Images/form/sher.jpg"
+                className="w-1/3 md:h-96 object-cover object-center md:w-full"
+                style={{
+                  borderRadius:
+                    window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
+                }}
+                alt=""
+              />
+              <div
+                className="flex flex-col flex-1 justify-center gap-4 items-start px-6 md:p-6 md:overflow-auto md:h-96"
+                style={{
+                  backgroundColor: "rgba(22, 130, 251, 0.20)",
+                  borderRadius:
+                    window.innerWidth > 867 ? "0 8px 8px 0" : "0 0 8px 8px",
+                }}
+              >
+                <p style={{ color: "gray" }} className="font-normal text-base">
+                  Sunrise Valley School, Haryana
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
+                  Sher Singh  
+                </p>
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base overflow-auto"
+                >
+                  Thrilled with excellent academic support, online training, and
+                  strong Montessori resources from Bright Kids Bangalore.
+                  Parents love the curriculum and monthly activity guidelines.
+                  Grateful for Bright Kids' strong and excellent support.
+                </p>
+              </div>
+            </div>
+            <div
+              className="flex md:h-auto h-80 justify-between md:m-auto ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
+              style={{ border: "20px solid white" }}
+            >
+              <img
+                src="./Assets/Images/form/anupama.jpg"
+                className="w-1/3 md:h-96 object-cover object-center md:w-full"
+                style={{
+                  borderRadius:
+                    window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
+                  objectPosition: "bottom center",
+                }}
+                alt="img"
+              />
+              <div
+                className="flex flex-col flex-1 justify-center gap-4 items-start px-6 md:p-6 overflow-auto md:h-96"
+                style={{
+                  backgroundColor: "rgba(22, 130, 251, 0.20)",
+                  borderRadius:
+                    window.innerWidth > 867 ? "0 8px 8px 0" : "0 0 8px 8px",
+                }}
+              >
+                <p style={{ color: "gray" }} className="font-normal text-base">
+                  Bright Kid Montessori, Jakkur, Bangalore
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
+                  Anupama Sengupta
+                </p>
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base overflow-auto"
+                >
+                  Proud franchisee of Bright Kid Montessori House. Owning a
+                  Bright kid School has been enriching. Very happy with the
+                  support and quality of materials. Our commitment to excellence
+                  in education is evident in our vibrant learning environment.
+                  Grateful to Susmita Ma'am for the franchise opportunity.
+                  Excited to contribute to the success of Bright Kid Montessori
+                  House. Thank you!
+                </p>
+              </div>
+            </div>
+            <div
+              className="flex md:h-auto h-80 justify-between md:m-auto ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
+              style={{ border: "20px solid red" }}
             >
               <img
                 src="./Assets/Images/form/swethaedited.png"
-                className="w-64 h-full object-cover md:w-full m-auto"
+                className="w-1/3 md:h-96 object-cover md:w-full"
                 style={{
-                  borderRadius: "8px 0 0 8px",
+                  borderRadius:
+                    window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
                   objectPosition: "top center",
                 }}
                 alt=""
               />
               <div
-                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll md:p-6 border-2 border-solid border-red-800"
+                className="flex flex-col flex-1 justify-center gap-4 items-start px-6 md:p-6 md:overflow-auto md:h-96"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
-                  borderRadius: "0 8px 8px 0",
+                  borderRadius:
+                    window.innerWidth > 867 ? "0 8px 8px 0" : "0 0 8px 8px",
                 }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
-                  Bright Kid Montessori Horamavu, Bangalore
+                  Bright Kid Montessori Horamavu, Bangalore
                 </p>
                 <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
-                  Shweta
+                  Shweta 
                 </p>
                 <p
-                  style={{
-                    color: "#0B1C39",
-                    maxHeight: "80px",
-                    overflowY: "auto",
-                  }}
-                  className="font-normal text-base"
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base overflow-auto"
                 >
                   Leading the successful Hormavu Center since 2012. Our Bright
                   Kit Academy and extracurricular activities ensure holistic
@@ -891,14 +1086,14 @@ export default function Form() {
                   appreciated. Good luck!
                 </p>
               </div>
-            </div> */}
-          </Carousel>
+            </div>
+          </Slider>
         </div>
       </section>
 
       <section
         id="form-hereisallyouneed"
-        className="py-16 gap-6 w-full flex flex-col items-center md:py-6"
+        className="py-16 gap-6 w-full md:mt-16 flex flex-col items-center md:py-6"
       >
         <p
           className="text-center text-3xl font-bold md:text-xl"
@@ -1123,28 +1318,26 @@ export default function Form() {
             customTransition="all 5"
             transitionDuration={300}
             focusOnSelect={false}
-            customLeftArrow={
-              <CustomLeftArrow
-                style={{ display: window.innerWidth < 860 ? "none" : "block" }}
-              />
-            }
-            customRightArrow={
-              <CustomRightArrow
-                style={{ display: window.innerWidth < 860 ? "none" : "block" }}
-              />
-            }
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}
           >
-            <div className="w-full flex justify-center gap-16 md:flex-col md:m-auto md:gap-0 md:w-11/12">
+            <div className="w-full flex justify-center gap-16 md:flex-col md:m-auto md:gap-0 md:w-11/12 md:pb-20">
               <img
                 src="./Assets/Images/form/carousel2.jpg"
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                <p
+                  style={{ color: "#1682FB" }}
+                  className="font-bold text-4xl xl:text-2xl lg:text-2xl md:text-2xl"
+                >
                   1 . Best Student Hamper: 
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-2xl xl:text-xl lg:text-xl md:text-xl"
+                >
                   Amaze parents and enrich kids. We offer a world-class Smart
                   book series, complemented by an anytime-anywhere Teacher, a
                   Craft Kit, and a Multiple Intelligence portal for kids.
@@ -1158,10 +1351,16 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                <p
+                  style={{ color: "#1682FB" }}
+                  className="font-bold text-4xl xl:text-2xl lg:text-2xl md:text-2xl"
+                >
                   2 . Montessori Toy Library: 
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-2xl xl:text-xl lg:text-xl md:text-xl"
+                >
                   Your school will have access to an extensive Montessori Toy
                   Library, fostering a stimulating and hands-on learning
                   experience for your students.
@@ -1175,10 +1374,16 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                <p
+                  style={{ color: "#1682FB" }}
+                  className="font-bold text-4xl xl:text-2xl lg:text-2xl md:text-2xl"
+                >
                   3 . Award-Winning Curriculum
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-2xl xl:text-xl lg:text-xl md:text-xl"
+                >
                   Our curriculum and teacher engagement programs have received
                   accolades for their innovation and effectiveness, ensuring
                   your preschool stands out from the rest.
@@ -1192,10 +1397,16 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+                <p
+                  style={{ color: "#1682FB" }}
+                  className="font-bold text-4xl xl:text-2xl lg:text-2xl md:text-2xl"
+                >
                   4 . Digital Concept Teacher Portal:
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-2xl xl:text-xl lg:text-xl md:text-xl"
+                >
                   With our cutting-edge technology, every classroom is empowered
                   to deliver world-class lessons, enriching both teachers and
                   students alike.
@@ -1208,11 +1419,17 @@ export default function Form() {
                 className="w-2/5 rounded-xl md:w-full"
                 alt=""
               />
-              <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-2xl">
+              <div className="w-2/5 flex flex-col items-start gap-2 py-1 md:w-full">
+                <p
+                  style={{ color: "#1682FB" }}
+                  className="font-bold text-4xl xl:text-2xl lg:text-2xl md:text-2xl"
+                >
                   5 . All-in Mobile App 
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-xl">
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-2xl xl:text-xl lg:text-xl md:text-xl"
+                >
                   Our comprehensive mobile app streamlines attendance, parent
                   communication, skill mapping of children, toy library
                   management, and fee tracking - everything you need at your
@@ -1237,7 +1454,7 @@ export default function Form() {
           className="text-6xl font-bold text-center md:text-4xl px-1/2"
           style={{ color: "#32355D" }}
         >
-          New Preschool Franchise has never been Here’s all&nbsp;
+          New Preschool Franchise has never been&nbsp;
           <span className="form-flexible-h1-style"> so flexible!</span>
         </h1>
         <p
@@ -1292,8 +1509,8 @@ export default function Form() {
               3. Digital Assets:
             </p>
             <p className="text-xl md:text-lg">
-              Our{" "}
-              <span className="font-bold"> award-winning digital assets</span>{" "}
+              Our
+              <span className="font-bold"> award-winning digital assets</span>
               are truly best-in-class, offering unmatched support for your
               preschool's growth.
             </p>
@@ -1310,8 +1527,8 @@ export default function Form() {
               4. Additional Revenue:
             </p>
             <p className="text-xl md:text-lg">
-              We share the earnings from{" "}
-              <span className="font-bold"> Montessori Teachers Training</span>{" "}
+              We share the earnings from
+              <span className="font-bold"> Montessori Teachers Training</span>
               and Vedic Maths courses conducted at your center, contributing to
               your financial success.
             </p>
@@ -1356,7 +1573,7 @@ export default function Form() {
         </h1>
         <div className="w-4/5 flex items-center justify-around py-12 md:w-full">
           <img
-            src="./Assets/Images/form/Illu.png"
+            src="./Assets/Images/form/admissionguranteeplan.png"
             alt=""
             className="md:hidden"
           />
@@ -1368,12 +1585,11 @@ export default function Form() {
             take it a step further with our Comprehensive Admission Guarantee
             Plan. Our commitment to your
             <span style={{ color: "#7F46FF" }} className="font-bold">
-              {" "}
               success is unwavering
             </span>
-            , and our{" "}
+            , and our
             <span style={{ color: "#7F46FF" }} className="font-bold">
-              marketing efforts{" "}
+              marketing efforts
             </span>
             under this plan are second to none.
           </p>
@@ -1396,23 +1612,20 @@ export default function Form() {
         >
           Celebrating
           <span style={{ color: "#FF833F" }} className="font-bold">
-            {" "}
             16+ years of excellence
-          </span>{" "}
+          </span>
           and innovation, we are thrilled to share our remarkable journey of
           success and customer validation! With numerous prestigious awards in
           recognition of our cutting-edge digital solutions, curriculum, and
           teachers' training, we take immense pride in empowering over
           <span style={{ color: "#FF833F" }} className="font-bold">
-            {" "}
-            35,000 bright young minds{" "}
+            35,000 bright young minds
           </span>
           across the country. Join the growing community of satisfied preschools
           who have witnessed the transformative impact of our tailored
           <span style={{ color: "#FF833F" }} className="font-bold">
-            {" "}
             curriculum
-          </span>{" "}
+          </span>
           and
           <span style={{ color: "#FF833F" }} className="font-bold">
             &nbsp;preschool learning materials!
@@ -1466,12 +1679,10 @@ export default function Form() {
           <Button
             radius="full"
             variant="bordered"
-            className="bg-gradient-to-tr shadow-lg px-32 py-9 text-lg font-bold"
+            className="bg-gradient-to-tr shadow-lg px-36 py-9 text-lg font-bold"
             style={{ color: "#F72378", border: "2px solid #F72378" }}
           >
-            Enquire now for
-            <br />
-            Admissions
+            Enquire now
           </Button>
         </div>
         {/* <img
