@@ -19,8 +19,9 @@ import SubmitFormApi from "./api";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Alert from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
+import Alert from "@mui/material/Alert";
+import Stack from "@mui/material/Stack";
+import validator from "validator";
 
 const images = [
   {
@@ -178,14 +179,39 @@ export default function Form() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
     try {
+      if (!validator.isEmail(formData.EMAIL)) {
+        setAlert(
+          <Alert variant="filled" style={{ position: 'fixed', bottom: '0', left: '0' }} severity="warning">
+            Enter a valid email
+          </Alert>
+        );
+        return;
+      }
+    
+      if (!validator.isMobilePhone(formData.SMS)) {
+        setAlert(
+          <Alert variant="filled" style={{ position: 'fixed', bottom: '0', left: '0' }} severity="warning">
+            Enter a valid phone number
+          </Alert>
+        );
+        return; 
+      }
+      
       const response = await SubmitFormApi(formData);
       console.log(response);
       if (response.iserror) {
-        setAlert(<Alert variant="filled" severity="error">{response.msg}</Alert>);
+        setAlert(
+          <Alert variant="filled" style={{ position: 'fixed', bottom: '0', left: '0' }} severity="error">
+            {response.msg}
+          </Alert>
+        );
       } else {
-        setAlert(<Alert variant="filled" severity="success">{response.msg}</Alert>);
+        setAlert(
+          <Alert variant="filled" style={{ position: 'fixed', bottom: '0', left: '0' }} severity="success">
+            {response.msg}
+          </Alert>
+        );
       }
       setFormData({
         FIRST_NAME: "",
@@ -193,8 +219,9 @@ export default function Form() {
         SMS: "",
         EMAIL: "",
         LOCATION: "",
-        YOUR_MESSAGE: 1,
-      });    } catch (error) {
+        YOUR_MESSAGE: null,
+      });
+    } catch (error) {
       console.log(error, "error");
     }
   };
@@ -237,9 +264,7 @@ export default function Form() {
       id="form"
       className="flex flex-col justify-center w-screen items-center"
     >
-      <Stack spacing={2}>
-        {alert}
-      </Stack>
+      <Stack spacing={2}>{alert}</Stack>
       <section
         id="form-inputs"
         className="flex justify-center w-screen items-center h-screen md:flex-col md:h-auto"
