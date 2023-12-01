@@ -350,4 +350,5 @@ h1 {
 .testimonials-slider-class-flex {
   display: flex !important;
   flex-direction: row;
+  border: 20px solid white;
 }/*# sourceMappingURL=Form.css.map */

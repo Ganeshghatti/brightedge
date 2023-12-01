@@ -92,7 +92,10 @@ const testimonailsdata = {
   },
 };
 const CustomPrevArrow = (props) => (
-  <div onClick={props.onClick} className="absolute left-1/3 top-full mb-6">
+  <button
+    onClick={props.onClick}
+    className="absolute left-1/3 md:left-1/4 top-full mb-6 cursor-pointer"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="40"
@@ -108,11 +111,14 @@ const CustomPrevArrow = (props) => (
         stroke-linejoin="round"
       />
     </svg>
-  </div>
+  </button>
 );
 
 const CustomNextArrow = (props) => (
-  <div onClick={props.onClick} className="absolute left-2/3 top-full mb-6">
+  <button
+    onClick={props.onClick}
+    className="absolute left-2/3 md:left-3/4 top-full mb-6 cursor-pointer"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="40"
@@ -128,7 +134,7 @@ const CustomNextArrow = (props) => (
         stroke-linejoin="round"
       />
     </svg>
-  </div>
+  </button>
 );
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -158,12 +164,9 @@ export default function Form() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // validate before submit
     await submitFormApi(formData);
-
-    // clear form after submission
   };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -914,18 +917,22 @@ export default function Form() {
           </Carousel> */}
         <div className="w-full">
           <Slider {...settings} className="flex items-center">
-            <div className="flex md:h-auto h-80 justify-between ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex">
+            <div className="flex md:h-auto h-80 justify-between md:m-auto ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex">
               <img
                 src="./Assets/Images/form/tina.jpg"
                 className=" md:h-96 object-cover object-center md:w-full"
-                style={{ borderRadius: "8px 0 0 8px" }}
+                style={{
+                  borderRadius:
+                    window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
+                }}
                 alt=""
               />
               <div
-                className="flex flex-col  justify-center gap-2 items-start px-6"
+                className="flex flex-col  justify-center gap-2 items-start px-6 md:p-6 md:overflow-auto md:h-96"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
-                  borderRadius: "0 8px 8px 0",
+                  borderRadius:
+                    window.innerWidth > 867 ? "0 8px 8px 0" : "0 0 8px 8px",
                 }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
@@ -936,7 +943,7 @@ export default function Form() {
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-base"
+                  className="font-normal text-base overflow-auto"
                 >
                   Bright Edu Mont provided the best teachers' training, enabling
                   practical learning for children. Grateful for their support in
@@ -947,107 +954,126 @@ export default function Form() {
               </div>
             </div>
             <div
-              className="flex md:h-auto h-80 justify-between ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
+              className="flex md:h-auto h-80 justify-between md:m-auto ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
               style={{ border: "20px solid white" }}
             >
               <img
-                src="./Assets/Images/form/tina.jpg"
-                className=" md:h-96 object-cover object-center md:w-full"
-                style={{ borderRadius: "8px 0 0 8px" }}
+                src="./Assets/Images/form/sher.jpg"
+                className="md:h-96 object-cover object-center md:w-full"
+                style={{
+                  borderRadius:
+                    window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
+                }}
                 alt=""
               />
               <div
-                className="flex flex-col  justify-center gap-4 items-start px-6"
+                className="flex flex-col justify-center gap-4 items-start px-6 md:p-6 md:overflow-auto md:h-96"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
-                  borderRadius: "0 8px 8px 0",
+                  borderRadius:
+                    window.innerWidth > 867 ? "0 8px 8px 0" : "0 0 8px 8px",
                 }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
-                  Wissen Mont Preschool, Madurai
+                  Sunrise Valley School, Haryana
                 </p>
                 <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
-                  Tina Prasanth  
+                  Sher Singh  
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-base"
+                  className="font-normal text-base overflow-auto"
                 >
-                  Bright Edu Mont provided the best teachers' training, enabling
-                  practical learning for children. Grateful for their support in
-                  building my centre. Education, a self-organizing work, is
-                  enhanced by their academic support, contributing to the
-                  success of my centre.
+                  Thrilled with excellent academic support, online training, and
+                  strong Montessori resources from Bright Kids Bangalore.
+                  Parents love the curriculum and monthly activity guidelines.
+                  Grateful for Bright Kids' strong and excellent support.
                 </p>
               </div>
             </div>
             <div
-              className="flex md:h-auto h-80 justify-between ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
+              className="flex md:h-auto h-80 justify-between md:m-auto ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
               style={{ border: "20px solid white" }}
             >
               <img
-                src="./Assets/Images/form/tina.jpg"
+                src="./Assets/Images/form/anupama.jpg"
                 className=" md:h-96 object-cover object-center md:w-full"
-                style={{ borderRadius: "8px 0 0 8px" }}
+                style={{
+                  borderRadius:
+                    window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",                    objectPosition: "bottom center",
+
+                }}
                 alt=""
               />
               <div
-                className="flex flex-col  justify-center gap-4 items-start px-6"
+                className="flex flex-col  justify-center gap-4 items-start px-6 md:p-6 overflow-auto md:h-96"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
-                  borderRadius: "0 8px 8px 0",
+                  borderRadius:
+                    window.innerWidth > 867 ? "0 8px 8px 0" : "0 0 8px 8px",
+
                 }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
-                  Wissen Mont Preschool, Madurai
+                  Bright Kid Montessori, Jakkur, Bangalore
                 </p>
                 <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
-                  Tina Prasanth  
+                  Anupama Sengupta
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-base"
+                  className="font-normal text-base overflow-auto"
                 >
-                  Bright Edu Mont provided the best teachers' training, enabling
-                  practical learning for children. Grateful for their support in
-                  building my centre. Education, a self-organizing work, is
-                  enhanced by their academic support, contributing to the
-                  success of my centre.
+                  Proud franchisee of Bright Kid Montessori House. Owning a
+                  Bright kid School has been enriching. Very happy with the
+                  support and quality of materials. Our commitment to excellence
+                  in education is evident in our vibrant learning environment.
+                  Grateful to Susmita Ma'am for the franchise opportunity.
+                  Excited to contribute to the success of Bright Kid Montessori
+                  House. Thank you!
                 </p>
               </div>
             </div>
             <div
-              className="flex md:h-auto h-80 justify-between ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
+              className="flex md:h-auto h-80 justify-between md:m-auto ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
               style={{ border: "20px solid red" }}
             >
               <img
-                src="./Assets/Images/form/tina.jpg"
-                className=" md:h-96 object-cover object-center md:w-full"
-                style={{ borderRadius: "8px 0 0 8px" }}
+                src="./Assets/Images/form/swethaedited.png"
+                className="md:h-96 object-cover md:w-full"
+                style={{
+                  borderRadius:
+                    window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
+                  objectPosition: "top center",
+                }}
                 alt=""
               />
               <div
-                className="flex flex-col  justify-center gap-4 items-start px-6"
+                className="flex flex-col  justify-center gap-4 items-start px-6 md:p-6 md:overflow-auto md:h-96"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
-                  borderRadius: "0 8px 8px 0",
+                  borderRadius:
+                    window.innerWidth > 867 ? "0 8px 8px 0" : "0 0 8px 8px",
                 }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
-                  Wissen Mont Preschool, Madurai
+                  Bright Kid Montessori Horamavu, Bangalore
                 </p>
                 <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
-                  Tina Prasanth  
+                  Shweta 
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
-                  className="font-normal text-base"
+                  className="font-normal text-base overflow-auto"
                 >
-                  Bright Edu Mont provided the best teachers' training, enabling
-                  practical learning for children. Grateful for their support in
-                  building my centre. Education, a self-organizing work, is
-                  enhanced by their academic support, contributing to the
-                  success of my centre.
+                  Leading the successful Hormavu Center since 2012. Our Bright
+                  Kit Academy and extracurricular activities ensure holistic
+                  child development. Bright start, right start - our motto for
+                  creating a better world. We follow the child, preparing the
+                  environment in Horamavu. Grateful to our team, partners Mr.
+                  Prasanta Sanyal and Mrs. Susmita Sanyal for support. Thanks to
+                  all for making my dream a success. Continuous support is
+                  appreciated. Good luck!
                 </p>
               </div>
             </div>
@@ -1057,7 +1083,7 @@ export default function Form() {
 
       <section
         id="form-hereisallyouneed"
-        className="py-16 gap-6 w-full flex flex-col items-center md:py-6"
+        className="py-16 gap-6 w-full md:mt-16 flex flex-col items-center md:py-6"
       >
         <p
           className="text-center text-3xl font-bold md:text-xl"
