@@ -187,7 +187,14 @@ export default function Form() {
       } else {
         setAlert(<Alert variant="filled" severity="success">{response.msg}</Alert>);
       }
-    } catch (error) {
+      setFormData({
+        FIRST_NAME: "",
+        SMS__COUNTRY_CODE: "",
+        SMS: "",
+        EMAIL: "",
+        LOCATION: "",
+        YOUR_MESSAGE: 1,
+      });    } catch (error) {
       console.log(error, "error");
     }
   };
