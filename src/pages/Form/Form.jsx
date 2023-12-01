@@ -185,7 +185,7 @@ export default function Form() {
     if (!validator.isEmail(formData.EMAIL)) {
       setAlert(
         <Alert
-          style={{ position: "fixed", bottom: "0", left: "0" }}
+          style={{ position: "fixed", bottom: "3", left: "2",zIndex:"999" }}
           variant="filled"
           severity="warning"
         >
@@ -199,7 +199,7 @@ export default function Form() {
     if (!validator.isMobilePhone(formData.SMS)) {
       setAlert(
         <Alert
-          style={{ position: "fixed", bottom: "3%", left: "2%" }}
+          style={{ position: "fixed", bottom: "3%", left: "2%",zIndex:"999" }}
           variant="filled"
           severity="warning"
         >
@@ -216,7 +216,7 @@ export default function Form() {
       if (response.iserror) {
         setAlert(
           <Alert
-            style={{ position: "fixed", bottom: "3%", left: "2%" }}
+            style={{ position: "fixed", bottom: "3%", left: "2%",zIndex:"999" }}
             variant="filled"
             severity="error"
           >
@@ -226,7 +226,7 @@ export default function Form() {
       } else {
         setAlert(
           <Alert
-            style={{ position: "fixed", bottom: "3%", left: "2%" }}
+            style={{ position: "fixed", bottom: "3%", left: "2%",zIndex:"999" }}
             variant="filled"
             severity="success"
           >
