@@ -16,6 +16,9 @@ import CustomLeftArrow from "../../Components/CustomLeftArrow";
 import CustomRightArrow from "../../Components/CustomRightArrow";
 import "./Form.scss";
 import submitFormApi from "./api.js";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const images = [
   {
@@ -88,7 +91,45 @@ const testimonailsdata = {
     partialVisibilityGutter: 40,
   },
 };
+const CustomPrevArrow = (props) => (
+  <div onClick={props.onClick} className="absolute left-1/3 top-full mb-6">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+    >
+      <path
+        d="M25 10L15 20L25 30"
+        stroke="#1682FB"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+);
 
+const CustomNextArrow = (props) => (
+  <div onClick={props.onClick} className="absolute left-2/3 top-full mb-6">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+    >
+      <path
+        d="M15 30L25 20L15 10"
+        stroke="#1682FB"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+);
 export default function Form() {
   const [formData, setFormData] = useState({
     FIRST_NAME: "",
@@ -123,7 +164,40 @@ export default function Form() {
 
     // clear form after submission
   };
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: testimonailsdata.desktop.items,
+    slidesToScroll: 1,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: testimonailsdata.desktop.breakpoint.max,
+        settings: {
+          slidesToShow: testimonailsdata.desktop.items,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: testimonailsdata.tablet.breakpoint.max,
+        settings: {
+          slidesToShow: testimonailsdata.tablet.items,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: testimonailsdata.mobile.breakpoint.max,
+        settings: {
+          slidesToShow: testimonailsdata.mobile.items,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <div
       id="form"
@@ -169,7 +243,10 @@ export default function Form() {
           id="sib-form"
           onSubmit={handleSubmit}
         >
-          <img src="./Assets/Images/form/AFFORDABLEMaterials.png" className="object-contain" />
+          <img
+            src="./Assets/Images/form/AFFORDABLEMaterials.png"
+            className="object-contain"
+          />
           <TextField
             id="outlined-basic"
             variant="outlined"
@@ -667,8 +744,7 @@ export default function Form() {
             <span className="form-testimonials-h1-style"> our word</span>
           </h1>
         </div>
-        <div className="w-full h-auto">
-          <Carousel
+        {/* <Carousel
             responsive={testimonailsdata}
             swipeable={true}
             draggable={true}
@@ -835,52 +911,147 @@ export default function Form() {
                 </p>
               </div>
             </div>
-            {/* <div
-              className="w-full md:m-auto h-208 md:h-auto flex ml-96 md:flex-col md:w-11/12 rounded"
-              style={{ border: "20px solid white", overflow: "hidden" }}
-            >
+          </Carousel> */}
+        <div className="w-full">
+          <Slider {...settings} className="flex items-center">
+            <div className="flex md:h-auto h-80 justify-between ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex">
               <img
-                src="./Assets/Images/form/swethaedited.png"
-                className="w-64 h-full object-cover md:w-full m-auto"
-                style={{
-                  borderRadius: "8px 0 0 8px",
-                  objectPosition: "top center",
-                }}
+                src="./Assets/Images/form/tina.jpg"
+                className=" md:h-96 object-cover object-center md:w-full"
+                style={{ borderRadius: "8px 0 0 8px" }}
                 alt=""
               />
               <div
-                className="flex-1 flex flex-col items-start justify-center h-full px-6 overflow-scroll md:p-6 border-2 border-solid border-red-800"
+                className="flex flex-col  justify-center gap-2 items-start px-6"
                 style={{
                   backgroundColor: "rgba(22, 130, 251, 0.20)",
                   borderRadius: "0 8px 8px 0",
                 }}
               >
                 <p style={{ color: "gray" }} className="font-normal text-base">
-                  Bright Kid Montessori Horamavu, Bangalore
+                  Wissen Mont Preschool, Madurai
                 </p>
                 <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
-                  Shweta
+                  Tina Prasanth  
                 </p>
                 <p
-                  style={{
-                    color: "#0B1C39",
-                    maxHeight: "80px",
-                    overflowY: "auto",
-                  }}
-                  className="font-normal text-base"
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base overflow-scroll"
                 >
-                  Leading the successful Hormavu Center since 2012. Our Bright
-                  Kit Academy and extracurricular activities ensure holistic
-                  child development. Bright start, right start - our motto for
-                  creating a better world. We follow the child, preparing the
-                  environment in Horamavu. Grateful to our team, partners Mr.
-                  Prasanta Sanyal and Mrs. Susmita Sanyal for support. Thanks to
-                  all for making my dream a success. Continuous support is
-                  appreciated. Good luck!
+                  Bright Edu Mont provided the best teachers' training, enabling
+                  practical learning for children. Grateful for their support in
+                  building my centre. Education, a self-organizing work, is
+                  enhanced by their academic support, contributing to the
+                  success of my centre.
                 </p>
               </div>
-            </div> */}
-          </Carousel>
+            </div>
+            <div
+              className="flex md:h-auto h-80 justify-between ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
+              style={{ border: "20px solid white" }}
+            >
+              <img
+                src="./Assets/Images/form/tina.jpg"
+                className=" md:h-96 object-cover object-center md:w-full"
+                style={{ borderRadius: "8px 0 0 8px" }}
+                alt=""
+              />
+              <div
+                className="flex flex-col  justify-center gap-4 items-start px-6"
+                style={{
+                  backgroundColor: "rgba(22, 130, 251, 0.20)",
+                  borderRadius: "0 8px 8px 0",
+                }}
+              >
+                <p style={{ color: "gray" }} className="font-normal text-base">
+                  Wissen Mont Preschool, Madurai
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
+                  Tina Prasanth  
+                </p>
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base overflow-scroll"
+                >
+                  Bright Edu Mont provided the best teachers' training, enabling
+                  practical learning for children. Grateful for their support in
+                  building my centre. Education, a self-organizing work, is
+                  enhanced by their academic support, contributing to the
+                  success of my centre.
+                </p>
+              </div>
+            </div>
+            <div
+              className="flex md:h-auto h-80 justify-between ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
+              style={{ border: "20px solid white" }}
+            >
+              <img
+                src="./Assets/Images/form/tina.jpg"
+                className=" md:h-96 object-cover object-center md:w-full"
+                style={{ borderRadius: "8px 0 0 8px" }}
+                alt=""
+              />
+              <div
+                className="flex flex-col  justify-center gap-4 items-start px-6"
+                style={{
+                  backgroundColor: "rgba(22, 130, 251, 0.20)",
+                  borderRadius: "0 8px 8px 0",
+                }}
+              >
+                <p style={{ color: "gray" }} className="font-normal text-base">
+                  Wissen Mont Preschool, Madurai
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
+                  Tina Prasanth  
+                </p>
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base overflow-scroll"
+                >
+                  Bright Edu Mont provided the best teachers' training, enabling
+                  practical learning for children. Grateful for their support in
+                  building my centre. Education, a self-organizing work, is
+                  enhanced by their academic support, contributing to the
+                  success of my centre.
+                </p>
+              </div>
+            </div>
+            <div
+              className="flex md:h-auto h-80 justify-between ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
+              style={{ border: "20px solid red" }}
+            >
+              <img
+                src="./Assets/Images/form/tina.jpg"
+                className=" md:h-96 object-cover object-center md:w-full"
+                style={{ borderRadius: "8px 0 0 8px" }}
+                alt=""
+              />
+              <div
+                className="flex flex-col  justify-center gap-4 items-start px-6"
+                style={{
+                  backgroundColor: "rgba(22, 130, 251, 0.20)",
+                  borderRadius: "0 8px 8px 0",
+                }}
+              >
+                <p style={{ color: "gray" }} className="font-normal text-base">
+                  Wissen Mont Preschool, Madurai
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
+                  Tina Prasanth  
+                </p>
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base overflow-scroll"
+                >
+                  Bright Edu Mont provided the best teachers' training, enabling
+                  practical learning for children. Grateful for their support in
+                  building my centre. Education, a self-organizing work, is
+                  enhanced by their academic support, contributing to the
+                  success of my centre.
+                </p>
+              </div>
+            </div>
+          </Slider>
         </div>
       </section>
 
@@ -1129,10 +1300,16 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-4xl md:text-2xl">
+                <p
+                  style={{ color: "#1682FB" }}
+                  className="font-bold text-4xl md:text-2xl"
+                >
                   1 . Best Student Hamper: 
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-2xl md:text-xl">
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-2xl md:text-xl"
+                >
                   Amaze parents and enrich kids. We offer a world-class Smart
                   book series, complemented by an anytime-anywhere Teacher, a
                   Craft Kit, and a Multiple Intelligence portal for kids.
@@ -1146,10 +1323,16 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-4xl md:text-2xl">
+                <p
+                  style={{ color: "#1682FB" }}
+                  className="font-bold text-4xl md:text-2xl"
+                >
                   2 . Montessori Toy Library: 
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-2xl md:text-xl">
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-2xl md:text-xl"
+                >
                   Your school will have access to an extensive Montessori Toy
                   Library, fostering a stimulating and hands-on learning
                   experience for your students.
@@ -1163,10 +1346,16 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-4xl md:text-2xl">
+                <p
+                  style={{ color: "#1682FB" }}
+                  className="font-bold text-4xl md:text-2xl"
+                >
                   3 . Award-Winning Curriculum
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-2xl md:text-xl">
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-2xl md:text-xl"
+                >
                   Our curriculum and teacher engagement programs have received
                   accolades for their innovation and effectiveness, ensuring
                   your preschool stands out from the rest.
@@ -1180,10 +1369,16 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-4xl md:text-2xl">
+                <p
+                  style={{ color: "#1682FB" }}
+                  className="font-bold text-4xl md:text-2xl"
+                >
                   4 . Digital Concept Teacher Portal:
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-2xl md:text-xl">
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-2xl md:text-xl"
+                >
                   With our cutting-edge technology, every classroom is empowered
                   to deliver world-class lessons, enriching both teachers and
                   students alike.
@@ -1197,10 +1392,16 @@ export default function Form() {
                 alt=""
               />
               <div className="w-2/5 flex flex-col items-start gap-6 py-4 md:w-full">
-                <p style={{ color: "#1682FB" }} className="font-bold text-4xl md:text-2xl">
+                <p
+                  style={{ color: "#1682FB" }}
+                  className="font-bold text-4xl md:text-2xl"
+                >
                   5 . All-in Mobile App 
                 </p>
-                <p style={{ color: "#0B1C39" }} className="font-normal text-2xl md:text-xl">
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-2xl md:text-xl"
+                >
                   Our comprehensive mobile app streamlines attendance, parent
                   communication, skill mapping of children, toy library
                   management, and fee tracking - everything you need at your
@@ -1280,8 +1481,8 @@ export default function Form() {
               3. Digital Assets:
             </p>
             <p className="text-xl md:text-lg">
-              Our{" "}
-              <span className="font-bold"> award-winning digital assets</span>{" "}
+              Our
+              <span className="font-bold"> award-winning digital assets</span>
               are truly best-in-class, offering unmatched support for your
               preschool's growth.
             </p>
@@ -1298,8 +1499,8 @@ export default function Form() {
               4. Additional Revenue:
             </p>
             <p className="text-xl md:text-lg">
-              We share the earnings from{" "}
-              <span className="font-bold"> Montessori Teachers Training</span>{" "}
+              We share the earnings from
+              <span className="font-bold"> Montessori Teachers Training</span>
               and Vedic Maths courses conducted at your center, contributing to
               your financial success.
             </p>
@@ -1356,12 +1557,11 @@ export default function Form() {
             take it a step further with our Comprehensive Admission Guarantee
             Plan. Our commitment to your
             <span style={{ color: "#7F46FF" }} className="font-bold">
-              {" "}
               success is unwavering
             </span>
-            , and our{" "}
+            , and our
             <span style={{ color: "#7F46FF" }} className="font-bold">
-              marketing efforts{" "}
+              marketing efforts
             </span>
             under this plan are second to none.
           </p>
@@ -1384,23 +1584,20 @@ export default function Form() {
         >
           Celebrating
           <span style={{ color: "#FF833F" }} className="font-bold">
-            {" "}
             16+ years of excellence
-          </span>{" "}
+          </span>
           and innovation, we are thrilled to share our remarkable journey of
           success and customer validation! With numerous prestigious awards in
           recognition of our cutting-edge digital solutions, curriculum, and
           teachers' training, we take immense pride in empowering over
           <span style={{ color: "#FF833F" }} className="font-bold">
-            {" "}
-            35,000 bright young minds{" "}
+            35,000 bright young minds
           </span>
           across the country. Join the growing community of satisfied preschools
           who have witnessed the transformative impact of our tailored
           <span style={{ color: "#FF833F" }} className="font-bold">
-            {" "}
             curriculum
-          </span>{" "}
+          </span>
           and
           <span style={{ color: "#FF833F" }} className="font-bold">
             &nbsp;preschool learning materials!
@@ -1457,7 +1654,7 @@ export default function Form() {
             className="bg-gradient-to-tr shadow-lg px-36 py-9 text-lg font-bold"
             style={{ color: "#F72378", border: "2px solid #F72378" }}
           >
-            Enquire now 
+            Enquire now
           </Button>
         </div>
         {/* <img
