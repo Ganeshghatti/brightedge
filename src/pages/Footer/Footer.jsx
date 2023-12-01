@@ -18,7 +18,7 @@ export default function Footer() {
           <a href="https://www.facebook.com/brightkidmont/">
             <img src="./Assets/Images/form/logo/facebook.svg" />
           </a>
-          <a href="https://www.instagram.com/brightkidathome/">
+          <a href="https://instagram.com/brightkid_montig">
             <img src="./Assets/Images/form/logo/instagram.svg" />
           </a>
           <a href="https://www.youtube.com/channel/UCci_ljnk0suwM96-2BEw6TQ">
@@ -27,7 +27,6 @@ export default function Footer() {
           <a href="https://www.linkedin.com/company/bright-edge-edusystems-pvt-ltd/">
           <img src="./Assets/Images/form/logo/linkedin.svg" />
           </a>
-          <img src="./Assets/Images/form/logo/twitter.svg" />
         </div>
       </div>
       <ul style={{ color: "#0B1C39" }} className="w-1/5 md:w-4/5">
