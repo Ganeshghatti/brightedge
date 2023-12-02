@@ -193,8 +193,8 @@ export default function Form() {
           Enter a valid email
         </Alert>
       );
-      setTimeout(() => setAlert(null), 5000); // Close alert after 5 seconds
-      return; // Exit the function if email is not valid
+      setTimeout(() => setAlert(null), 5000);
+      return;
     }
 
     if (!validator.isMobilePhone(formData.SMS)) {
@@ -207,8 +207,8 @@ export default function Form() {
           Enter a valid phone number
         </Alert>
       );
-      setTimeout(() => setAlert(null), 5000); // Close alert after 5 seconds
-      return; // Exit the function if phone number is not valid
+      setTimeout(() => setAlert(null), 5000);
+      return;
     }
 
     try {
@@ -253,9 +253,9 @@ export default function Form() {
           YOUR_MESSAGE: null,
         });
       }
-      setTimeout(() => setAlert(null), 5000); // Close alert after 5 seconds
+      setTimeout(() => setAlert(null), 5000); 
     } catch (error) {
-      console.error(error, "error");
+      console.error("error");
     }
   };
   const handlescrolltotop = () => {
@@ -1797,7 +1797,7 @@ export default function Form() {
           src="./Assets/Images/form/Certificates.png"
           className="block md:hidden w-4/5"
           alt=""
-        />cd
+        />
         <img
           src="./Assets/Images/form/Certificatesmobile.png"
           className="hidden md:block w-11/12"
