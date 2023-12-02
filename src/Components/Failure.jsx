@@ -25,11 +25,11 @@ export default function Failure() {
       <img src="./Assets/Images/form/failure.png" />
       <Button
         radius="full"
-        className="bg-gradient-to-tr text-white shadow-lg px-16 py-5 text-lg  md:text-base font-bold md:w-4/5"
+        className="bg-gradient-to-tr text-white shadow-lg px-16 py-5 text-lg  md:text-base font-bold md:w-2/5"
         style={{ backgroundColor: "#F72378" }}
         onClick={handlescrolltotop}
       >
-        <Link to="/form"> Fill form again</Link>
+        <Link to="/"> Fill form again</Link>
       </Button>
     </section>
   );

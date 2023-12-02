@@ -25,7 +25,7 @@ export default function Success() {
       <a href="http://www.brightkidmont.com">
         <Button
           radius="full"
-          className="bg-gradient-to-tr text-white shadow-lg px-16 py-5 text-lg md:text-base font-bold md:w-4/5"
+          className="bg-gradient-to-tr text-white shadow-lg px-16 py-5 text-lg md:text-base font-bold md:w-2/5"
           style={{ backgroundColor: "#F72378" }}
         >
           Visit our site

@@ -24,6 +24,7 @@ import Stack from "@mui/material/Stack";
 import validator from "validator";
 import { Link } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useNavigate } from "react-router-dom";
 
 const images = [
   {
@@ -152,7 +153,7 @@ export default function Form() {
     YOUR_MESSAGE: 1,
   });
   const [alert, setAlert] = useState(null);
-
+  const navigate = new useNavigate();
   const [vid1, setvid1] = useState(false);
   const vid1f = () => {
     setvid1(!vid1);
@@ -229,6 +230,7 @@ export default function Form() {
             {response.msg}
           </Alert>
         );
+        navigate("/form-error.html");
       } else {
         setAlert(
           <Alert
@@ -244,6 +246,7 @@ export default function Form() {
             {response.msg}
           </Alert>
         );
+        navigate("/form-thankyou.html");
         setFormData({
           FIRST_NAME: "",
           SMS__COUNTRY_CODE: "",
@@ -253,7 +256,7 @@ export default function Form() {
           YOUR_MESSAGE: null,
         });
       }
-      setTimeout(() => setAlert(null), 5000); 
+      setTimeout(() => setAlert(null), 5000);
     } catch (error) {
       console.error("error");
     }
@@ -1845,7 +1848,7 @@ export default function Form() {
             style={{ color: "#F72378", border: "2px solid #F72378" }}
             onClick={handlescrolltotop}
           >
-            <Link to="/form">Enquire now</Link>
+            <Link to="/">Enquire now</Link>
           </Button>
         </div>
         {/* <img

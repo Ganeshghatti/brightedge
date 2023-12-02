@@ -14,8 +14,8 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Form />} />
-        <Route path="/success=true" element={<Success />} />
-        <Route path="/success=false" element={<Failure />} />
+        <Route path="/form-thankyou" element={<Success />} />
+        <Route path="/form-error" element={<Failure />} />
         {/* <Route path="/form" element={<Form />} /> */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
