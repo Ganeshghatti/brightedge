@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@nextui-org/react";
+import { Helmet } from "react-helmet";
 
 export default function Success() {
   return (
@@ -7,6 +8,15 @@ export default function Success() {
       id="success"
       className="flex flex-col h-screen w-screen justify-start md:justify-center items-center gap-6"
     >
+      <Helmet>
+        <script>
+          {`
+            gtag("event", "conversion", {
+              send_to: "AW-642203851/wf2fCOfyqegYEMuBnbIC",
+            });
+          `}
+        </script>
+      </Helmet>
       <img src="./Assets/Images/form/BEMlogo.png" className="w-32" />
       <p
         className="text-6xl md:text-4xl font-bold"
