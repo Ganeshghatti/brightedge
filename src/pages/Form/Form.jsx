@@ -145,7 +145,7 @@ const CustomNextArrow = (props) => (
 export default function Form() {
   const [formData, setFormData] = useState({
     FIRST_NAME: "",
-    SMS__COUNTRY_CODE: "",
+    SMS__COUNTRY_CODE: "+91",
     SMS: "",
     EMAIL: "",
     LOCATION: "",
@@ -337,7 +337,7 @@ export default function Form() {
             className="text-6xl font-bold lg:text-5xl md:text-4xl"
             style={{ color: "#32355D" }}
           >
-            Make an Impactful
+            <span style={{ color: "#F87E00" }}>Make an Impactful</span>
             <p className="" style={{ color: "#7F46FF" }}>
               Preschool
             </p>
@@ -347,8 +347,8 @@ export default function Form() {
             className="text-2xl font-normal md:text-xl"
           >
             <span className="font-bold">
-              Become the #1 in your area. Just fill out the form and we will get
-              you started.
+              Become the #1 in your area. Just fill out the form and we will
+              pave the way for success!
             </span>
             <br />
             <br />
@@ -382,7 +382,6 @@ export default function Form() {
           <div className="flex justify-start w-full gap-4">
             <select
               name="SMS__COUNTRY_CODE"
-              defaultValue="+91"
               value={formData.SMS__COUNTRY_CODE}
               disabled={true}
               className="w-1/3 h-full z-10 py-4 px-4 flex justify-center rounded bg-white border-1 border-solid border-gray-400 cursor-pointer text-gray-500"
@@ -391,7 +390,6 @@ export default function Form() {
                 (+91) India
               </option>
             </select>
-
             <TextField
               id="outlined-basic"
               variant="outlined"
@@ -501,7 +499,7 @@ export default function Form() {
       >
         <h1
           className="text-6xl font-bold md:text-center md:text-4xl"
-          style={{ color: "#32355D", padding: "0 15vw" }}
+          style={{ color: "#F87E00", padding: "0 15vw" }}
         >
           Endurance<span className="form-numbers-h1-style"> & Success</span>
         </h1>
@@ -597,28 +595,30 @@ export default function Form() {
           className="absolute  mb-96 left-2/3 lg:hidden md:hidden"
           alt=""
         />
-        <img
+        {/* <img
           src="./Assets/Images/form/trapezium.png"
           className="absolute right-0 mb-96 lg:hidden md:hidden"
-        />
+        /> */}
 
         <h1
           className="text-6xl font-bold w-1/4 md:text-center lg:w-2/5 md:w-full md:text-4xl"
-          style={{ color: "#32355D" }}
+          style={{ color: "#F87E00" }}
         >
           Our Pricing
           <br />
           <span className="form-highlights-h1-style"> Highlights</span>
         </h1>
         <div
-          className="w-1/5 p-6 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full"
+          className="w-1/5 p-4 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full"
           style={{
             backgroundColor: "#D0E6FE",
             borderRadius: "24px",
             border: "1px solid #1682FB",
           }}
         >
-          <p className="text-2xl font-normal">Opening new Preschool:</p>
+          <p className="text-2xl font-semibold" style={{ color: "#009BDF" }}>
+            Opening new Preschool:
+          </p>
           <p
             className="text-3xl font-normal 2xl:text-2xl"
             style={{ color: "#0B1C39" }}
@@ -630,7 +630,8 @@ export default function Form() {
             </span>
           </p>
           <p
-            className="flex font-bold text-xl underline items-center"
+            className="flex font-bold text-xl underline items-center cursor-pointer"
+            onClick={handlescrolltotop}
             style={{ color: "#F72378" }}
           >
             Let’s Discuss
@@ -658,14 +659,16 @@ export default function Form() {
         </div>
 
         <div
-          className="w-1/5 p-6 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full lg:mt-6"
+          className="w-1/5 p-4 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full lg:mt-6"
           style={{
             backgroundColor: "rgba(255, 131, 63, 0.16)",
             borderRadius: "24px",
             border: "1px solid #FF833F",
           }}
         >
-          <p className="text-2xl font-normal">Elevating Exsisting Preschool:</p>
+          <p className="text-2xl font-semibold" style={{ color: "#FF7700" }}>
+            Elevating Preschool:
+          </p>
           <p
             className="text-3xl font-normal 2xl:text-2xl"
             style={{ color: "#0B1C39" }}
@@ -676,7 +679,8 @@ export default function Form() {
             </span>
           </p>
           <p
-            className="flex font-bold text-xl underline items-center"
+            className="flex font-bold text-xl underline items-center cursor-pointer"
+            onClick={handlescrolltotop}
             style={{ color: "#F72378" }}
           >
             Let’s Discuss
@@ -699,28 +703,29 @@ export default function Form() {
         </div>
 
         <div
-          className="w-1/5 p-6 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full lg:mt-6"
+          className="w-1/5 p-4 h-72 flex flex-col justify-center gap-4 lg:w-2/5 md:w-full lg:mt-6"
           style={{
             backgroundColor: "#E5DAFF",
             borderRadius: "24px",
             border: " 1px solid  #7F46FF",
           }}
         >
-          <p className="text-2xl font-normal">
-            Dedicated B2B Purchasing portal:
+          <p className="text-2xl font-semibold" style={{ color: "#8044F8" }}>
+            Dedicated B2B Materials Portal:
           </p>
           <p
-            className="text-3xl font-bold 2xl:text-2xl"
+            className="text-3xl font-normal 2xl:text-2xl"
             style={{ color: "#0B1C39" }}
           >
-            Most Economical
+            Most
+            <span className="font-bold"> Economical</span>
             <br />
-            <span className="font-normal" style={{ color: "#32355D" }}>
-              for Resource
-            </span>
+            and
+            <span className="font-bold"> Efficient Supply Chain</span>
           </p>
           <p
-            className="flex font-bold text-xl underline items-center"
+            className="flex font-bold text-xl underline items-center cursor-pointer"
+            onClick={handlescrolltotop}
             style={{ color: "#F72378" }}
           >
             Let’s Discuss
@@ -749,7 +754,7 @@ export default function Form() {
       >
         <p
           className="text-6xl font-bold md:text-center md:text-4xl"
-          style={{ color: "#7F46FF" }}
+          style={{ color: "#F87E00" }}
         >
           Our Preschool
           <span className="form-affiliate-h1-style"> Partnership </span>Program
@@ -861,7 +866,7 @@ export default function Form() {
           </p>
           <h1
             className="text-6xl font-bold md:text-center md:text-4xl lg:text-center"
-            style={{ color: "#32355D" }}
+            style={{ color: "#F87E00" }}
           >
             Don’t take
             <span className="form-testimonials-h1-style"> our word</span>
@@ -1098,7 +1103,7 @@ export default function Form() {
                   Sunrise Valley School, Haryana
                 </p>
                 <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
-                  Sher Singh  
+                  Neelam Pandit  
                 </p>
                 <p
                   style={{ color: "#0B1C39" }}
@@ -1153,6 +1158,52 @@ export default function Form() {
                 </p>
               </div>
             </div>
+
+            <div
+              className="flex md:h-auto h-80 justify-between md:m-auto ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
+              style={{ border: "20px solid red" }}
+            >
+              <img
+                src="./Assets/Images/form/jesing.png"
+                className="w-1/3 md:h-96 object-cover md:w-full"
+                style={{
+                  borderRadius:
+                    window.innerWidth > 867 ? "8px 0 0 8px" : "8px 8px 0 0",
+                  objectPosition: "top center",
+                }}
+                alt=""
+              />
+              <div
+                className="flex flex-col flex-1 justify-center gap-4 items-start px-6 md:p-6 md:overflow-auto md:h-96"
+                style={{
+                  backgroundColor: "rgba(22, 130, 251, 0.20)",
+                  borderRadius:
+                    window.innerWidth > 867 ? "0 8px 8px 0" : "0 0 8px 8px",
+                }}
+              >
+                <p style={{ color: "gray" }} className="font-normal text-base">
+                  WonderKids Pre-School, Anand, Gujarat{" "}
+                </p>
+                <p style={{ color: "#0B1C39" }} className="font-bold text-2xl">
+                  Jesing Gohil
+                </p>
+                <p
+                  style={{ color: "#0B1C39" }}
+                  className="font-normal text-base overflow-auto"
+                >
+                  As the owner of The Wonderkids Pre School in Anand, Gujarat,
+                  under the Bright Kid Montessori House franchise since 2019, I
+                  want to express my satisfaction. Over 5 successful years,
+                  Brightkid has been a standout franchise, providing continuous
+                  support in teacher and centre head training, Montessori
+                  training, and weekly academic support. The unique curriculum,
+                  smart books, and structured materials make it an excellent
+                  choice for those aiming to excel in the education sector.
+                  Highly recommended for franchise partnership.
+                </p>
+              </div>
+            </div>
+
             <div
               className="flex md:h-auto h-80 justify-between md:m-auto ml-96 md:flex-col w-11/12 rounded-xl testimonials-slider-class-flex"
               style={{ border: "20px solid red" }}
@@ -1212,7 +1263,7 @@ export default function Form() {
         </p>
         <h1
           className="text-6xl font-bold md:text-center md:text-4xl"
-          style={{ color: "#32355D", padding: "0 6vw" }}
+          style={{ color: "#F87E00", padding: "0 6vw" }}
         >
           Here’s all&nbsp;
           <br className="hidden md:block" />
@@ -1355,7 +1406,7 @@ export default function Form() {
           <div className="flex flex-col justify-center w-1/2 px-8 md:w-full md:items-center">
             <h1
               className="text-6xl font-bold md:text-center md:text-4xl"
-              style={{ color: "#1682FB" }}
+              style={{ color: "#F87E00" }}
             >
               Parent’s Choice:
             </h1>
@@ -1563,7 +1614,7 @@ export default function Form() {
         />
         <h1
           className="text-6xl font-bold text-center md:text-4xl px-1/2"
-          style={{ color: "#32355D" }}
+          style={{ color: "#F87E00" }}
         >
           New Preschool Franchise has never been&nbsp;
           <span className="form-flexible-h1-style"> so flexible!</span>
@@ -1604,7 +1655,7 @@ export default function Form() {
             </p>
             <p className="text-xl md:text-lg">
               As a leading manufacturer of high-quality Montessori items and
-              <span className="font-bold"> preschool furniture</span>, we
+              <span className="font-bold"> preschool furniture </span>, we
               provide all your preschool needs at the best cost.
             </p>
           </div>
@@ -1621,7 +1672,7 @@ export default function Form() {
             </p>
             <p className="text-xl md:text-lg">
               Our
-              <span className="font-bold"> award-winning digital assets</span>
+              <span className="font-bold"> award-winning digital assets </span>
               are truly best-in-class, offering unmatched support for your
               preschool's growth.
             </p>
@@ -1639,7 +1690,7 @@ export default function Form() {
             </p>
             <p className="text-xl md:text-lg">
               We share the earnings from
-              <span className="font-bold"> Montessori Teachers Training</span>
+              <span className="font-bold"> Montessori Teachers Training </span>
               and Vedic Maths courses conducted at your center, contributing to
               your financial success.
             </p>
@@ -1676,31 +1727,31 @@ export default function Form() {
 
         <h1
           className="text-6xl font-bold text-center md:text-4xl px-1/2"
-          style={{ color: "#32355D" }}
+          style={{ color: "#F87E00" }}
         >
           Comprehensive
           <br /> Admission Guar
           <span className="form-addmissiongurantee-h1-style">antee Plan</span>
         </h1>
-        <div className="w-4/5 flex items-center justify-around py-12 md:w-full">
+        <div className="w-4/5 flex items-center justify-around py-12 md:w-full md:flex-col">
           <img
             src="./Assets/Images/form/admissionguranteeplan.png"
             alt=""
-            className="md:hidden"
+            className="w-1/2 md:w-11/12"
           />
           <p
-            className="text-left md:text-center w-3/5 text-xl md:w-11/12"
+            className="text-left md:text-center w-1/2 text-xl md:w-11/12"
             style={{ color: "#0B1C39" }}
           >
             We don't just stop at helping you build a top-notch preschool. We
             take it a step further with our Comprehensive Admission Guarantee
-            Plan. Our commitment to your
+            Plan. Our commitment to your&nbsp;
             <span style={{ color: "#7F46FF" }} className="font-bold">
               success is unwavering
             </span>
-            , and our
+            , and our&nbsp;
             <span style={{ color: "#7F46FF" }} className="font-bold">
-              marketing efforts
+              marketing efforts&nbsp;
             </span>
             under this plan are second to none.
           </p>
@@ -1713,7 +1764,7 @@ export default function Form() {
       >
         <h1
           className="text-6xl font-bold text-center md:text-4xl px-1/2"
-          style={{ color: "#32355D" }}
+          style={{ color: "#F87E00" }}
         >
           Our Awards &<span className="form-awards-h1-style"> Accolades</span>
         </h1>
@@ -1721,21 +1772,21 @@ export default function Form() {
           className="text-xl w-3/4 md:w-11/12 text-center"
           style={{ color: "#0B1C39" }}
         >
-          Celebrating
+          Celebrating&nbsp;
           <span style={{ color: "#FF833F" }} className="font-bold">
-            16+ years of excellence
+            16+ years of excellence&nbsp;
           </span>
           and innovation, we are thrilled to share our remarkable journey of
           success and customer validation! With numerous prestigious awards in
           recognition of our cutting-edge digital solutions, curriculum, and
-          teachers' training, we take immense pride in empowering over
+          teachers' training, we take immense pride in empowering over&nbsp;
           <span style={{ color: "#FF833F" }} className="font-bold">
-            35,000 bright young minds
+            35,000 bright young minds&nbsp;
           </span>
           across the country. Join the growing community of satisfied preschools
-          who have witnessed the transformative impact of our tailored
+          who have witnessed the transformative impact of our tailored&nbsp;
           <span style={{ color: "#FF833F" }} className="font-bold">
-            curriculum
+            curriculum&nbsp;
           </span>
           and
           <span style={{ color: "#FF833F" }} className="font-bold">
@@ -1746,7 +1797,7 @@ export default function Form() {
           src="./Assets/Images/form/Certificates.png"
           className="block md:hidden w-4/5"
           alt=""
-        />
+        />cd
         <img
           src="./Assets/Images/form/Certificatesmobile.png"
           className="hidden md:block w-11/12"
@@ -1760,7 +1811,7 @@ export default function Form() {
       >
         <h1
           className="text-6xl font-bold text-center md:text-4xl px-1/2"
-          style={{ color: "#32355D" }}
+          style={{ color: "#F87E00" }}
         >
           Pathway to
           <span className="form-pathwaytosuccess-h1-style"> Success</span>
@@ -1775,10 +1826,10 @@ export default function Form() {
           alt=""
           className="w-11/12 hidden md:block"
         />
-        <div className="flex gap-6 mt-12 md:hidden ">
+        <div className="flex gap-6 mt-12 md:flex-col md:full md:items-center">
           <Button
             radius="full"
-            className="bg-gradient-to-tr text-white shadow-lg px-24 py-9 text-lg font-bold"
+            className="bg-gradient-to-tr text-white shadow-lg px-24 py-9 text-lg font-bold md:w-4/5"
             style={{ backgroundColor: "#F72378" }}
           >
             <div>
@@ -1790,7 +1841,7 @@ export default function Form() {
           <Button
             radius="full"
             variant="bordered"
-            className="bg-gradient-to-tr shadow-lg px-36 py-9 text-lg font-bold"
+            className="bg-gradient-to-tr shadow-lg px-36 py-9 text-lg font-bold md:w-4/5"
             style={{ color: "#F72378", border: "2px solid #F72378" }}
             onClick={handlescrolltotop}
           >
