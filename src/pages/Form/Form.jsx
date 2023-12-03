@@ -332,6 +332,10 @@ export default function Form() {
         className="flex justify-center w-screen items-center h-screen md:flex-col md:h-auto"
       >
         <div id="form-inputs-background-container"></div>
+        <img
+          src="./Assets/Images/form/AFFORDABLEMaterials.png"
+          className="object-contain hidden md:block w-11/12"
+        />
         <div
           className="w-1/2 flex justify-center flex-col gap-5 md:w-full"
           style={{ padding: "0 6vw" }}
