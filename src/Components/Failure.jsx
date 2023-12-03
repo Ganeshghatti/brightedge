@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function Failure() {
   const handlescrolltotop = () => {
@@ -8,9 +9,12 @@ export default function Failure() {
   };
   return (
     <section
-      id="success"
+      id="failure"
       className="flex flex-col h-screen w-screen justify-start md:justify-center items-center gap-6"
     >
+      <Helmet>
+        <title>Form Submission Failed | BrightEdge</title>
+      </Helmet>
       <img src="./Assets/Images/form/BEMlogo.png" className="w-32" />
       <p className="text-6xl md:text-4xl font-bold" style={{ color: "#F44" }}>
         Oops!

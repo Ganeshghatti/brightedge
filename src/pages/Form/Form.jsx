@@ -369,7 +369,7 @@ export default function Form() {
         >
           <img
             src="./Assets/Images/form/AFFORDABLEMaterials.png"
-            className="object-contain"
+            className="object-contain md:hidden"
           />
           <TextField
             id="outlined-basic"
@@ -1451,7 +1451,7 @@ export default function Form() {
         ) : (
           <>
             <img
-              src="./Assets/Images/form/video2thumbnail.png"
+              src="./Assets/Images/form/Video.png"
               style={{ width: "90vw" }}
               className="self-start cursor-pointer md:hidden"
               onClick={vid2f}

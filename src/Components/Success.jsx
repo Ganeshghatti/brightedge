@@ -9,6 +9,7 @@ export default function Success() {
       className="flex flex-col h-screen w-screen justify-start md:justify-center items-center gap-6"
     >
       <Helmet>
+        <title>Form Submission Success | BrightEdge</title>
         <script>
           {`
             gtag("event", "conversion", {
