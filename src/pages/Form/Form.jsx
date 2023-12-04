@@ -230,7 +230,7 @@ export default function Form() {
             {response.msg}
           </Alert>
         );
-        navigate("/form-error.html");
+        navigate("/form-error");
       } else {
         setAlert(
           <Alert
@@ -246,7 +246,7 @@ export default function Form() {
             {response.msg}
           </Alert>
         );
-        navigate("/form-thankyou.html");
+        navigate("/form-thankyou");
         setFormData({
           FIRST_NAME: "",
           SMS__COUNTRY_CODE: "",
