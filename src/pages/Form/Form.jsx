@@ -461,9 +461,9 @@ export default function Form() {
                   onChange={(e) => handleChange(e, 3)}
                 />
                 <FormControlLabel
-                  value="Need Preschol Materials"
+                  value="Need Preschool Materials"
                   control={<Radio />}
-                  label="Need Preschol Materials"
+                  label="Need Preschool Materials"
                   onChange={(e) => handleChange(e, 4)}
                 />
                 <FormControlLabel
